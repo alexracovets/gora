@@ -1,0 +1,28 @@
+@import '../../global/variable.scss';
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .navigation {
+        padding: 123px 0;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                font-size: 16px;
+                line-height: 20px;
+                color: $color-white;
+                text-transform: uppercase;
+                font-weight: 350;
+                padding: 16px;
+            }
+        }
+    }
+}

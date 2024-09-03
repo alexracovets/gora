@@ -1,0 +1,11 @@
+@import '../../../global/variable.scss';
+
+.title {
+    font-size: 70px;
+    line-height: 84px;
+    font-weight: 700;
+    color: $color-beige;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 90px;
+}
