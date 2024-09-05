@@ -11,4 +11,10 @@
     padding: 25px 95px;
     background-color: $color-green;
     box-shadow: 0 0 40px 0 #3E5837;
+
+    &.small {
+        font-size: 21px;
+        line-height: 25.24px;
+        padding: 16.5px 33px;
+    }
 }

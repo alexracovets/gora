@@ -1,0 +1,46 @@
+@import '../../global/variable.scss';
+
+.patron_type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 122px;
+
+    .item {
+        width: 869px;
+        height: 687px;
+        background-color: rgba(90, 90, 90, 0.63);
+        border: 1px solid $color-white;
+        border-radius: 35px;
+        padding: 237px 153px 0 148px;
+
+        .title {
+            font-size: 32px;
+            line-height: 38.4px;
+            color: $color-white;
+            text-align: center;
+            font-weight: 350;
+            margin-bottom: 30px;
+
+            span {
+                color: $color-beige;
+                font-weight: 700;
+            }
+        }
+
+        .texts {
+            p {
+                color: $color-white;
+                font-size: 16px;
+                line-height: 19.62px;
+                text-align: center;
+                margin-bottom: 24px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

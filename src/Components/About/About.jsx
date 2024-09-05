@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 
+import SliderAbout from "../SliderAbout/SliderAbout";
 import Container from "../Container/Container";
 import Button from "../UI/Button/Button";
 import Title from "../UI/Title/Title";
 
 import s from './About.module.scss';
-import SliderAbout from "../SliderAbout/SliderAbout";
 export default function About() {
     const { t } = useTranslation();
 

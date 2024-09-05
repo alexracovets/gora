@@ -1,5 +1,6 @@
 
 import About from "../About/About";
+import Patron from "../Patron/Patron";
 import StartSection from "../StartSection/StartSection";
 
 export default function Main() {
@@ -8,6 +9,7 @@ export default function Main() {
         <main>
             <StartSection />
             <About />
+            <Patron />
         </main>
     )
 }
