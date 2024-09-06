@@ -1,20 +1,44 @@
 import { useTranslation } from "react-i18next";
+import PropTypes from 'prop-types';
+
+import Button from "../../UI/Button/Button";
 
 import s from '../Patron.module.scss';
-import Button from "../../UI/Button/Button";
-export default function Item() {
+export default function Item({ item }) {
     const { t } = useTranslation();
 
     return (
         <div className={s.item}>
-            <p className={s.title}>
-                <span>Твоє прізвище</span> на цеглині закладеної в будову Келії
-            </p>
-            <div className={s.texts}>
-                <p>Ми вирішили, що Ваші щедрі внески мають бути по-особливому відзначені та увічнені в історії. Тому виготовимо дві «персональні» цеглини з Вашим прізвищем. Одну буде закладено у стіни відбудованої Келії, а другу отримаєте як сувенір, що нагадуватиме про Ваш зв’язок з Афоном. Її зможете розмістити у себе на робочому столі в кабінеті, в офісі або вдома.</p>
-                <p>Ми вирішили, що Ваші щедрі внески мають бути по-особливому відзначені та увічнені в історії. Тому виготовимо дві «персональні» цеглини з Вашим прізвищем. Одну буде закладено у стіни відбудованої Келії, а другу отримаєте як сувенір, що нагадуватиме про Ваш зв’язок з Афоном. Її зможете розмістити у себе на робочому столі в кабінеті, в офісі або вдома.</p>
+            <div className={s.background_wrapper}>
+                <div className={s.background}>
+
+                </div>
             </div>
-            <Button small>{t("btn.contribution")}</Button>
+            <p className={s.title} dangerouslySetInnerHTML={{ __html: t(item.title) }} />
+            <div className={s.texts}>
+                {item.texts.map((text, idx) => {
+                    return <p key={idx} dangerouslySetInnerHTML={{ __html: t(text) }} />
+                })}
+                {item.patrons && <div className={s.patrons}>
+                    {item.patrons.map((item, idx) => {
+                        return <div key={idx} className={s.patron}>
+                            <span className={s.name}>{item.name}</span>
+                            <span className={s.price}>{item.price}</span>
+                        </div>
+                    })}
+                </div>
+                }
+                {item.secondText && item.secondText.map((text, idx) => {
+                    return <p key={idx} dangerouslySetInnerHTML={{ __html: t(text) }} />
+                })}
+            </div>
+            <div className={s.btn}>
+                <Button small>{t("btn.contribution")}</Button>
+            </div>
         </div>
     )
 }
+
+Item.propTypes = {
+    item: PropTypes.object
+};
