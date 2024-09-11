@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Container from "../Container/Container";
 import DashLine from "../UI/DashLine/DashLine";
 import Button from "../UI/Button/Button";
+import Title from "../UI/Title/Title";
 
 import s from './InfoSection.module.scss';
 export default function InfoSection({ content }) {
@@ -12,7 +13,7 @@ export default function InfoSection({ content }) {
     return (
         <section className={s.info}>
             <Container>
-                <h1 className={s.title}>{t(content.title)}</h1>
+                <Title>{t(content.title)}</Title>
                 <p className={s.we_are}>{t(content.startText)}</p>
                 <DashLine />
                 <div className={s.help}>

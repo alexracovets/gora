@@ -1,7 +1,7 @@
 import InfoSection from "../InfoSection/InfoSection";
 export default function FirstInfo() {
     const content = {
-        title: "firstInfo.gathering",
+        title: "title.gathering",
         startText: "firstInfo.0",
         help: [
             "firstInfo.1.0",

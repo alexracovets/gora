@@ -8,13 +8,13 @@ export default function CurrentState() {
     const { t } = useTranslation();
 
     return (
-        <Container>
-            <section>
+        <section className={s.state}>
+            <Container>
                 <Title>{t("title.building")}</Title>
                 <div className={s.video_wrapper}>
                     <video src=""></video>
                 </div>
-            </section>
-        </Container>
+            </Container>
+        </section>
     )
 }

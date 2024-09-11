@@ -7,6 +7,7 @@ import BackgroundPattern from "../UI/BackgroundPattern/BackgroundPattern";
 import TimeLine from "../TimeLine/TimeLine";
 import CurrentState from "../CurrentState/CurrentState";
 import Comitet from "../Comitet/Comitet";
+import GiftSection from "../GiftSection/GiftSection";
 
 
 export default function Main() {
@@ -21,6 +22,7 @@ export default function Main() {
             <TimeLine />
             <CurrentState />
             <Comitet />
+            <GiftSection />
         </main>
     )
 }
