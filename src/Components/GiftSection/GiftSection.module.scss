@@ -1,3 +1,97 @@
+@import '../../global/variable.scss';
+
 .gift {
     padding-top: 150px;
+
+    .line_wrapper {
+        margin-top: 90px;
+        margin-bottom: 60px;
+
+        .text {
+            color: $color-white;
+            font-size: 40px;
+            line-height: 48px;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 24px;
+        }
+    }
+
+    .slider {
+        .item {
+            .item_wrapper {
+                width: 431px;
+                height: 405px;
+                background: linear-gradient(137.3deg, #DCA61F 10.32%, #F6EC97 31.23%, #FADD5A 50.12%, #FBDE9C 67.34%, #E3A21F 86.35%);
+                box-shadow: -5px 4px 24px 0px rgba(237, 224, 134, 0.16);
+                border-radius: 25px;
+                padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 96.14px;
+                    background-image: url("./img/pattern/pattern_white.svg");
+                    background-position-y: 31px;
+                    opacity: 0.7;
+                }
+
+                &::before {
+                    top: -30px;
+                    background-position-x: 20px;
+                }
+
+                &::after {
+                    bottom: -30px;
+                    transform: rotate(180deg);
+                }
+
+                .name,
+                .price {
+                    font-size: 32px;
+                    line-height: 38.4px;
+                    text-transform: uppercase;
+                }
+
+                .name {
+                    font-weight: 700;
+                }
+
+                .price {
+                    font-weight: 350;
+                    margin-bottom: 40px;
+
+                    span {
+                        color: $color-green;
+                        font-size: 40px;
+                        line-height: 48px;
+                        font-weight: 700;
+                    }
+                }
+
+                button {
+                    color: $color-white;
+                    font-size: 23.04px;
+                    line-height: 27.65px;
+                    text-align: center;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    background-color: $color-black;
+                    padding: 18px 30px;
+                    border-radius: 10.84px;
+                }
+            }
+        }
+    }
 }
