@@ -83,8 +83,12 @@
                 position: relative;
                 width: 79px;
                 height: 79px;
-                background-color: $color-green;
+                background-color: $color-beige;
                 border-radius: 50%;
+
+                &.done {
+                    background-color: $color-green;
+                }
 
                 .content {
                     position: absolute;

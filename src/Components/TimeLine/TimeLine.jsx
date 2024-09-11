@@ -17,7 +17,7 @@ export default function TimeLine() {
                         timeLineData.map((time, idx) => {
                             return (
                                 <div key={idx} className={`${s.dot} ${idx % 2 ? s.left : s.right}`}>
-                                    <div className={s.dot_wrapper}>
+                                    <div className={`${s.dot_wrapper} ${time.done ? s.done : ''}`}>
                                         <div className={s.content}>
                                             <div className={s.title}>{t(time.title)}</div>
                                             <div className={s.info}>
