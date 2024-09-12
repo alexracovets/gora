@@ -5,6 +5,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 250px;
+    padding-bottom: 50px;
 
     .contacts {
         display: flex;
@@ -49,6 +50,23 @@ footer {
                         margin-right: 0;
                     }
                 }
+            }
+
+            .site_link {
+                color: $color-white;
+                font-size: 32px;
+                line-height: 38.4px;
+                font-weight: 350;
+                margin-bottom: 60px;
+            }
+
+            .link_info {
+                color: $color-lightYellow;
+                font-size: 20px;
+                line-height: 24.52px;
+                font-family: $font-Centurygothic;
+                max-width: 462px;
+                margin-bottom: 50px;
             }
         }
     }
