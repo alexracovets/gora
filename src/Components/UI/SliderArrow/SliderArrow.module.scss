@@ -1,0 +1,29 @@
+.arrowPrev,
+.arrowNext {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+
+    &.bottom {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+.arrowPrev {
+    left: 0;
+    transform: rotate(180deg);
+
+    &.bottom {
+        left: 45%;
+    }
+}
+
+.arrowNext {
+    right: 0;
+
+    &.bottom {
+        right: 45%;
+    }
+}

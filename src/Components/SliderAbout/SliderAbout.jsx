@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
-import PropTypes from 'prop-types';
 import Slider from "react-slick";
 
 import sliderAboutData from "../../data/sliderAboutData";
+import SliderArrow from "../UI/SliderArrow/SliderArrow";
 
 import s from './SliderAbout.module.scss';
+
 export default function SliderAbout() {
     const { t } = useTranslation();
 
@@ -16,8 +17,8 @@ export default function SliderAbout() {
         autoplay: true,
         autoplaySpeed: 6000,
         pauseOnHover: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        nextArrow: <SliderArrow isPrev={false} />,
+        prevArrow: <SliderArrow isPrev={true} />
     };
 
     return (
@@ -41,24 +42,3 @@ export default function SliderAbout() {
         </Slider>
     )
 }
-
-function SampleNextArrow({ onClick }) {
-    return (
-        <img className={s.arrowNext}
-            src="./img/slider/about/arrow/arrow.svg"
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow({ onClick }) {
-    return (
-        <img className={s.arrowPrev}
-            src="./img/slider/about/arrow/arrow.svg"
-            onClick={onClick}
-        />
-    )
-}
-
-SampleNextArrow.propTypes = { onClick: PropTypes.func };
-SamplePrevArrow.propTypes = { onClick: PropTypes.func };

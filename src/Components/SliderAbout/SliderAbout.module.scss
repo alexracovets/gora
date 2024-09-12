@@ -76,19 +76,4 @@
     }
 }
 
-.arrowPrev,
-.arrowNext {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.arrowPrev {
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.arrowNext {
-    right: 0;
-}
+ 
