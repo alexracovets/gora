@@ -16,7 +16,7 @@ export default function Patron() {
                 <Title>{t("title.patron")}</Title>
                 <div className={s.patron_type}>
                     {patronData.map((item, idx) => {
-                        return <Item key={idx} item={item} />
+                        return <Item key={idx} item={item} idx={idx} />
                     })}
                 </div>
             </Container>
