@@ -13,6 +13,12 @@
     box-shadow: 0 0 40px 0 #3E5837;
     letter-spacing: 1px;
 
+    @media (max-width:$media-mobile) {
+        font-size: 16px;
+        line-height: 19.2px;
+        padding: 14px 28px;
+    }
+
     &.small {
         font-size: 21px;
         line-height: 25.24px;

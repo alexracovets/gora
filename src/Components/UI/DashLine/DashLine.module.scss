@@ -10,4 +10,10 @@
     outline: none;
     unicode-bidi: bidi-override;
     border-style: solid;
+
+
+    @media (max-width:$media-mobile) {
+        border-width: 1px;
+        max-width: 152px;
+    }
 }

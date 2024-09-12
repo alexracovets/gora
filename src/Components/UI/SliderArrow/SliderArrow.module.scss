@@ -1,9 +1,18 @@
+@import '../../../global/variable.scss';
+
 .arrowPrev,
 .arrowNext {
     position: absolute;
+    width: 70px;
+    height: 70px;
     top: 50%;
     z-index: 1;
     cursor: pointer;
+
+    @media (max-width:$media-mobile) {
+        top: auto;
+        bottom: 0;
+    }
 
     &.bottom {
         top: auto;
@@ -15,6 +24,10 @@
     left: 0;
     transform: rotate(180deg);
 
+    @media (max-width:$media-mobile) {
+        left: 25%;
+    }
+
     &.bottom {
         left: 45%;
     }
@@ -22,6 +35,10 @@
 
 .arrowNext {
     right: 0;
+
+    @media (max-width:$media-mobile) {
+        right: 25%;
+    }
 
     &.bottom {
         right: 45%;

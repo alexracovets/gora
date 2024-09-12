@@ -10,6 +10,7 @@ export default function SliderAbout() {
     const { t } = useTranslation();
 
     const settings = {
+        className: s.slider,
         dots: false,
         infinite: true,
         slidesToShow: 1,

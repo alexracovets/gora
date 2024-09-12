@@ -15,6 +15,12 @@ html {
   position: relative;
 }
 
+section,
+footer,
+header {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }

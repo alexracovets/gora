@@ -6,13 +6,17 @@
     position: relative;
     z-index: 0;
 
-    .title {
-        font-size: 64px;
-        line-height: 62px;
-        font-weight: 700;
-        color: $color-beige;
-        text-align: center;
-        text-transform: uppercase;
+    @media (max-width:$media-mobile) {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        @media (max-width:$media-mobile) {
+            display: none;
+        }
     }
 
     .we_are {
@@ -26,6 +30,13 @@
         margin: 0 auto;
         margin-top: 50px;
         margin-bottom: 40px;
+
+        @media (max-width:$media-mobile) {
+            font-size: 18px;
+            line-height: 21.6px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
     }
 
     .help {
@@ -40,5 +51,12 @@
         margin: 0 auto;
         margin-top: 40px;
         margin-bottom: 50px;
+
+        @media (max-width:$media-mobile) {
+            font-size: 13px;
+            line-height: 15.94px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
     }
 }
