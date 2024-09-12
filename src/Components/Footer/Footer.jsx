@@ -4,8 +4,8 @@ import s from './Footer.module.scss';
 export default function Footer() {
 
     return (
-        <Container>
-            <footer className={s.footer}>
+        <footer>
+            <Container>
                 <div className={s.contacts}>
                     <div className={s.title}>
                         Контакти
@@ -26,7 +26,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            </footer>
-        </Container>
+            </Container>
+        </footer>
     )
 }
