@@ -1,72 +1,100 @@
 @import '../../global/variable.scss';
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 250px;
     padding-bottom: 50px;
 
-    .contacts {
+    .footer_wrapper {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
-        .title {
-            color: $color-beige;
-            font-size: 70px;
-            line-height: 84px;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 80px;
-        }
-
-        .cosial {
+        .contacts {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
 
-            .name {
-                color: $color-white;
-                font-size: 32px;
-                line-height: 38.4px;
-                font-weight: 700;
+            .title {
+                color: $color-beige;
+                font-size: 70px;
+                line-height: 84px;
                 text-transform: uppercase;
-                margin-bottom: 50px;
+                font-weight: 700;
+                margin-bottom: 80px;
             }
 
-            .links_icons {
+            .cosial {
                 display: flex;
                 justify-content: flex-start;
-                align-items: center;
-                margin-bottom: 50px;
+                align-items: flex-start;
+                flex-direction: column;
 
-                .item {
-                    margin-right: 20px;
+                .name {
+                    color: $color-white;
+                    font-size: 32px;
+                    line-height: 38.4px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 50px;
+                }
 
-                    &:last-of-type {
-                        margin-right: 0;
+                .links_icons {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 50px;
+
+                    .item {
+                        margin-right: 20px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
                     }
+                }
+
+                .site_link {
+                    color: $color-white;
+                    font-size: 32px;
+                    line-height: 38.4px;
+                    font-weight: 350;
+                    margin-bottom: 60px;
+                }
+
+                .link_info {
+                    color: $color-lightYellow;
+                    font-size: 20px;
+                    line-height: 24.52px;
+                    font-family: $font-Centurygothic;
+                    max-width: 462px;
+                    margin-bottom: 50px;
+                }
+
+                button {
+                    margin: 0;
                 }
             }
 
-            .site_link {
-                color: $color-white;
-                font-size: 32px;
-                line-height: 38.4px;
-                font-weight: 350;
-                margin-bottom: 60px;
+
+        }
+
+        .map_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .map {
+                width: 781px;
+                height: 455px;
+                background-color: #D9D9D9;
+                border-radius: 30px;
+                margin-bottom: 150px;
             }
 
-            .link_info {
-                color: $color-lightYellow;
-                font-size: 20px;
-                line-height: 24.52px;
-                font-family: $font-Centurygothic;
-                max-width: 462px;
-                margin-bottom: 50px;
+            button {
+                margin: 0;
             }
         }
     }
