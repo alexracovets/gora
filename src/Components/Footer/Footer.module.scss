@@ -1,0 +1,55 @@
+@import '../../global/variable.scss';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 250px;
+
+    .contacts {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .title {
+            color: $color-beige;
+            font-size: 70px;
+            line-height: 84px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 80px;
+        }
+
+        .cosial {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .name {
+                color: $color-white;
+                font-size: 32px;
+                line-height: 38.4px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 50px;
+            }
+
+            .links_icons {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 50px;
+
+                .item {
+                    margin-right: 20px;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
