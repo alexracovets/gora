@@ -8,6 +8,7 @@ import TimeLine from "../TimeLine/TimeLine";
 import CurrentState from "../CurrentState/CurrentState";
 import Comitet from "../Comitet/Comitet";
 import GiftSection from "../GiftSection/GiftSection";
+import Footer from "../Footer/Footer";
 
 
 export default function Main() {
@@ -23,6 +24,7 @@ export default function Main() {
             <CurrentState />
             <Comitet />
             <GiftSection />
+            <Footer />
         </main>
     )
 }

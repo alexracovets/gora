@@ -1,4 +1,4 @@
-import pattern from "/img/pattern.svg";
+import pattern from "/img/pattern/pattern_gray.svg";
 
 
 import s from './BackgroundPattern.module.scss';

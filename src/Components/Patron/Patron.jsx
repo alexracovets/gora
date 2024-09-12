@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 
 import Container from "../Container/Container";
 import Title from "../UI/Title/Title";
+import Item from "./Item/Item";
 
 import s from './Patron.module.scss';
-import Item from "./Item/Item";
 export default function Patron() {
     const { t } = useTranslation();
 

@@ -56,6 +56,6 @@ export default function GiftSlider({ slides, available }) {
 }
 
 GiftSlider.propTypes = {
-    slides: PropTypes.object,
+    slides: PropTypes.array,
     available: PropTypes.bool
 }; 
