@@ -159,7 +159,8 @@
         }
     },
     "dash_text": {
-        "huge_patron": "Вагомі внески"
+        "huge_patron": "Вагомі внески",
+        "available_patron": "Доступні внески"
     },
     "gift": {
         "huge": {
