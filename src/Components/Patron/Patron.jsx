@@ -7,18 +7,22 @@ import Item from "./Item/Item";
 
 import patronData from "../../data/patronData";
 import patronDataMobile from "../../data/patronDataMobile";
+import SliderMobile from "../SliderMobile/SliderMobile";
 
 import s from './Patron.module.scss';
 export default function Patron() {
     const { t } = useTranslation();
     const [data, setData] = useState([]);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
 
     useEffect(() => {
         const updateData = () => {
             if (window.innerWidth <= 430) {
                 setData(patronDataMobile);
+                setIsDesktop(false);
             } else {
                 setData(patronData);
+                setIsDesktop(true);
             }
         };
 
@@ -35,12 +39,27 @@ export default function Patron() {
         <section className={s.patron}>
             <Container>
                 <Title>{t("title.patron")}</Title>
-                <div className={s.patron_type}>
-                    {data.map((item, idx) => {
-                        return <Item key={idx} item={item} idx={idx} />
-                    })}
-                </div>
+                {data
+                    ?
+                    <>
+                        {
+                            isDesktop ?
+                                <div className={s.patron_type} >
+                                    {
+                                        data.map((item, idx) => {
+                                            return <Item key={idx} item={item} idx={idx} />
+                                        })
+                                    }
+                                </div> :
+                                <SliderMobile styleName={s.patron_type} >
+                                    {data.map((item, idx) => {
+                                        return <Item key={idx} item={item} idx={idx} />
+                                    })}
+                                </SliderMobile>
+                        }
+                    </>
+                    : null}
             </Container>
-        </section>
+        </section >
     )
 }

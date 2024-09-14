@@ -9,7 +9,7 @@ export default function Item({ item, idx }) {
     const { t } = useTranslation();
 
     return (
-        <div className={s.item_wrapper}>
+        <div className={s.item_wrapper} index={`item_${idx}`}>
             <div className={s.item}>
                 <div className={s.background_wrapper}>
                     <BackgroundImage idx={idx} />
