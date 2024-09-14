@@ -18,20 +18,20 @@ const patronData = [
         ],
         patrons: [
             {
-                name: "Патронат «хранитель»",
-                price: "€1.500.000"
+                name: "patron.2.texts.patrons.0.name",
+                price: "patron.2.texts.patrons.0.price"
             },
             {
-                name: "Патронат «відбудовник»",
-                price: "€800.000"
+                name: "patron.2.texts.patrons.1.name",
+                price: "patron.2.texts.patrons.1.price"
             },
             {
-                name: "Патронат «живитель»",
-                price: "€600.000"
+                name: "patron.2.texts.patrons.2.name",
+                price: "patron.2.texts.patrons.2.price"
             },
             {
-                name: "Патронат «Бережич»",
-                price: "€100.000"
+                name: "patron.2.texts.patrons.3.name",
+                price: "patron.2.texts.patrons.3.price"
             }
         ],
         secondText: [

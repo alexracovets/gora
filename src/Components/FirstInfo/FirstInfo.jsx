@@ -11,6 +11,6 @@ export default function FirstInfo() {
     }
 
     return (
-        <InfoSection content={content} />
+        <InfoSection content={content} fullscreen />
     )
 }

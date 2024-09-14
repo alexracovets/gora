@@ -11,6 +11,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: auto;
+    }
+
+    &:not(.full_screen) {
+        @media (max-width:$media-mobile) {
+            margin-top: 130px;
+            margin-bottom: 200px;
+        }
+    }
+
+    &.full_screen {
+        @media (max-width:$media-mobile) {
+            min-height: 100dvh;
+        }
     }
 
     button {

@@ -10,7 +10,7 @@ export default function CurrentState() {
     return (
         <section className={s.state}>
             <Container>
-                <Title>{t("title.building")}</Title>
+                <Title>{t("title.current_state")}</Title>
                 <div className={s.video_wrapper}>
                     <video src=""></video>
                 </div>

@@ -7,11 +7,11 @@ import Button from "../UI/Button/Button";
 import Title from "../UI/Title/Title";
 
 import s from './InfoSection.module.scss';
-export default function InfoSection({ content }) {
+export default function InfoSection({ content, fullscreen }) {
     const { t } = useTranslation();
 
     return (
-        <section className={s.info}>
+        <section className={`${s.info} ${fullscreen ? s.full_screen:''}`}>
             <Container>
                 <Title>{t(content.title)}</Title>
                 <p className={s.we_are}>{t(content.startText)}</p>
@@ -31,5 +31,6 @@ export default function InfoSection({ content }) {
 }
 
 InfoSection.propTypes = {
-    content: PropTypes.object
+    content: PropTypes.object,
+    fullscreen: PropTypes.bool
 };

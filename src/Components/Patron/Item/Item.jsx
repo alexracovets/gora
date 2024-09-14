@@ -23,8 +23,8 @@ export default function Item({ item, idx }) {
                         {item.patrons && <div className={s.patrons}>
                             {item.patrons.map((item, idx) => {
                                 return <div key={idx} className={s.patron}>
-                                    <span className={s.name}>{item.name}</span>
-                                    <span className={s.price}>{item.price}</span>
+                                    <span className={s.name}>{t(item.name)}</span>
+                                    <span className={s.price}>{t(item.price)}</span>
                                 </div>
                             })}
                         </div>

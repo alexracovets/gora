@@ -1,8 +1,14 @@
 @import '../../global/variable.scss';
 
 .time_line {
-    padding-top: 150px;
+    margin-top: 150px;
     padding-bottom: 79px;
+
+    @media (max-width:$media-mobile) {
+        margin: 0;
+        padding-bottom: 25px;
+        margin-bottom: 150px;
+    }
 
     .line {
         height: 2236px;
@@ -13,10 +19,23 @@
         margin: 0 auto;
         margin-top: 139.5px;
 
+        @media (max-width:$media-mobile) {
+            width: 1px;
+            border-radius: 1px;
+            height: 1558px;
+            margin: 0;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+
         .dot {
             position: absolute;
             top: 0;
             left: calc(1.5px - 79px/2);
+
+            @media (max-width:$media-mobile) {
+                left: calc(1.5px - 25px);
+            }
 
             &:nth-of-type(1) {
                 top: 0;
@@ -24,34 +43,66 @@
 
             &:nth-of-type(2) {
                 top: 236px;
+
+                @media (max-width:$media-mobile) {
+                    top: 164px;
+                }
             }
 
             &:nth-of-type(3) {
                 top: 586px;
+
+                @media (max-width:$media-mobile) {
+                    top: 431px;
+                }
             }
 
             &:nth-of-type(4) {
                 top: 849px;
+
+                @media (max-width:$media-mobile) {
+                    top: 663px;
+                }
             }
 
             &:nth-of-type(5) {
                 top: 1084px;
+
+                @media (max-width:$media-mobile) {
+                    top: 825px;
+                }
             }
 
             &:nth-of-type(6) {
                 top: 1274px;
+
+                @media (max-width:$media-mobile) {
+                    top: 960px;
+                }
             }
 
             &:nth-of-type(7) {
                 top: 1570px;
+
+                @media (max-width:$media-mobile) {
+                    top: 1149px;
+                }
             }
 
             &:nth-of-type(8) {
                 top: 1951px;
+
+                @media (max-width:$media-mobile) {
+                    top: 1408px;
+                }
             }
 
             &:nth-of-type(9) {
                 top: 2227px;
+
+                @media (max-width:$media-mobile) {
+                    top: 1533px;
+                }
             }
 
             &.right {
@@ -61,6 +112,10 @@
                         text-align: left;
                         align-items: flex-start;
                         margin-left: 30px;
+
+                        @media (max-width:$media-mobile) {
+                            left: 40px;
+                        }
                     }
                 }
             }
@@ -72,6 +127,15 @@
                         text-align: right;
                         align-items: flex-end;
                         margin-right: 30px;
+
+                        @media (max-width:$media-mobile) {
+                            text-align: left;
+                            align-items: flex-start;
+                            right: auto;
+                            left: 40px;
+                            margin-right: 0;
+                            margin-left: 30px;
+                        }
                     }
                 }
             }
@@ -82,6 +146,11 @@
                 height: 79px;
                 background-color: $color-beige;
                 border-radius: 50%;
+
+                @media (max-width:$media-mobile) {
+                    width: 50px;
+                    height: 50px;
+                }
 
                 &.done {
                     background-color: $color-green;
@@ -96,19 +165,36 @@
                     flex-direction: column;
                     width: 636px;
 
+                    @media (max-width:$media-mobile) {
+                        width: 286px;
+                        padding: 0;
+                    }
+
                     .title {
                         font-size: 40px;
                         line-height: 48px;
                         margin-bottom: 13px;
+
+                        @media (max-width:$media-mobile) {
+                            font-size: 32px;
+                            line-height: 38.4px;
+                            margin-bottom: 15px;
+                        }
                     }
 
                     .info {
-                        font-size: 20px;
-                        line-height: 24.52px;
                         font-family: $font-Centurygothic;
 
                         p {
+                            font-size: 20px;
+                            line-height: 24.52px;
                             margin-bottom: 16px;
+
+                            @media (max-width:$media-mobile) {
+                                font-size: 13px;
+                                line-height: 15.94px;
+                                margin-bottom: 15px;
+                            }
                         }
                     }
                 }

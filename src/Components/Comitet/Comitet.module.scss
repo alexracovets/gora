@@ -3,6 +3,11 @@
 .comitet {
     padding-top: 150px;
 
+    @media (max-width:$media-mobile) {
+        padding: 0;
+        margin-top: 130px;
+    }
+
     .comitet_wrapper {
         display: flex;
         justify-content: center;

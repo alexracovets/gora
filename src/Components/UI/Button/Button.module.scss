@@ -23,5 +23,11 @@
         font-size: 21px;
         line-height: 25.24px;
         padding: 16.5px 33px;
+
+        @media (max-width:$media-mobile) {
+            font-size: 16px;
+            line-height: 19.2px;
+            padding: 13px 28px;
+        }
     }
 }
