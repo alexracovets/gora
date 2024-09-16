@@ -39,21 +39,24 @@ export default function Footer() {
                                     <img src="./img/social/facebook.svg" alt="facebook" />
                                 </a>
                             </div>
-                            <a href="https://wa.me/380503525236" className={s.site_link}>
-                                +380503525236 <br />
-                                (WhatsApp, Signal)
-                            </a>
-                            <a href="mailto:pilgrimage_center@ukr.net" className={s.site_link}>
-                                pilgrimage_center@ukr.net
-                            </a>
-                            <Button>{t("btn.tel")}</Button>
+                            <div className={s.links_wrapper}>
+                                <a href="https://wa.me/380503525236" className={s.site_link}>
+                                    +380503525236 <br />
+                                    (WhatsApp, Signal)
+                                </a>
+                                <a href="mailto:pilgrimage_center@ukr.net" className={s.site_link}>
+                                    pilgrimage_center@ukr.net
+                                </a>
+                            </div>
+
+                            <Button footer>{t("btn.tel")}</Button>
                         </div>
                     </div>
                     <div className={s.map_wrapper}>
                         <div className={s.map}>
                             <GoogleMap />
                         </div>
-                        <Button>{t("btn.docs")}</Button>
+                        <Button footer>{t("btn.docs")}</Button>
                     </div>
                 </div>
             </Container>

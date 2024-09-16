@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 import s from './Button.module.scss';
-export default function Button({ children, small }) {
+export default function Button({ children, small, footer }) {
 
     return (
-        <button className={small ? s.button + ' ' + s.small : s.button}>
+        <button className={`${s.button} ${small ? s.small : ''}  ${footer ? s.footer_btn : ''}`}>
             {children}
         </button>
     )
@@ -12,6 +12,7 @@ export default function Button({ children, small }) {
 
 Button.propTypes = {
     children: PropTypes.node,
+    footer: PropTypes.bool,
     small: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string

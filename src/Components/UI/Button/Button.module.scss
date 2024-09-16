@@ -30,4 +30,12 @@
             padding: 13px 28px;
         }
     }
+
+    &.footer_btn {
+        @media (max-width:$media-mobile) {
+            width: 260px;
+            padding: 0;
+            height: 47px;
+        }
+    }
 }
