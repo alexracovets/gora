@@ -10,7 +10,7 @@ export default function About() {
     const { t } = useTranslation();
 
     return (
-        <section className={s.about}>
+        <section className={s.about} id="about">
             <Container>
                 <Title>{t("title.about")}</Title>
                 <SliderAbout />

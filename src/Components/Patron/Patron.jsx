@@ -36,7 +36,7 @@ export default function Patron() {
     }, []);
 
     return (
-        <section className={s.patronat}>
+        <section className={s.patronat} id="patron">
             <Container>
                 <Title>{t("title.patron")}</Title>
                 {data

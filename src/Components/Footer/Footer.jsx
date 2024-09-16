@@ -9,7 +9,7 @@ export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer>
+        <footer id="contact">
             <Container>
                 <div className={s.footer_wrapper}>
                     <div className={s.contacts}>

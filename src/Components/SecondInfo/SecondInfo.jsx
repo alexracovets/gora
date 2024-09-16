@@ -8,7 +8,8 @@ export default function SecondInfo() {
             "secondInfo.1.0",
             "secondInfo.1.1"
         ],
-        btn: "btn.join"
+        btn: "btn.join",
+        id: "join"
     }
 
     return (

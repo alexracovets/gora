@@ -11,7 +11,7 @@ export default function InfoSection({ content, fullscreen }) {
     const { t } = useTranslation();
 
     return (
-        <section className={`${s.info} ${fullscreen ? s.full_screen:''}`}>
+        <section className={`${s.info} ${fullscreen ? s.full_screen : ''}`} id={content.id}>
             <Container>
                 <Title>{t(content.title)}</Title>
                 <p className={s.we_are}>{t(content.startText)}</p>

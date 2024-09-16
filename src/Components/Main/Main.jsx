@@ -1,4 +1,3 @@
-
 import About from "../About/About";
 import Patron from "../Patron/Patron";
 import FirstInfo from "../FirstInfo/FirstInfo";

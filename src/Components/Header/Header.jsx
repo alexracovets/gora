@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 
 import Container from "../Container/Container";
 
@@ -9,35 +10,35 @@ export default function Header() {
     const links = [
         {
             name: t("links.0"),
-            href: "###"
+            href: "#start"
         },
         {
             name: t("links.1"),
-            href: "###"
+            href: "#about"
         },
         {
             name: t("links.2"),
-            href: "###"
+            href: "#patron"
         },
         {
             name: t("links.3"),
-            href: "###"
+            href: "#join"
         },
         {
             name: t("links.4"),
-            href: "###"
+            href: "#time_line"
         },
         {
             name: t("links.5"),
-            href: "###"
+            href: "#comitet"
         },
         {
             name: t("links.6"),
-            href: "###"
+            href: "#gifts"
         },
         {
             name: t("links.7"),
-            href: "###"
+            href: "#contact"
         }
     ]
 
@@ -49,7 +50,7 @@ export default function Header() {
                         {links.map((link, idx) => {
                             return (
                                 <li key={idx}>
-                                    <a href={link.href}>{link.name}</a>
+                                    <Link to={link.href}>{link.name}</Link>
                                 </li>
                             )
                         })}

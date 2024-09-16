@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import Title from "../UI/Title/Title";
 import Container from "../Container/Container";
 import comitetData from "../../data/comitetData";
+import SliderMobile from "../SliderMobile/SliderMobile";
 
 import s from './Comitet.module.scss';
-import SliderMobile from "../SliderMobile/SliderMobile";
 export default function Comitet() {
     const { t } = useTranslation();
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
@@ -30,7 +30,7 @@ export default function Comitet() {
     }, []);
 
     return (
-        <section className={s.comitet}>
+        <section className={s.comitet} id="comitet">
             <Container>
                 <Title>{t("title.comitet")}</Title>
                 {isDesktop ?

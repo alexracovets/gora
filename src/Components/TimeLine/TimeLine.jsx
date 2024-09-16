@@ -9,7 +9,7 @@ export default function TimeLine() {
     const { t } = useTranslation();
 
     return (
-        <section className={s.time_line}>
+        <section className={s.time_line} id="time_line">
             <Container>
                 <Title>{t("title.building")}</Title>
                 <div className={s.line}>
