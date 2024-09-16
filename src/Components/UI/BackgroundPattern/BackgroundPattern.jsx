@@ -1,11 +1,31 @@
 import pattern from "/img/pattern/pattern_gray.svg";
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 import s from './BackgroundPattern.module.scss';
+
 export default function BackgroundPattern({ backgroundHeight }) {
+    const [showPattern, setShowPattern] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setShowPattern(false);
+            setTimeout(() => {
+                setShowPattern(true);
+            }, 0);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <div className={s.pattern} style={{ backgroundImage: `url(${pattern})`, minHeight: `${backgroundHeight}px` }}></div>
-    )
+        showPattern && (
+            <div className={s.pattern} style={{ backgroundImage: `url(${pattern})`, minHeight: `${backgroundHeight}px` }}></div>
+        )
+    );
 }
 
 BackgroundPattern.propTypes = {

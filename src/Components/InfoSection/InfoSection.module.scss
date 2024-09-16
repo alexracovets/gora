@@ -1,8 +1,7 @@
 @import '../../global/variable.scss';
 
 .info {
-    padding-top: 30rem;
-    min-height: 100dvh;
+    padding: 30rem 0;
     position: relative;
     z-index: 0;
 
@@ -21,12 +20,6 @@
 
         @media (max-width:$media-mobile) {
             margin-top: 13rem;
-        }
-    }
-
-    &.full_screen {
-        @media (max-width:$media-mobile) {
-            min-height: 100dvh;
         }
     }
 

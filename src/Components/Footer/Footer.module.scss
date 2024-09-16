@@ -145,6 +145,13 @@ footer {
 
                 }
 
+                a {
+                    @media (max-width:$media-mobile) {
+                        display: block;
+                        width: 26rem;
+                    }
+                }
+
                 button {
                     margin: 0;
 
@@ -165,6 +172,14 @@ footer {
             @media (max-width:$media-mobile) {
                 align-items: center;
                 flex-direction: column-reverse;
+            }
+
+            a {
+                @media (max-width:$media-mobile) {
+                    display: block;
+                    width: 26rem;
+                }
+
             }
 
             .map {
