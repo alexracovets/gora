@@ -13,6 +13,8 @@
         align-items: stretch;
         flex-flow: row wrap;
         margin-top: 5rem;
+        position: relative;
+        z-index: 0;
 
         @media (max-width:$media-mobile) {
             margin-top: 3rem;

@@ -1,11 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
+import { Twirl as Hamburger } from 'hamburger-react';
 
 import Container from "../Container/Container";
 
 import s from './Header.module.scss';
+import { useState } from "react";
 export default function Header() {
     const { t } = useTranslation();
+    const [isOpen, setOpen] = useState(false);
 
     const links = [
         {
@@ -56,6 +59,22 @@ export default function Header() {
                         })}
                     </ul>
                 </nav>
+                <div className={s.burger_wrapper}>
+                    <div className={s.burger}>
+                        <Hamburger toggled={isOpen} toggle={setOpen} className={s.me_burger} color="white" size={36} />
+                    </div>
+                </div>
+                <div className={`${s.navigation_mobile} ${isOpen ? s.active : ''}`}>
+                    <ul>
+                        {links.map((link, idx) => {
+                            return (
+                                <li key={idx}>
+                                    <Link to={link.href} onClick={() => { setOpen(prevIsOpen => !prevIsOpen) }}>{link.name}</Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
             </Container>
         </header>
     )

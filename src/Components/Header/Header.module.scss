@@ -29,4 +29,70 @@ header {
             display: none;
         }
     }
+
+    .burger_wrapper {
+        position: fixed;
+        top: 50px;
+        right: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 11;
+
+        .burger {
+            display: none;
+            padding: 7px 3px;
+
+            @media (max-width:$media-mobile) {
+                display: block;
+            }
+
+            .me_burger {
+                background-color: aqua;
+            }
+        }
+    }
+
+    .navigation_mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: $color-bg;
+        transform: translateY(-100%);
+        z-index: 10;
+        transition: all ease-in-out 300ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &.active {
+            transform: translateY(0%);
+        }
+
+        ul {
+            li {
+                text-align: center;
+
+                a {
+                    font-size: 24px;
+                    line-height: 28.8px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    padding: 15px;
+                    display: block;
+
+                    &:hover {
+                        color: $color-green;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
