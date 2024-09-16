@@ -2,11 +2,13 @@ import { useTranslation } from "react-i18next";
 import PropTypes from 'prop-types';
 
 import Button from "../../UI/Button/Button";
+import modalStore from '../../../store/modalStore';
+import BackgroundImage from "./BackgroundImage/BackgroundImage";
 
 import s from '../Patron.module.scss';
-import BackgroundImage from "./BackgroundImage/BackgroundImage";
 export default function Item({ item, idx }) {
     const { t } = useTranslation();
+    const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     return (
         <div className={s.item_wrapper} index={`item_${idx}`}>
@@ -34,7 +36,7 @@ export default function Item({ item, idx }) {
                         })}
                     </div>
                     <div className={s.btn}>
-                        <Button small>{t("btn.contribution")}</Button>
+                        <Button small click={() => setIsPayModal(true)}>{t("btn.contribution")}</Button>
                     </div>
                 </div>
             </div>

@@ -17,5 +17,11 @@
 
     &.modal {
         font-size: 5rem;
+        line-height: 6rem;
+
+        @media (max-width:$media-mobile) {
+            font-size: 2.6rem;
+            line-height: 3rem;
+        }
     }
 }

@@ -6,9 +6,12 @@ import DashLine from "../UI/DashLine/DashLine";
 import Button from "../UI/Button/Button";
 import Title from "../UI/Title/Title";
 
+import modalStore from '../../store/modalStore';
+
 import s from './InfoSection.module.scss';
 export default function InfoSection({ content, fullscreen }) {
     const { t } = useTranslation();
+    const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     return (
         <section className={`${s.info} ${fullscreen ? s.full_screen : ''}`} id={content.id}>
@@ -27,7 +30,7 @@ export default function InfoSection({ content, fullscreen }) {
                         return <p key={idx} dangerouslySetInnerHTML={{ __html: t(item) }} />
                     })}
                 </div>
-                {content.btn ? <Button>{t(content.btn)}</Button> : null}
+                {content.btn ? <Button click={() => setIsPayModal(true)}>{t(content.btn)}</Button> : null}
 
             </Container>
         </section >

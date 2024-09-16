@@ -49,8 +49,9 @@ export default function Footer() {
                                     pilgrimage_center@ukr.net
                                 </a>
                             </div>
-
-                            <Button footer>{t("btn.tel")}</Button>
+                            <a href="tel:+380503525236">
+                                <Button footer>{t("btn.tel")}</Button>
+                            </a>
                         </div>
                     </div>
                     <div className={s.map_wrapper}>

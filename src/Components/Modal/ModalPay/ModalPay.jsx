@@ -58,8 +58,9 @@ export default function ModalPay() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                     exit={{ opacity: 0 }}
+                    onClick={() => setIsPayModal(false)}
                 >
-                    <div className={s.modal}>
+                    <div className={s.modal} onClick={(e) => e.stopPropagation()}>
                         <div className={s.close_form} onClick={() => setIsPayModal(false)}>
                             <div className={s.lines}>
                                 <span></span>
