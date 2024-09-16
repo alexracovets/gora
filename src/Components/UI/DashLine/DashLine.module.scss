@@ -1,11 +1,11 @@
 @import '../../../global/variable.scss';
 
 .dash {
-    border-width: 4px;
+    border-width: 0.4rem;
     border-color: #EBD7B2;
     box-shadow: none;
     border-radius: 4px;
-    max-width: 237px;
+    max-width: 23.7rem;
     margin: 0 auto;
     outline: none;
     unicode-bidi: bidi-override;
@@ -13,7 +13,7 @@
 
 
     @media (max-width:$media-mobile) {
-        border-width: 1px;
-        max-width: 152px;
+        border-width: 0.1rem;
+        max-width: 15.2rem;
     }
 }

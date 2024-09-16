@@ -13,6 +13,11 @@ html {
   background-color: $color-bg;
   font-family: $font-KyivTypeSans;
   position: relative;
+  font-size: calc(100vw / 1920 *10);
+
+  @media (max-width:$media-mobile) {
+    font-size: calc(100vw / 430 *10);
+  }
 }
 
 section,

@@ -1,40 +1,41 @@
 @import '../../global/variable.scss';
 
 .time_line {
-    margin-top: 150px;
-    padding-bottom: 79px;
+    margin-top: 32rem;
+    padding-bottom: 7.9rem;
 
     @media (max-width:$media-mobile) {
         margin: 0;
-        padding-bottom: 25px;
-        margin-bottom: 150px;
+        margin-top: 20rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 15rem;
     }
 
     .line {
-        height: 2236px;
-        width: 3px;
+        height: 223.6rem;
+        width: 0.3rem;
         background-color: $color-white;
         position: relative;
-        border-radius: 3px;
+        border-radius: 0.3rem;
         margin: 0 auto;
-        margin-top: 139.5px;
+        margin-top: 13.95rem;
 
         @media (max-width:$media-mobile) {
-            width: 1px;
-            border-radius: 1px;
-            height: 1558px;
+            width: 0.1rem;
+            border-radius: 0.1rem;
+            height: 155.8rem;
             margin: 0;
-            margin-left: 25px;
-            margin-top: 30px;
+            margin-left: 2.5rem;
+            margin-top: 3rem;
         }
 
         .dot {
             position: absolute;
             top: 0;
-            left: calc(1.5px - 79px/2);
+            left: calc(0.15rem - 7.9rem/2);
 
             @media (max-width:$media-mobile) {
-                left: calc(1.5px - 25px);
+                left: calc(0.15rem - 2.5rem);
             }
 
             &:nth-of-type(1) {
@@ -42,79 +43,79 @@
             }
 
             &:nth-of-type(2) {
-                top: 236px;
+                top: 23.6rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 164px;
+                    top: 16.4rem;
                 }
             }
 
             &:nth-of-type(3) {
-                top: 586px;
+                top: 58.6rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 431px;
+                    top: 43.1rem;
                 }
             }
 
             &:nth-of-type(4) {
-                top: 849px;
+                top: 84.9rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 663px;
+                    top: 66.3rem;
                 }
             }
 
             &:nth-of-type(5) {
-                top: 1084px;
+                top: 108.4rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 825px;
+                    top: 82.5rem;
                 }
             }
 
             &:nth-of-type(6) {
-                top: 1274px;
+                top: 127.4rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 960px;
+                    top: 96rem;
                 }
             }
 
             &:nth-of-type(7) {
-                top: 1570px;
+                top: 157rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 1149px;
+                    top: 114.9rem;
                 }
             }
 
             &:nth-of-type(8) {
-                top: 1951px;
+                top: 195.1rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 1408px;
+                    top: 140.8rem;
                 }
             }
 
             &:nth-of-type(9) {
-                top: 2227px;
+                top: 222.7rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 1533px;
+                    top: 153.3rem;
                 }
             }
 
             &.right {
                 .dot_wrapper {
                     .content {
-                        left: 79px;
+                        left: 7.9rem;
                         text-align: left;
                         align-items: flex-start;
-                        margin-left: 30px;
+                        margin-left: 3rem;
 
                         @media (max-width:$media-mobile) {
-                            left: 40px;
+                            left: 4rem;
                         }
                     }
                 }
@@ -123,18 +124,18 @@
             &.left {
                 .dot_wrapper {
                     .content {
-                        right: 79px;
+                        right: 7.9rem;
                         text-align: right;
                         align-items: flex-end;
-                        margin-right: 30px;
+                        margin-right: 3rem;
 
                         @media (max-width:$media-mobile) {
                             text-align: left;
                             align-items: flex-start;
                             right: auto;
-                            left: 40px;
+                            left: 4rem;
                             margin-right: 0;
-                            margin-left: 30px;
+                            margin-left: 3rem;
                         }
                     }
                 }
@@ -142,14 +143,14 @@
 
             .dot_wrapper {
                 position: relative;
-                width: 79px;
-                height: 79px;
+                width: 7.9rem;
+                height: 7.9rem;
                 background-color: $color-beige;
                 border-radius: 50%;
 
                 @media (max-width:$media-mobile) {
-                    width: 50px;
-                    height: 50px;
+                    width: 5rem;
+                    height: 5rem;
                 }
 
                 &.done {
@@ -163,22 +164,22 @@
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
-                    width: 636px;
+                    width: 63.6rem;
 
                     @media (max-width:$media-mobile) {
-                        width: 286px;
+                        width: 28.6rem;
                         padding: 0;
                     }
 
                     .title {
-                        font-size: 40px;
-                        line-height: 48px;
-                        margin-bottom: 13px;
+                        font-size: 4rem;
+                        line-height: 4.8rem;
+                        margin-bottom: 1.3rem;
 
                         @media (max-width:$media-mobile) {
-                            font-size: 32px;
-                            line-height: 38.4px;
-                            margin-bottom: 15px;
+                            font-size: 3.2rem;
+                            line-height: 3.84rem;
+                            margin-bottom: 1.5rem;
                         }
                     }
 
@@ -186,14 +187,14 @@
                         font-family: $font-Centurygothic;
 
                         p {
-                            font-size: 20px;
-                            line-height: 24.52px;
-                            margin-bottom: 16px;
+                            font-size: 2rem;
+                            line-height: 2.452rem;
+                            margin-bottom: 1.6rem;
 
                             @media (max-width:$media-mobile) {
-                                font-size: 13px;
-                                line-height: 15.94px;
-                                margin-bottom: 15px;
+                                font-size: 1.3rem;
+                                line-height: 1.594rem;
+                                margin-bottom: 1.5rem;
                             }
                         }
                     }

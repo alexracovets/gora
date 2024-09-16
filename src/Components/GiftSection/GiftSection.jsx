@@ -10,7 +10,8 @@ import s from './GiftSection.module.scss';
 export default function GiftSection() {
     const { t } = useTranslation();
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide1, setCurrentSlide1] = useState(0);
+    const [currentSlide2, setCurrentSlide2] = useState(0);
 
     useEffect(() => {
         const updateData = () => {
@@ -61,14 +62,14 @@ export default function GiftSection() {
                 <p className={s.text}>{t("dash_text.huge_patron")}</p>
             </div>
             <div className={s.slider_wrapper}>
-                <GiftSlider setCurrentSlide={setCurrentSlide} styleName={s.slider} >
+                <GiftSlider setCurrentSlide={setCurrentSlide1} styleName={s.slider} >
                     {slides1.map((slide, idx) => {
                         const totalSlides = slides1.length;
-                        const isActive = currentSlide === idx;
-                        const isSecondLeft = currentSlide === 0 ? idx === totalSlides - 1 : idx === currentSlide - 1;
-                        const isSecondRight = currentSlide === totalSlides - 1 ? idx === 0 : idx === currentSlide + 1;
-                        const isThirdLeft = currentSlide === 0 ? idx === totalSlides - 2 : idx === currentSlide - 2;
-                        const isThirdRight = currentSlide === totalSlides - 2 ? idx === 0 : idx === currentSlide + 2;
+                        const isActive = currentSlide1 === idx;
+                        const isSecondLeft = currentSlide1 === 0 ? idx === totalSlides - 1 : idx === currentSlide1 - 1;
+                        const isSecondRight = currentSlide1 === totalSlides - 1 ? idx === 0 : idx === currentSlide1 + 1;
+                        const isThirdLeft = currentSlide1 === 0 ? idx === totalSlides - 2 : idx === currentSlide1 - 2;
+                        const isThirdRight = currentSlide1 === totalSlides - 2 ? idx === 0 : idx === currentSlide1 + 2;
 
                         return (
                             <div
@@ -92,14 +93,14 @@ export default function GiftSection() {
                 <p className={s.text}>{t("dash_text.available_patron")}</p>
             </div>
             <div className={s.slider_wrapper}>
-                <GiftSlider setCurrentSlide={setCurrentSlide} styleName={s.slider} >
+                <GiftSlider setCurrentSlide={setCurrentSlide2} styleName={s.slider} >
                     {slides1.map((slide, idx) => {
                         const totalSlides = slides1.length;
-                        const isActive = currentSlide === idx;
-                        const isSecondLeft = currentSlide === 0 ? idx === totalSlides - 1 : idx === currentSlide - 1;
-                        const isSecondRight = currentSlide === totalSlides - 1 ? idx === 0 : idx === currentSlide + 1;
-                        const isThirdLeft = currentSlide === 0 ? idx === totalSlides - 2 : idx === currentSlide - 2;
-                        const isThirdRight = currentSlide === totalSlides - 2 ? idx === 0 : idx === currentSlide + 2;
+                        const isActive = currentSlide2 === idx;
+                        const isSecondLeft = currentSlide2 === 0 ? idx === totalSlides - 1 : idx === currentSlide2 - 1;
+                        const isSecondRight = currentSlide2 === totalSlides - 1 ? idx === 0 : idx === currentSlide2 + 1;
+                        const isThirdLeft = currentSlide2 === 0 ? idx === totalSlides - 2 : idx === currentSlide2 - 2;
+                        const isThirdRight = currentSlide2 === totalSlides - 2 ? idx === 0 : idx === currentSlide2 + 2;
 
                         return (
                             <div

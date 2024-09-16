@@ -1,19 +1,17 @@
 @import '../../../global/variable.scss';
 
 .title {
-    font-size: 70px;
-    line-height: 84px;
+    font-size: 7rem;
+    line-height: 8.4rem;
     font-weight: 700;
     color: $color-beige;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 90px;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
 
 
     @media (max-width:$media-mobile) {
-        padding: 0;
-        font-size: 32px;
-        line-height: 38.4px;
+        font-size: 3.2rem;
+        line-height: 3.84rem;
     }
 }
