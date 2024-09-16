@@ -10,7 +10,6 @@ export default function FirstInfo() {
             "firstInfo.1.0",
             "firstInfo.1.1"
         ],
-        btn: "btn.more",
         id: "start"
     }
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Title from "../UI/Title/Title";
 import DashLine from "../UI/DashLine/DashLine";
 import GiftSlider from "../GiftSlider/GiftSlider";
+import modalStore from '../../store/modalStore';
 
 import s from './GiftSection.module.scss';
 
@@ -12,6 +13,7 @@ export default function GiftSection() {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
     const [currentSlide1, setCurrentSlide1] = useState(0);
     const [currentSlide2, setCurrentSlide2] = useState(0);
+    const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     useEffect(() => {
         const updateData = () => {
@@ -81,7 +83,7 @@ export default function GiftSection() {
                                 <div className={s.item_wrapper}>
                                     <div className={s.name} dangerouslySetInnerHTML={{ __html: t(slide.name) }} />
                                     <div className={s.price} dangerouslySetInnerHTML={{ __html: t(slide.price) }} />
-                                    <button> {t("btn.contribution")} </button>
+                                    <button onClick={() => setIsPayModal(true)}> {t("btn.contribution")} </button>
                                 </div>
                             </div>
                         )
@@ -112,7 +114,7 @@ export default function GiftSection() {
                                 <div className={s.item_wrapper}>
                                     <div className={s.name} dangerouslySetInnerHTML={{ __html: t(slide.name) }} />
                                     <div className={s.price} dangerouslySetInnerHTML={{ __html: t(slide.price) }} />
-                                    <button> {t("btn.contribution")} </button>
+                                    <button onClick={() => setIsPayModal(true)}> {t("btn.contribution")} </button>
                                 </div>
                             </div>
                         )

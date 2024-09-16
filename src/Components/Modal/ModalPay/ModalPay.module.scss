@@ -15,58 +15,101 @@
     z-index: 200;
 
     .modal {
-        width: 1270px;
-        height: 90dvh;
         background-color: $color-bg;
         border-radius: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 0 262px;
+        padding: 50px 70px;
+        position: relative;
 
-        .qr {
-            width: 220px;
-            height: 220px;
-            border-radius: 15px;
-            background-color: rgba(217, 217, 217, 1);
-            margin-bottom: 115px;
-        }
+        .close_form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 58.41px;
+            height: 58.41px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background-color: $color-browne;
 
-        .description {
-            color: $color-white;
-            font-size: 24px;
-            line-height: 29.43px;
-            font-family: $font-Centurygothic;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 60px;
-
-            .input__wrapper {
+            .lines {
+                position: relative;
                 width: 100%;
-                margin-bottom: 20px;
+                height: 100%;
+                transform: translateX(calc(50% - 2px));
+                cursor: pointer;
 
-                input {
+                span {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    width: 4px;
+                    height: 100%;
+                    background-color: $color-white;
+
+                    &:nth-of-type(1) {
+                        left: 0;
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-of-type(2) {
+                        left: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .modal_container {
+            max-width: 70rem;
+
+            .qr {
+                width: 220px;
+                height: 220px;
+                border-radius: 15px;
+                background-color: rgba(217, 217, 217, 1);
+                margin-bottom: 115px;
+            }
+
+            .description {
+                color: $color-white;
+                font-size: 20px;
+                line-height: 24px;
+                font-family: $font-Centurygothic;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 32px;
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                max-width: 50rem;
+                margin: 0 auto;
+
+                .input__wrapper {
                     width: 100%;
-                    color: $color-black;
-                    max-width: 736px;
-                    padding: 15px 50px;
-                    font-size: 20px;
-                    line-height: 24.52px;
-                    border-radius: 15px;
-                    overflow: hidden;
-                    outline: none;
+                    margin-bottom: 20px;
 
-                    &::placeholder {
-                        color: rgba(170, 170, 170, 1);
+                    input {
+                        width: 100%;
+                        color: $color-black;
+                        max-width: 736px;
+                        padding: 15px 50px;
+                        font-size: 20px;
+                        line-height: 24.52px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        outline: none;
+
+                        &::placeholder {
+                            color: rgba(170, 170, 170, 1);
+                        }
                     }
                 }
             }

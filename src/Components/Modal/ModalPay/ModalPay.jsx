@@ -1,13 +1,18 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
+
+import ContactsFormInput from "./ContactsFormInput/ContactsFormInput";
+import modalStore from '../../../store/modalStore';
+import Button from "../../UI/Button/Button";
 import Title from '../../UI/Title/Title';
 
 import s from './ModalPay.module.scss';
-import { useState } from "react";
-import ContactsFormInput from "./ContactsFormInput/ContactsFormInput";
-import Button from "../../UI/Button/Button";
 export default function ModalPay() {
     const { t } = useTranslation();
+    const isPayModal = modalStore((state) => state.isPayModal);
+    const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     const [userForm, setUserForm] = useState({
         full_name: {
@@ -46,38 +51,56 @@ export default function ModalPay() {
     };
 
     return (
-        <div className={s.modal_wrapper}>
-            <div className={s.modal}>
-                <Title>{t("title.qr")}</Title>
-                {/* <div className={s.qr}></div>
-                <div className={s.description}>
-                    Або ми звʼяжемося з Вами особисто та надамо пряме посилання з усіма необхідними реквізитами для переказу напряму на рахунки Афону
-                </div> */}
-                <form onSubmit={handleSubmit}>
-                    <ContactsFormInput
-                        name={`full_name`}
-                        placeholder={t('modal.modal_pay.name')}
-                        type={`text`}
-                        setUserForm={setUserForm}
-                        userForm={userForm}
-                    />
-                    <ContactsFormInput
-                        name={`phone`}
-                        placeholder={t('modal.modal_pay.phone')}
-                        type={`phone`}
-                        setUserForm={setUserForm}
-                        userForm={userForm}
-                    />
-                    <ContactsFormInput
-                        name={`telegram`}
-                        placeholder={t('modal.modal_pay.telegram')}
-                        type={`telegram`}
-                        setUserForm={setUserForm}
-                        userForm={userForm}
-                    />
-                    <Button submit >{t("btn.send")}</Button>
-                </form>
-            </div>
-        </div>
+        <AnimatePresence>
+            {isPayModal ?
+                <motion.div className={s.modal_wrapper}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    exit={{ opacity: 0 }}
+                >
+                    <div className={s.modal}>
+                        <div className={s.close_form} onClick={() => setIsPayModal(false)}>
+                            <div className={s.lines}>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div className={s.modal_container}>
+                            <Title modal>{t("title.qr")}</Title>
+                            {/* <div className={s.qr}></div>  */}
+                            <div className={s.description}>
+                                {t('modal.modal_pay.description')}
+                            </div>
+                            <form onSubmit={handleSubmit}>
+                                <ContactsFormInput
+                                    name={`full_name`}
+                                    placeholder={t('modal.modal_pay.name')}
+                                    type={`text`}
+                                    setUserForm={setUserForm}
+                                    userForm={userForm}
+                                />
+                                <ContactsFormInput
+                                    name={`phone`}
+                                    placeholder={t('modal.modal_pay.phone')}
+                                    type={`phone`}
+                                    setUserForm={setUserForm}
+                                    userForm={userForm}
+                                />
+                                <ContactsFormInput
+                                    name={`telegram`}
+                                    placeholder={t('modal.modal_pay.telegram')}
+                                    type={`telegram`}
+                                    setUserForm={setUserForm}
+                                    userForm={userForm}
+                                />
+                                <Button submit >{t("btn.send")}</Button>
+                            </form>
+                        </div>
+                    </div>
+                </motion.div> :
+                null
+            }
+        </AnimatePresence>
     );
 }

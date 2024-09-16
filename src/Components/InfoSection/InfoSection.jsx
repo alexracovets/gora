@@ -27,7 +27,8 @@ export default function InfoSection({ content, fullscreen }) {
                         return <p key={idx} dangerouslySetInnerHTML={{ __html: t(item) }} />
                     })}
                 </div>
-                <Button>{t("btn.more")}</Button>
+                {content.btn ? <Button>{t(content.btn)}</Button> : null}
+
             </Container>
         </section >
 

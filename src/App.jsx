@@ -11,7 +11,7 @@ import ModalPay from './Components/Modal/ModalPay/ModalPay';
 
 export default function App() {
   const [scrollHeight, setScrollHeight] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
 
   return (
     <BrowserRouter>
