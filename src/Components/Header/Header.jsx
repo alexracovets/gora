@@ -47,7 +47,7 @@ export default function Header({ isScrolled }) {
     ]
 
     return (
-        <header className={!isScrolled ? s.disable : s.active}>
+        <header className={`${!isScrolled ? s.disable : s.active} ${isOpen ? s.open : ''}`}>
             <Container>
                 <nav className={s.navigation}>
                     <ul>
