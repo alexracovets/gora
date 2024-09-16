@@ -188,11 +188,6 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@cascadia-code/scroll-to-hash-element@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@cascadia-code/scroll-to-hash-element/-/scroll-to-hash-element-2.0.2.tgz#5375b678f1a8837150d8769d82a9c93547a4b1b7"
-  integrity sha512-XpPBapwNzu5rTMffckG2o/h4Qm5HOZWKnXO+WcArecKQmcwEJ31+sQM1sM7NqlDd2S8aCpEUCoiATHjJR5V+Ag==
-
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.18.20.tgz#984b4f9c8d0377443cc2dfcef266d02244593622"
@@ -1648,6 +1643,11 @@ iterator.prototype@^1.1.2:
     has-symbols "^1.0.3"
     reflect.getprototypeof "^1.0.4"
     set-function-name "^2.0.1"
+
+jquery@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
+  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
