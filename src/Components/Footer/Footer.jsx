@@ -61,6 +61,7 @@ export default function Footer() {
                         <Button footer>{t("btn.docs")}</Button>
                     </div>
                 </div>
+                <div className={s.develop} dangerouslySetInnerHTML={{ __html: t("develop") }}/>
             </Container>
         </footer>
     )

@@ -79,7 +79,7 @@ export default function GiftSection() {
                                 className={`${s.item} ${isActive && s.active} ${(isSecondLeft || isSecondRight) && s.second} ${(isThirdLeft || isThirdRight) && s.third}`}
                                 data-index={idx}
                             >
-                                <div className={s.dot}>{slide.number}/<span>25</span></div>
+                                {/* <div className={s.dot}>{slide.number}/<span>25</span></div> */}
                                 <div className={s.item_wrapper}>
                                     <div className={s.name} dangerouslySetInnerHTML={{ __html: t(slide.name) }} />
                                     <div className={s.price} dangerouslySetInnerHTML={{ __html: t(slide.price) }} />
@@ -110,7 +110,7 @@ export default function GiftSection() {
                                 className={`${s.item} ${isActive && s.active} ${(isSecondLeft || isSecondRight) && s.second} ${(isThirdLeft || isThirdRight) && s.third} ${s.available}`}
                                 data-index={idx}
                             >
-                                <div className={s.dot}>{slide.number}/<span>25</span></div>
+                                {/* <div className={s.dot}>{slide.number}/<span>25</span></div> */}
                                 <div className={s.item_wrapper}>
                                     <div className={s.name} dangerouslySetInnerHTML={{ __html: t(slide.name) }} />
                                     <div className={s.price} dangerouslySetInnerHTML={{ __html: t(slide.price) }} />
