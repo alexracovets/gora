@@ -10,7 +10,7 @@
     margin: 0 auto;
     padding: 2.5rem 5.7rem;
     background-color: $color-green;
-    box-shadow: 0 0 4rem 0 #3E5837;
+    box-shadow: 0 0 2rem 0 $color-green;
     letter-spacing: 0.1rem;
 
     @media (max-width:$media-mobile) {

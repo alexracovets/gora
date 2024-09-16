@@ -146,6 +146,7 @@
                 width: 7.9rem;
                 height: 7.9rem;
                 background-color: $color-beige;
+                box-shadow: 0 0 1rem 0 $color-beige;
                 border-radius: 50%;
 
                 @media (max-width:$media-mobile) {
@@ -155,6 +156,7 @@
 
                 &.done {
                     background-color: $color-green;
+                    box-shadow: 0 0 1rem 0 $color-green;
                 }
 
                 .content {
