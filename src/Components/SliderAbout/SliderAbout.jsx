@@ -12,12 +12,13 @@ export default function SliderAbout() {
     const settings = {
         className: s.slider,
         dots: false,
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 6000,
         pauseOnHover: true,
+        arrows: false,
         nextArrow: <SliderArrow isPrev={false} />,
         prevArrow: <SliderArrow isPrev={true} />
     };
