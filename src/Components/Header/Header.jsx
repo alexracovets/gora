@@ -1,12 +1,12 @@
-import { useTranslation } from "react-i18next";
-import { Link } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 import Container from "../Container/Container";
 
 import s from './Header.module.scss';
-import { useState } from "react";
-export default function Header() {
+export default function Header({ isScrolled }) {
     const { t } = useTranslation();
     const [isOpen, setOpen] = useState(false);
 
@@ -45,8 +45,19 @@ export default function Header() {
         }
     ]
 
+    // const scrollMove = () => {
+    //     const scrollHandler = () => handleScroll(setIsScrolled);
+    //     window.addEventListener('scroll', scrollHandler);
+    //     return () => {
+    //         window.removeEventListener('scroll', scrollHandler);
+    //     };
+    // }
+    // useEffect(() => {
+    //     scrollMove();
+    // }, []);
+
     return (
-        <header>
+        <header className={!isScrolled ? s.disable : s.active}>
             <Container>
                 <nav className={s.navigation}>
                     <ul>
@@ -76,6 +87,6 @@ export default function Header() {
                     </ul>
                 </div>
             </Container>
-        </header>
+        </header >
     )
 }

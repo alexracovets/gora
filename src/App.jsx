@@ -10,12 +10,13 @@ import CustomScroll from './Components/CustomScroll/CustomScroll';
 
 export default function App() {
   const [scrollHeight, setScrollHeight] = useState(null);
-  
+  const [isScrolled, setIsScrolled] = useState(false);
+
   return (
     <BrowserRouter>
       <ScrollToHashElement behavior="smooth" inline="start" block="start" />
-      <CustomScroll setScrollHeight={setScrollHeight}>
-        <Header />
+      <CustomScroll setScrollHeight={setScrollHeight} setIsScrolled={setIsScrolled}>
+        <Header isScrolled={isScrolled} />
         <Main scrollHeight={scrollHeight} />
         <Footer />
       </CustomScroll>

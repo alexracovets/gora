@@ -1,11 +1,22 @@
 @import '../../global/variable.scss';
 
 header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     z-index: 1;
+    transition: all ease-in-out 300ms;
+    pointer-events: none;
+
+    &.disable {
+        transform: translateY(-100%);
+    }
+
+    &.active {
+        transform: translateY(0%);
+    }
 
     .navigation {
         padding: 12.3rem 0;
@@ -22,6 +33,7 @@ header {
                 text-transform: uppercase;
                 font-weight: 350;
                 padding: 1.6rem;
+                pointer-events: all;
             }
         }
 
@@ -43,6 +55,7 @@ header {
         .burger {
             display: none;
             padding: 7px 3px;
+            pointer-events: all;
 
             @media (max-width:$media-mobile) {
                 display: block;
@@ -68,6 +81,7 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        pointer-events: all;
 
         &.active {
             transform: translateY(0%);
@@ -85,6 +99,7 @@ header {
                     color: $color-white;
                     padding: 15px;
                     display: block;
+                    pointer-events: all;
 
                     &:hover {
                         color: $color-green;
