@@ -3,7 +3,9 @@ import InfoSection from "../InfoSection/InfoSection";
 export default function SecondInfo() {
     const content = {
         title: "title.join",
-        startText: "secondInfo.0",
+        startText: [
+            "secondInfo.0"
+        ],
         help: [
             "secondInfo.1.0",
             "secondInfo.1.1"

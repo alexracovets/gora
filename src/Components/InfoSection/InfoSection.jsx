@@ -14,7 +14,11 @@ export default function InfoSection({ content, fullscreen }) {
         <section className={`${s.info} ${fullscreen ? s.full_screen : ''}`} id={content.id}>
             <Container>
                 <Title>{t(content.title)}</Title>
-                <p className={s.we_are}>{t(content.startText)}</p>
+                {content.startText.map((text, idx) => {
+                    return (
+                        <p key={idx} className={s.we_are} dangerouslySetInnerHTML={{ __html: t(text) }} />
+                    )
+                })}
                 <DashLine />
                 <div className={s.help}>
                     {content.help.map((item, idx) => {
