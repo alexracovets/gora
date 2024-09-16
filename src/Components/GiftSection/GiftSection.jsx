@@ -6,8 +6,10 @@ import DashLine from "../UI/DashLine/DashLine";
 import GiftSlider from "../GiftSlider/GiftSlider";
 import modalStore from '../../store/modalStore';
 
-import s from './GiftSection.module.scss';
+import availableGiftsData from "../../data/availableGiftsData";
 
+import s from './GiftSection.module.scss';
+import hugeGiftsData from "../../data/hugeGiftsData";
 export default function GiftSection() {
     const { t } = useTranslation();
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
@@ -33,29 +35,6 @@ export default function GiftSection() {
         };
     }, []);
 
-    const slides1 = [
-        {
-            name: "gift.huge.0.name",
-            price: "gift.huge.0.price",
-            number: 2
-        },
-        {
-            name: "gift.huge.0.name",
-            price: "gift.huge.0.price",
-            number: 2
-        },
-        {
-            name: "gift.huge.0.name",
-            price: "gift.huge.0.price",
-            number: 2
-        },
-        {
-            name: "gift.huge.0.name",
-            price: "gift.huge.0.price",
-            number: 2
-        }
-    ]
-
     return (
         <section className={s.gift} id="gifts">
             <Title>{isDesktop ? t("title.gifts") : t("title.gifts_mobile")}</Title>
@@ -65,8 +44,8 @@ export default function GiftSection() {
             </div>
             <div className={s.slider_wrapper}>
                 <GiftSlider setCurrentSlide={setCurrentSlide1} styleName={s.slider} >
-                    {slides1.map((slide, idx) => {
-                        const totalSlides = slides1.length;
+                    {hugeGiftsData.map((slide, idx) => {
+                        const totalSlides = hugeGiftsData.length;
                         const isActive = currentSlide1 === idx;
                         const isSecondLeft = currentSlide1 === 0 ? idx === totalSlides - 1 : idx === currentSlide1 - 1;
                         const isSecondRight = currentSlide1 === totalSlides - 1 ? idx === 0 : idx === currentSlide1 + 1;
@@ -96,8 +75,8 @@ export default function GiftSection() {
             </div>
             <div className={s.slider_wrapper}>
                 <GiftSlider setCurrentSlide={setCurrentSlide2} styleName={s.slider} >
-                    {slides1.map((slide, idx) => {
-                        const totalSlides = slides1.length;
+                    {availableGiftsData.map((slide, idx) => {
+                        const totalSlides = availableGiftsData.length;
                         const isActive = currentSlide2 === idx;
                         const isSecondLeft = currentSlide2 === 0 ? idx === totalSlides - 1 : idx === currentSlide2 - 1;
                         const isSecondRight = currentSlide2 === totalSlides - 1 ? idx === 0 : idx === currentSlide2 + 1;

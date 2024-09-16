@@ -79,6 +79,47 @@
                                 width: 100%;
                                 min-width: 35rem;
                             }
+
+                            .name,
+                            .price {
+                                font-size: 3.2rem;
+                                line-height: 3.84rem;
+                                text-transform: uppercase;
+                                height: auto;
+                                transition: all ease-in-out 300ms;
+                                padding: 0;
+
+                                @media (max-width:$media-mobile) {
+                                    font-size: 2.4rem;
+                                    line-height: 2.88rem;
+                                }
+
+                                span {
+                                    color: $color-green;
+                                    font-size: 4rem;
+                                    line-height: 4.8rem;
+                                    font-weight: 700;
+                                    transition: all ease-in-out 300ms;
+
+                                    @media (max-width:$media-mobile) {
+                                        font-size: 3.2rem;
+                                        line-height: 3.84rem;
+                                    }
+                                }
+                            }
+
+                            .name {
+                                font-weight: 700;
+                            }
+
+                            .price {
+                                font-weight: 350;
+                                margin-bottom: 4rem;
+
+                                @media (max-width:$media-mobile) {
+                                    margin-bottom: 3rem;
+                                }
+                            }
                         }
                     }
 
@@ -289,8 +330,8 @@
                     }
 
                     .item_wrapper {
-                        width: 20rem;
-                        height: 20rem;
+                        width: 34.432rem;
+                        height: 32.355rem;
                         background: linear-gradient(137.3deg, #B9BCC1 10.32%, #D1D2D6 31.23%, #EEF0EF 50.12%, #DDE1E2 67.34%, #AEB6B8 86.35%);
                         box-shadow: 0 0 2rem 0 rgba(237, 224, 134, 0.2);
                         border-radius: 2.5rem;
@@ -343,28 +384,30 @@
 
                         .name,
                         .price {
-                            font-size: 3.2rem;
-                            line-height: 3.84rem;
+                            text-align: center;
+                            font-size: 2.556rem;
+                            line-height: 3.068rem;
                             text-transform: uppercase;
                             height: auto;
                             transition: all ease-in-out 300ms;
                             padding: 0;
+                            position: relative;
+                            z-index: 1;
 
                             @media (max-width:$media-mobile) {
-                                font-size: 2.4rem;
-                                line-height: 2.88rem;
+                                font-size: 2rem;
+                                line-height: 2.4rem;
                             }
 
                             span {
                                 color: $color-green;
-                                font-size: 4rem;
-                                line-height: 4.8rem;
+                                font-size: 3.196rem;
+                                line-height: 3.835rem;
                                 font-weight: 700;
-                                transition: all ease-in-out 300ms;
 
                                 @media (max-width:$media-mobile) {
-                                    font-size: 3.2rem;
-                                    line-height: 3.84rem;
+                                    font-size: 2.6rem;
+                                    line-height: 3.12rem;
                                 }
                             }
                         }
@@ -394,6 +437,8 @@
                             padding: 1.8rem 3rem;
                             border-radius: 1.084rem;
                             transition: all ease-in-out 300ms;
+                            position: relative;
+                            z-index: 1;
 
                             @media (max-width:$media-mobile) {
                                 font-size: 1.6rem;
