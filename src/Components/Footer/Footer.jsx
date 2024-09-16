@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 
+import GoogleMap from "../GoogleMap/GoogleMap";
 import Container from "../Container/Container";
 import Button from "../UI/Button/Button";
 
 import s from './Footer.module.scss';
-import GoogleMap from "../GoogleMap/GoogleMap";
+
 export default function Footer() {
     const { t } = useTranslation();
 

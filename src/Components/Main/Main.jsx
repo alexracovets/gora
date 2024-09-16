@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import About from "../About/About";
 import Patron from "../Patron/Patron";
 import FirstInfo from "../FirstInfo/FirstInfo";
@@ -8,11 +10,11 @@ import CurrentState from "../CurrentState/CurrentState";
 import Comitet from "../Comitet/Comitet";
 import GiftSection from "../GiftSection/GiftSection";
 
-export default function Main() {
+export default function Main({ scrollHeight }) {
 
     return (
         <main>
-            <BackgroundPattern />
+            {scrollHeight && <BackgroundPattern backgroundHeight={scrollHeight} />}
             <FirstInfo />
             <About />
             <Patron />
@@ -24,3 +26,7 @@ export default function Main() {
         </main>
     )
 }
+
+Main.propTypes = {
+    scrollHeight: PropTypes.number
+};
