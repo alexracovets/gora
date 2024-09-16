@@ -4,27 +4,25 @@
     margin-top: 15rem;
 
     .video_wrapper {
-        width: 100%;
-        height: 100%;
+        width: 116.6rem;
+        height: 65.2rem;
         display: flex;
         justify-content: center;
+        margin: 0 auto;
         margin-top: 9rem;
+        overflow: hidden;
+        border-radius: 3rem;
+        overflow: hidden;
 
         @media (max-width:$media-mobile) {
             margin-top: 7rem;
+            width: 100%;
+            height: 22rem;
         }
 
-        video {
-            width: 116.6rem;
-            height: 65.2rem;
-            background-color: antiquewhite;
-            border-radius: 3rem;
-            overflow: hidden;
-
-            @media (max-width:$media-mobile) {
-                width: 100%;
-                height: 22rem;
-            }
+        .video {
+            width: 100%;
+            height: 100%;
         }
     }
 }
