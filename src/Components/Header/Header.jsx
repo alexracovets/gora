@@ -1,7 +1,8 @@
 import { Twirl as Hamburger } from 'hamburger-react';
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useState } from "react";
 
 import Container from "../Container/Container";
 
@@ -45,17 +46,6 @@ export default function Header({ isScrolled }) {
         }
     ]
 
-    // const scrollMove = () => {
-    //     const scrollHandler = () => handleScroll(setIsScrolled);
-    //     window.addEventListener('scroll', scrollHandler);
-    //     return () => {
-    //         window.removeEventListener('scroll', scrollHandler);
-    //     };
-    // }
-    // useEffect(() => {
-    //     scrollMove();
-    // }, []);
-
     return (
         <header className={!isScrolled ? s.disable : s.active}>
             <Container>
@@ -90,3 +80,7 @@ export default function Header({ isScrolled }) {
         </header >
     )
 }
+
+Header.propTypes = {
+    isScrolled: PropTypes.bool
+};
