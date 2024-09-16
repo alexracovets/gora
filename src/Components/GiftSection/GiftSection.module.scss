@@ -1,7 +1,7 @@
 @import '../../global/variable.scss';
 
 .gift {
-    margin-top: 15rem;
+    margin-top: 24rem;
 
     @media (max-width:$media-mobile) {
         margin-top: 13rem;
@@ -318,7 +318,7 @@
                             @media (max-width:$media-mobile) {
                                 background-image: url("/img/pattern/pattern_white_mobile.svg");
                                 height: 7.845rem;
-                                background-position-y: 2.5rem;
+                                background-position-y: 2.3rem;
                             }
                         }
 
@@ -336,7 +336,7 @@
                             transform: rotate(180deg);
 
                             @media (max-width:$media-mobile) {
-                                bottom: -2.5rem;
+                                background-position-x: 2rem;
                             }
                         }
 
