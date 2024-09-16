@@ -49,7 +49,7 @@ export default function Footer() {
                                     pilgrimage_center@ukr.net
                                 </a>
                             </div>
-                            <a href="tel:+380503525236">
+                            <a href="tel:+380503525236" target="_blank" rel="noreferrer">
                                 <Button footer>{t("btn.tel")}</Button>
                             </a>
                         </div>
@@ -58,10 +58,12 @@ export default function Footer() {
                         <div className={s.map}>
                             <GoogleMap />
                         </div>
-                        <Button footer>{t("btn.docs")}</Button>
+                        <a href="https://drive.google.com/drive/folders/1tZ-B4U0FUOTJBLAfFqkzlpQyGhUieMX3" target="_blank" rel="noreferrer">
+                            <Button footer>{t("btn.docs")}</Button>
+                        </a>
                     </div>
                 </div>
-                <div className={s.develop} dangerouslySetInnerHTML={{ __html: t("develop") }}/>
+                <div className={s.develop} dangerouslySetInnerHTML={{ __html: t("develop") }} />
             </Container>
         </footer>
     )
