@@ -21,7 +21,7 @@ export default function App() {
         <Main scrollHeight={scrollHeight} />
         <Footer />
       </CustomScroll>
-      {/* <ModalPay /> */}
+      <ModalPay />
     </BrowserRouter>
 
   )
