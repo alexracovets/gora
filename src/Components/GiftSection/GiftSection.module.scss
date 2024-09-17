@@ -45,6 +45,7 @@
 
             div {
                 height: 47.5rem;
+                overflow: visible;
 
                 @media (max-width:$media-mobile) {
                     height: 35.1rem;
@@ -56,9 +57,9 @@
                     align-items: center;
                     position: relative;
                     margin: 0 auto;
-                    margin: 0 1.5rem;
                     padding: 0;
                     transition: all ease-in 300ms;
+                    transform: scale(0.8, 0.8);
 
                     @media (max-width:$media-mobile) {
                         margin: 0;
@@ -66,208 +67,19 @@
                     }
 
                     &.active {
-                        transform: scale(1);
+                        transform: scale(1, 1);
 
                         .item_wrapper {
-                            width: 43.1rem;
-                            height: 40.5rem;
                             background: linear-gradient(137.3deg, #DCA61F 10.32%, #F6EC97 31.23%, #FADD5A 50.12%, #FBDE9C 67.34%, #E3A21F 86.35%);
-                            box-shadow: 0 0 1.6rem 0 rgba(237, 224, 134, 0.5);
-
-                            @media (max-width:$media-mobile) {
-                                height: 33rem;
-                                width: 100%;
-                                min-width: 35rem;
-                            }
-
-                            .name,
-                            .price {
-                                font-size: 3.2rem;
-                                line-height: 3.84rem;
-                                text-transform: uppercase;
-                                height: auto;
-                                transition: all ease-in-out 300ms;
-                                padding: 0;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 2.4rem;
-                                    line-height: 2.88rem;
-                                }
-
-                                span {
-                                    color: $color-green;
-                                    font-size: 4rem;
-                                    line-height: 4.8rem;
-                                    font-weight: 700;
-                                    transition: all ease-in-out 300ms;
-
-                                    @media (max-width:$media-mobile) {
-                                        font-size: 3.2rem;
-                                        line-height: 3.84rem;
-                                    }
-                                }
-                            }
-
-                            .name {
-                                font-weight: 700;
-                            }
-
-                            .price {
-                                font-weight: 350;
-                                margin-bottom: 4rem;
-
-                                @media (max-width:$media-mobile) {
-                                    margin-bottom: 3rem;
-                                }
-                            }
+                            transform: scale(1, 1);
                         }
                     }
 
                     &.second {
-                        @media (max-width:$media-mobile) {
-                            transform: scale(0.8);
-                        }
-
-                        .dot {
-                            top: 3rem;
-                            right: 4.4rem;
-                            width: 5.3rem;
-                            height: 5.3rem;
-                            font-size: 1.6rem;
-
-                            @media (max-width:$media-mobile) {
-                                top: 0;
-                                width: 5.3rem;
-                                height: 5.3rem;
-                                right: 3rem;
-                            }
-                        }
+                        transform: scale(0.9, 0.9);
 
                         .item_wrapper {
-                            width: 38.29rem;
-                            height: 35.98rem;
-
-                            @media (max-width:$media-mobile) {
-                                height: 33rem;
-                                width: 100%;
-                                min-width: 35rem;
-                            }
-
-                            .name,
-                            .price {
-                                font-size: 2.843rem;
-                                line-height: 3.411rem;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 2rem;
-                                    line-height: 2.4rem;
-                                }
-
-                                span {
-                                    font-size: 3.554rem;
-                                    line-height: 4.264rem;
-
-                                    @media (max-width:$media-mobile) {
-                                        font-size: 2.6rem;
-                                        line-height: 3.12rem;
-                                    }
-                                }
-                            }
-
-                            .price {
-                                margin-bottom: 1.6rem;
-
-                                @media (max-width:$media-mobile) {
-                                    margin-bottom: 2rem;
-                                }
-                            }
-
-                            button {
-                                font-size: 2.047rem;
-                                line-height: 2.456rem;
-                                padding: 1.6rem 3rem;
-                                border-radius: 0.963rem;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 1.6rem;
-                                    line-height: 1.92rem;
-                                    padding: 1.3rem 2.7rem;
-                                }
-                            }
-                        }
-                    }
-
-                    &.third {
-                        @media (max-width:$media-mobile) {
-                            transform: scale(0.8);
-                        }
-
-                        .dot {
-                            top: 5rem;
-                            right: 4.4rem;
-                            width: 5.3rem;
-                            height: 5.3rem;
-                            font-size: 1.6rem;
-
-                            @media (max-width:$media-mobile) {
-                                top: 0;
-                                width: 5.3rem;
-                                height: 5.3rem;
-                                right: 3rem;
-                            }
-                        }
-
-                        .item_wrapper {
-                            width: 34.432rem;
-                            height: 32.355rem;
-
-                            @media (max-width:$media-mobile) {
-                                height: 33rem;
-                                width: 100%;
-                                min-width: 35rem;
-                            }
-
-                            .name,
-                            .price {
-                                font-size: 2.556rem;
-                                line-height: 3.068rem;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 2rem;
-                                    line-height: 2.4rem;
-                                }
-
-                                span {
-                                    font-size: 3.196rem;
-                                    line-height: 3.835rem;
-
-                                    @media (max-width:$media-mobile) {
-                                        font-size: 2.6rem;
-                                        line-height: 3.12rem;
-                                    }
-                                }
-                            }
-
-                            .price {
-                                margin-bottom: 1.5rem;
-
-                                @media (max-width:$media-mobile) {
-                                    margin-bottom: 2rem;
-                                }
-                            }
-
-                            button {
-                                font-size: 1.841rem;
-                                line-height: 2.209rem;
-                                padding: 1.4rem 2.7rem;
-                                border-radius: 0.866rem;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 1.6rem;
-                                    line-height: 1.92rem;
-                                    padding: 1.3rem 2.7rem;
-                                }
-                            }
+                            transform: scale(1, 1);
                         }
                     }
 
@@ -330,8 +142,8 @@
                     }
 
                     .item_wrapper {
-                        width: 34.432rem;
-                        height: 32.355rem;
+                        width: 43.1rem;
+                        height: 40.5rem;
                         background: linear-gradient(137.3deg, #B9BCC1 10.32%, #D1D2D6 31.23%, #EEF0EF 50.12%, #DDE1E2 67.34%, #AEB6B8 86.35%);
                         box-shadow: 0 0 2rem 0 rgba(237, 224, 134, 0.2);
                         border-radius: 2.5rem;
@@ -344,6 +156,8 @@
                         position: relative;
                         overflow: hidden;
                         transition: all ease-in-out 300ms;
+                        transform: scale(1.2, 1);
+
 
                         &::before,
                         &::after {
