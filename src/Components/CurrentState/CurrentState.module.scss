@@ -1,7 +1,11 @@
 @import '../../global/variable.scss';
 
 .state {
-    margin-top: 15rem;
+    margin-top: 28rem;
+
+    @media (max-width:$media-mobile) {
+        margin-top: 15rem;
+    }
 
     .video_wrapper {
         width: 116.6rem;

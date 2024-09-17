@@ -50,16 +50,16 @@ const timeLineData = [
         ],
         done: false
     },
-    {
-        title: "timeLine.7.title",
-        info: [],
-        done: false
-    },
-    {
-        title: "timeLine.8.title",
-        info: [],
-        done: false
-    },
+    // {
+    //     title: "timeLine.7.title",
+    //     info: [],
+    //     done: false
+    // },
+    // {
+    //     title: "timeLine.8.title",
+    //     info: [],
+    //     done: false
+    // },
 ]
 
 export default timeLineData
