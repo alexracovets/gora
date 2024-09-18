@@ -8,6 +8,13 @@ export default defineConfig({
     target: 'es2015',
     outDir: 'dist',
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ["legacy-js-api"],
+      },
+    },
+  },
   server: {
     port: 3000,
     proxy: {
