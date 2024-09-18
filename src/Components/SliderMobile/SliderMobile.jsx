@@ -16,7 +16,7 @@ export default function SliderMobile({ children, styleName, onSlideChange }) {
         pauseOnHover: true,
         nextArrow: <SliderArrow isPrev={false} />,
         prevArrow: <SliderArrow isPrev={true} />,
-        beforeChange: (current, next) => { onSlideChange(next) },
+        beforeChange: (current, next) => { current === -1 ? null : onSlideChange(next) },
         responsive: [
             {
                 breakpoint: 431,
