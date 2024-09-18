@@ -22,7 +22,7 @@ export default function App() {
         <Footer />
       </CustomScroll>
       <ModalPay />
-      <ModalProgress />
+      {/* <ModalProgress /> */}
     </BrowserRouter>
 
   )
