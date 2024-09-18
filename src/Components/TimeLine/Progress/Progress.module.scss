@@ -7,6 +7,10 @@
     flex-direction: column;
     margin-top: 2.6rem;
 
+    @media (max-width:$media-mobile) {
+        margin-top: 2rem;
+    }
+
     .line_wrapper {
         width: 23.8rem;
         height: 0.5rem;
@@ -17,6 +21,10 @@
         border-radius: 0.5rem;
         overflow: hidden;
         margin-bottom: 1.6rem;
+
+        @media (max-width:$media-mobile) {
+            margin-bottom: 2rem;
+        }
 
         .back_line {
             height: 0.2rem;
@@ -43,6 +51,10 @@
         font-family: $font-Centurygothic;
         font-weight: 400;
         margin-bottom: 4.2rem;
+
+        @media (max-width:$media-mobile) {
+            margin-bottom: 2rem;
+        }
 
         span {
             font-weight: 600;

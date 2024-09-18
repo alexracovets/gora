@@ -17,6 +17,7 @@
         font-size: 1.6rem;
         line-height: 1.92rem;
         padding: 1.4rem 2.8rem;
+        border-radius: 0.8rem;
     }
 
     &.small {
@@ -28,6 +29,7 @@
             font-size: 1.6rem;
             line-height: 1.92rem;
             padding: 1.3rem 2.8rem;
+            border-radius: 0.8rem;
         }
     }
 
@@ -37,6 +39,7 @@
             max-width: 26rem;
             padding: 0;
             height: 4.7rem;
+            border-radius: 0.8rem;
         }
     }
 
@@ -46,5 +49,13 @@
         margin: 0;
         font-size: 2.234rem;
         padding: 0;
+
+        @media (max-width:$media-mobile) {
+            width: 240px;
+            height: 47px;
+            font-size: 1.6rem;
+            line-height: 1.92rem;
+            border-radius: 0.8rem;
+        }
     }
 }
