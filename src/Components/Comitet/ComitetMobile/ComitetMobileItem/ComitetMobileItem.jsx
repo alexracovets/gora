@@ -10,7 +10,7 @@ export default function ComitetMobileItem({ person, idx, activeSlideIndex }) {
     useEffect(() => {
         setIsActive(activeSlideIndex === idx);
     }, [activeSlideIndex, idx])
-    
+
     return (
         <div className={s.item_wrapper}>
             <div key={idx} className={`${s.item} ${isActive ? s.active : ''}`}>
@@ -24,5 +24,6 @@ export default function ComitetMobileItem({ person, idx, activeSlideIndex }) {
 
 ComitetMobileItem.propTypes = {
     person: PropTypes.object,
-    idx: PropTypes.number
+    idx: PropTypes.number,
+    activeSlideIndex: PropTypes.number
 };
