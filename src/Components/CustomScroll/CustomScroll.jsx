@@ -6,26 +6,18 @@ import s from './CustomScroll.module.scss';
 
 export default function CustomScroll({ children, setIsScrolled }) {
     const scrollRef = useRef(null);
-
     const [prevScrollTop, setPrevScrollTop] = useState(0);
 
-    const handleScroll = () => {
-        if (scrollRef.current) {
-            const currentScrollTop = scrollRef.current.getScrollTop();
-            if (currentScrollTop > prevScrollTop) {
-                setIsScrolled(false);
-            } else {
-                setIsScrolled(true);
-            }
-            setPrevScrollTop(currentScrollTop);
-        }
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            if (scrollRef.current) {
+                const currentScrollTop = scrollRef.current.getScrollTop();
+                setIsScrolled(prevScrollTop >= currentScrollTop);
+                setPrevScrollTop(currentScrollTop);
+            }
+        };
+
         if (scrollRef && scrollRef.current) {
-            // setTimeout(() => {
-            //     setScrollHeight(scrollRef.current.getScrollHeight());
-            // }, 10);
             scrollRef.current.view.addEventListener('scroll', handleScroll);
         }
 
@@ -34,15 +26,7 @@ export default function CustomScroll({ children, setIsScrolled }) {
                 scrollRef.current.view.removeEventListener('scroll', handleScroll);
             }
         };
-    }, [scrollRef, prevScrollTop]);
-
-    // useEffect(() => {
-    //     if (scrollRef && scrollRef.current) {
-    //         setTimeout(() => {
-    //             setScrollHeight(scrollRef.current.getScrollHeight())
-    //         }, 10)
-    //     }
-    // }, [scrollRef, setScrollHeight])
+    }, [scrollRef, prevScrollTop, setIsScrolled]);
 
     return (
         <Scrollbars
