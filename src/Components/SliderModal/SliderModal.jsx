@@ -10,8 +10,6 @@ export default function SliderModal({ children, styleName, onSlideChange }) {
         dots: false,
         centerMode: false,
         arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
         variableWidth: true,
         nextArrow: <SliderArrow isPrev={false} isProgressModal />,
         prevArrow: <SliderArrow isPrev={true} isProgressModal />,
@@ -21,6 +19,7 @@ export default function SliderModal({ children, styleName, onSlideChange }) {
                 breakpoint: 431,
                 settings: {
                     slidesToShow: 1,
+                    centerMode: true,
                     variableWidth: false,
                 }
             }

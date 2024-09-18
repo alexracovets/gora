@@ -129,7 +129,7 @@ export default function ModalProgress() {
                 <div className={s.progres}>
                     <SliderModal styleName={`${s.slider_modal} fix_visible`} onSlideChange={(index) => setActiveSlideIndex(index)}>
                         {progressData.map((item, idx) => {
-                            return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + 1} countSlides={progressData.length} />
+                            return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + (window.innerWidth > 430 ? 1 : 0)} countSlides={progressData.length} />
                         })}
                     </SliderModal>
                 </div>

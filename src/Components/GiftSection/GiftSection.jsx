@@ -57,7 +57,7 @@ export default function GiftSection() {
                         index={idx}
                         slide={slide}
                         currentSlide={currentSlide2}
-                        totalSlides={hugeGiftsData.length}
+                        totalSlides={availableGiftsData.length}
                         plusClases={s.available}
                     />)}
                 </GiftSlider>

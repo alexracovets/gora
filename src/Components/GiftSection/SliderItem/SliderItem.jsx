@@ -13,10 +13,10 @@ export default function SliderItem({ slide, currentSlide, index, totalSlides, pl
 
     useEffect(() => {
         setIsActive(currentSlide === index);
-
+    
         const isPrevious = currentSlide === 0 ? index === totalSlides - 1 : index === currentSlide - 1;
-        const isNext = currentSlide === totalSlides - 1 ? index === 0 : index === currentSlide + 1;
-
+        const isNext = (currentSlide === totalSlides - 1 && index === 0) || index === currentSlide + 1;
+    
         setIsSecond(isPrevious || isNext);
     }, [currentSlide, index, totalSlides]);
 
