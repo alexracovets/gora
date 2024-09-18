@@ -23,11 +23,11 @@ export default function CurrentState() {
             <Container>
                 <Title>{t("title.current_state")}</Title>
                 <div className={s.video_wrapper}>
-                    {/* <YouTube
+                    <YouTube
                         videoId="_-8UIkpVZiM"
                         opts={opts}
                         className={s.video}
-                    /> */}
+                    />
                 </div>
             </Container>
         </section>
