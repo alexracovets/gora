@@ -11,19 +11,17 @@ import ModalPay from './Components/Modal/ModalPay/ModalPay';
 import ModalProgress from './Components/Modal/ModalProgress/ModalProgress';
 
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(true);
 
   return (
     <BrowserRouter>
       <ScrollToHashElement behavior="smooth" inline="start" block="start" />
-      <CustomScroll setIsScrolled={setIsScrolled}>
-        <Header isScrolled={isScrolled} />
+      <CustomScroll>
+        <Header />
         <Main />
         <Footer />
       </CustomScroll>
       <ModalPay />
-      {/* <ModalProgress /> */}
+      <ModalProgress />
     </BrowserRouter>
-
   )
 }
