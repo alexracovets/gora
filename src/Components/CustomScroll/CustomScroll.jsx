@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import s from './CustomScroll.module.scss';
 
-export default function CustomScroll({ children, setScrollHeight, setIsScrolled }) {
+export default function CustomScroll({ children, setIsScrolled }) {
     const scrollRef = useRef(null);
 
     const [prevScrollTop, setPrevScrollTop] = useState(0);
@@ -23,9 +23,9 @@ export default function CustomScroll({ children, setScrollHeight, setIsScrolled 
 
     useEffect(() => {
         if (scrollRef && scrollRef.current) {
-            setTimeout(() => {
-                setScrollHeight(scrollRef.current.getScrollHeight());
-            }, 10);
+            // setTimeout(() => {
+            //     setScrollHeight(scrollRef.current.getScrollHeight());
+            // }, 10);
             scrollRef.current.view.addEventListener('scroll', handleScroll);
         }
 
@@ -34,15 +34,15 @@ export default function CustomScroll({ children, setScrollHeight, setIsScrolled 
                 scrollRef.current.view.removeEventListener('scroll', handleScroll);
             }
         };
-    }, [scrollRef, setScrollHeight, prevScrollTop]);
+    }, [scrollRef, prevScrollTop]);
 
-    useEffect(() => {
-        if (scrollRef && scrollRef.current) {
-            setTimeout(() => {
-                setScrollHeight(scrollRef.current.getScrollHeight())
-            }, 10)
-        }
-    }, [scrollRef, setScrollHeight])
+    // useEffect(() => {
+    //     if (scrollRef && scrollRef.current) {
+    //         setTimeout(() => {
+    //             setScrollHeight(scrollRef.current.getScrollHeight())
+    //         }, 10)
+    //     }
+    // }, [scrollRef, setScrollHeight])
 
     return (
         <Scrollbars

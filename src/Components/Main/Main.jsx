@@ -4,17 +4,16 @@ import About from "../About/About";
 import Patron from "../Patron/Patron";
 import FirstInfo from "../FirstInfo/FirstInfo";
 import SecondInfo from "../SecondInfo/SecondInfo";
-import BackgroundPattern from "../UI/BackgroundPattern/BackgroundPattern";
 import TimeLine from "../TimeLine/TimeLine";
 import CurrentState from "../CurrentState/CurrentState";
 import Comitet from "../Comitet/Comitet";
 import GiftSection from "../GiftSection/GiftSection";
 
-export default function Main({ scrollHeight }) {
+export default function Main() {
 
     return (
         <main>
-            {scrollHeight && <BackgroundPattern backgroundHeight={scrollHeight} />}
+            {/* {scrollHeight && <BackgroundPattern backgroundHeight={scrollHeight} />} */}
             <FirstInfo />
             <About />
             <Patron />
