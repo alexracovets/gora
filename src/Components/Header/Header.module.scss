@@ -14,7 +14,8 @@ header {
 
     @media (max-width:$media-mobile) {
         height: 8rem;
-        box-shadow: 0 0 1rem 2rem $color-bg;
+        box-shadow: none;
+        background-color: transparent;
     }
 
     &.disable {
@@ -67,13 +68,19 @@ header {
         align-items: center;
         z-index: 11;
 
+
+
+
         .burger {
             display: none;
-            padding: 0.7rem 0.3rem;
+            padding: 1rem;
             pointer-events: all;
+            border-radius: 50%;
 
             @media (max-width:$media-mobile) {
                 display: block;
+                background-color: $color-bg;
+                box-shadow: 0 0 2rem 1rem $color-bg;
             }
 
             .me_burger {

@@ -38,7 +38,7 @@
             width: 100%;
             height: 100%;
             border-radius: 0;
-            padding: 8rem 6rem;
+            padding: 4rem;
         }
 
         .close_form {
@@ -50,13 +50,20 @@
             padding: 1rem;
             box-sizing: border-box;
             border-radius: 50%;
-            background-color: $color-browne;
+            background-color: $color-bg;
             cursor: pointer;
+            transition: all ease-in-out 300ms;
+
+            &:hover {
+                transform: scale(1.2);
+            }
 
             @media (max-width:$media-mobile) {
                 width: 4.5rem;
                 height: 4.5rem;
                 max-width: 100%;
+                right: 4rem;
+                top: 5rem;
             }
 
             .lines {
@@ -72,6 +79,10 @@
                     width: 0.4rem;
                     height: 100%;
                     background-color: $color-white;
+
+                    @media (max-width:$media-mobile) {
+                        width: 0.2rem;
+                    }
 
                     &:nth-of-type(1) {
                         left: 0;
@@ -118,87 +129,140 @@
             width: 100%;
             margin-top: 8rem;
 
-            .item {
-                width: 54rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            @media (max-width:$media-mobile) {
+                max-width: 100%;
+                margin-top: 6.5rem;
+            }
 
-                .item_wrapper {
-                    width: 54rem;
-                    height: 54rem;
-                    background-color: #5A5A5A80;
-                    border: 0.1rem solid $color-white;
-                    border-radius: 2.5rem;
-                    padding: 5.4rem 8rem 0 8rem;
-                    position: relative;
-                    transform: scale(0.9);
-                    transition: all ease-in-out 300ms;
-                    margin-top: 1rem;
-
-                    &.active {
-                        transform: scale(0.95);
-                    }
+            .slider_modal {
+                @media (max-width:$media-mobile) {
+                    padding-bottom: 12rem;
                 }
 
-                .progress_slide {
-                    width: 38rem;
-                    height: 24.9rem;
-                    border: 0.2rem solid $color-white;
-                    border-radius: 2rem;
-                    overflow: hidden;
+                .item {
+                    width: 54rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    .content_wrapper {
-                        width: 100% !important;
-                        height: 100% !important;
+                    @media (max-width:$media-mobile) {
+                        width: 100%;
+                    }
+
+                    .item_wrapper {
+                        width: 54rem;
+                        height: 54rem;
+                        background-color: #5A5A5A80;
+                        border: 0.1rem solid $color-white;
+                        border-radius: 2.5rem;
+                        padding: 5.4rem 8rem 0 8rem;
                         position: relative;
+                        transform: scale(0.9);
+                        transition: all ease-in-out 300ms;
+                        margin-top: 1rem;
+
+                        @media (max-width:$media-mobile) {
+                            border-radius: 1.8rem;
+                            transform: scale(1);
+                            width: 35rem;
+                            height: 38rem;
+                            padding: 35px 52px;
+                            margin-top: 2rem;
+                        }
+
+                        &.active {
+                            transform: scale(0.95);
+
+                            @media (max-width:$media-mobile) {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
+                    .progress_slide {
+                        width: 38rem;
+                        height: 24.9rem;
+                        border: 0.2rem solid $color-white;
+                        border-radius: 2rem;
+                        overflow: hidden;
+
+                        @media (max-width:$media-mobile) {
+                            border: 0.1rem solid $color-white;
+                            border-radius: 1rem;
+                            height: 16rem;
+                        }
+
+                        .content_wrapper {
+                            width: 100% !important;
+                            height: 100% !important;
+                            position: relative;
+                            max-height: 100%;
+
+                            img,
+                            video {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: auto !important;
+                                height: 24.9rem !important;
+                                pointer-events: none;
+                                max-height: 100%;
+                            }
+                        }
 
                         img,
                         video {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
                             width: auto !important;
-                            height: 100%;
+                            height: 24.9rem !important;
                             pointer-events: none;
                         }
                     }
 
-                    img,
-                    video {
-                        width: auto;
-                        height: 100%;
-                    }
-                }
+                    .bottomSlider {
+                        margin-top: 1.6rem;
+                        margin-bottom: 2rem;
 
-                .bottomSlider {
-                    margin-top: 1.6rem;
-                    margin-bottom: 2rem;
+                        @media (max-width:$media-mobile) {
+                            margin-top: 0.8rem;
+                            margin-bottom: 2.1rem;
+                        }
 
-                    .progress_slide {
-                        height: 12rem;
-                        width: calc(100%) !important;
-                        border: none;
-                        border-radius: 0;
-                        display: flex !important;
-                        justify-content: center;
-                        align-items: center;
+                        .progress_slide {
+                            height: 12rem;
+                            width: calc(100%) !important;
+                            border: none;
+                            border-radius: 0;
+                            display: flex !important;
+                            justify-content: center;
+                            align-items: center;
 
-                        .content {
-                            border-radius: 1.5rem;
-                            width: 12rem;
-                            height: 11.8rem;
-                            overflow: hidden;
-                            transform: scale(0.95);
-                            transition: all ease-in 500ms;
+                            @media (max-width:$media-mobile) {
+                                height: 7.5rem;
+                            }
 
-                            &.active {
-                                transform: scale(1);
+                            .content {
+                                border-radius: 1.5rem;
+                                width: 12rem;
+                                height: 11.8rem;
+                                overflow: hidden;
+                                transform: scale(0.95);
+                                transition: all ease-in 500ms;
+
+                                @media (max-width:$media-mobile) {
+                                    border-radius: 1rem;
+                                    width: 7.5rem;
+                                    height: 7.5rem;
+                                }
+
+                                &.active {
+                                    transform: scale(1);
+                                }
                             }
                         }
                     }
                 }
             }
+
         }
 
         .text_info {
@@ -207,6 +271,19 @@
             line-height: 1.962rem;
             text-align: center;
             font-family: $font-Centurygothic;
+
+            @media (max-width:$media-mobile) {
+                font-size: 1.3rem;
+                line-height: 1.594rem;
+            }
         }
     }
+}
+
+
+.content_wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    max-height: 100%;
 }

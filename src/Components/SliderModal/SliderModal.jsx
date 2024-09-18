@@ -8,14 +8,23 @@ export default function SliderModal({ children, styleName, onSlideChange }) {
     const settings = {
         className: styleName,
         dots: false,
-        centerMode: false, 
+        centerMode: false,
         arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
         nextArrow: <SliderArrow isPrev={false} isProgressModal />,
         prevArrow: <SliderArrow isPrev={true} isProgressModal />,
-        beforeChange: (current, next) => { onSlideChange(next) }
+        beforeChange: (current, next) => { onSlideChange(next) },
+        responsive: [
+            {
+                breakpoint: 431,
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: false,
+                }
+            }
+        ]
     };
 
     return (

@@ -8,6 +8,8 @@
     top: 50%;
     z-index: 1;
     cursor: pointer;
+    transition: all ease-in-out 300ms;
+
 
     @media (max-width:$media-mobile) {
         top: auto;
@@ -70,10 +72,18 @@
 
 .progress_modal {
     &.arrowPrev {
-        left: -8rem
+        left: -8rem;
+
+        @media (max-width:$media-mobile) {
+            left: 25%;
+        }
     }
 
     &.arrowNext {
-        right: -8rem
+        right: -8rem;
+
+        @media (max-width:$media-mobile) {
+            right: 25%;
+        }
     }
 }
