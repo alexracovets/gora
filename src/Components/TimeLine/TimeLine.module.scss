@@ -2,7 +2,7 @@
 
 .time_line {
     margin-top: 32rem;
-    padding-bottom: 7.9rem;
+    padding-bottom: 15rem;
 
     @media (max-width:$media-mobile) {
         margin: 0;
@@ -201,6 +201,11 @@
                                 line-height: 1.594rem;
                                 margin-bottom: 1.5rem;
                             }
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
                         }
                     }
                 }

@@ -5,6 +5,7 @@ import timeLineData from '../../data/timeLineData';
 import Container from "../Container/Container";
 
 import s from './TimeLine.module.scss';
+import Progress from "./Progress/Progress";
 export default function TimeLine() {
     const { t } = useTranslation();
 
@@ -23,6 +24,7 @@ export default function TimeLine() {
                                             <div className={s.info}>
                                                 {time.info.map((text, id) => <p key={id}>{t(text)}</p>)}
                                             </div>
+                                            {time.progress ? <Progress /> : null}
                                         </div>
                                     </div>
                                 </div>

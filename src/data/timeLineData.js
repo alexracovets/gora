@@ -48,7 +48,8 @@ const timeLineData = [
         info: [
             "timeLine.6.info.0"
         ],
-        done: false
+        done: false,
+        progress: true
     },
     // {
     //     title: "timeLine.7.title",

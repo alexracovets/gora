@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -118,34 +117,23 @@ export default function ModalProgress() {
     ]
 
     return (
-        <AnimatePresence>
-            {isModalProgress ?
-                <motion.div className={s.modal_wrapper}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    exit={{ opacity: 0 }}
-                    onClick={() => setIsModalProgress(false)}
-                >
-                    <div className={s.modal} onClick={(e) => e.stopPropagation()}>
-                        <div className={s.close_form} onClick={() => setIsModalProgress(false)}>
-                            <div className={s.lines}>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <Title>{t("title.progress")}</Title>
-                        <div className={s.progres}>
-                            <SliderModal styleName={`${s.slider_modal} fix_visible`} onSlideChange={(index) => setActiveSlideIndex(index)}>
-                                {progressData.map((item, idx) => {
-                                    return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + 1} countSlides={progressData.length} />
-                                })}
-                            </SliderModal>
-                        </div>
+        <div className={`${s.modal_wrapper} ${isModalProgress ? s.active : ''}`} onClick={() => setIsModalProgress(false)}>
+            <div className={s.modal} onClick={(e) => e.stopPropagation()}>
+                <div className={s.close_form} onClick={() => setIsModalProgress(false)}>
+                    <div className={s.lines}>
+                        <span></span>
+                        <span></span>
                     </div>
-                </motion.div> :
-                null
-            }
-        </AnimatePresence>
+                </div>
+                <Title>{t("title.progress")}</Title>
+                <div className={s.progres}>
+                    <SliderModal styleName={`${s.slider_modal} fix_visible`} onSlideChange={(index) => setActiveSlideIndex(index)}>
+                        {progressData.map((item, idx) => {
+                            return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + 1} countSlides={progressData.length} />
+                        })}
+                    </SliderModal>
+                </div>
+            </div>
+        </div>
     );
 }

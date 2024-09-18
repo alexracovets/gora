@@ -12,7 +12,14 @@
     align-items: center;
     background-color: #9b9b9b33;
     backdrop-filter: blur(0.4rem);
-    z-index: 200;
+    transition: all ease-in-out 300ms;
+    z-index: -10;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+        z-index: 200;
+    }
 
     .modal {
         background-color: $color-bg;
@@ -24,7 +31,7 @@
         padding: 5rem 7rem;
         position: relative;
         box-shadow: 0 0 2rem 0 #9b9b9b9a;
-        width: 1800px; 
+        width: 180rem;
         margin: 0 auto;
 
         @media (max-width:$media-mobile) {
@@ -81,20 +88,20 @@
 
         .status {
             position: absolute;
-            right: 52px;
-            top: -19px;
+            right: 5.2rem;
+            top: -1.9rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 20px;
+            font-size: 2rem;
             line-height: 1;
             text-align: center;
             font-weight: 200;
             color: $color-white;
-            width: 148px;
-            height: 38px;
-            border-radius: 7px;
-            padding: 0 0 4px 0;
+            width: 14.8rem;
+            height: 3.8rem;
+            border-radius: 0.7rem;
+            padding: 0 0 0.4rem 0;
             background-color: $color-white;
 
             &.done {
@@ -107,27 +114,27 @@
         }
 
         .progres {
-            max-width: 1620px;
+            max-width: 162rem;
             width: 100%;
-            margin-top: 80px;
+            margin-top: 8rem;
 
             .item {
-                width: 540px;
+                width: 54rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                 .item_wrapper {
-                    width: 540px;
-                    height: 540px;
+                    width: 54rem;
+                    height: 54rem;
                     background-color: #5A5A5A80;
-                    border: 1px solid $color-white;
-                    border-radius: 25px;
-                    padding: 54px 80px 0 80px;
+                    border: 0.1rem solid $color-white;
+                    border-radius: 2.5rem;
+                    padding: 5.4rem 8rem 0 8rem;
                     position: relative;
                     transform: scale(0.9);
                     transition: all ease-in-out 300ms;
-                    margin-top: 10px;
+                    margin-top: 1rem;
 
                     &.active {
                         transform: scale(0.95);
@@ -135,10 +142,10 @@
                 }
 
                 .progress_slide {
-                    width: 380px;
-                    height: 249px;
-                    border: 2px solid $color-white;
-                    border-radius: 20px;
+                    width: 38rem;
+                    height: 24.9rem;
+                    border: 0.2rem solid $color-white;
+                    border-radius: 2rem;
                     overflow: hidden;
 
                     .content_wrapper {
@@ -165,11 +172,11 @@
                 }
 
                 .bottomSlider {
-                    margin-top: 16px;
-                    margin-bottom: 20px;
+                    margin-top: 1.6rem;
+                    margin-bottom: 2rem;
 
                     .progress_slide {
-                        height: 120px;
+                        height: 12rem;
                         width: calc(100%) !important;
                         border: none;
                         border-radius: 0;
@@ -178,9 +185,9 @@
                         align-items: center;
 
                         .content {
-                            border-radius: 15px;
-                            width: 120px;
-                            height: 118px;
+                            border-radius: 1.5rem;
+                            width: 12rem;
+                            height: 11.8rem;
                             overflow: hidden;
                             transform: scale(0.95);
                             transition: all ease-in 500ms;
@@ -196,8 +203,8 @@
 
         .text_info {
             color: $color-white;
-            font-size: 16px;
-            line-height: 19.62px;
+            font-size: 1.6rem;
+            line-height: 1.962rem;
             text-align: center;
             font-family: $font-Centurygothic;
         }

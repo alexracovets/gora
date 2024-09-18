@@ -6,10 +6,10 @@ import DashLine from "../UI/DashLine/DashLine";
 import GiftSlider from "../GiftSlider/GiftSlider";
 
 import availableGiftsData from "../../data/availableGiftsData";
-
-import s from './GiftSection.module.scss';
 import hugeGiftsData from "../../data/hugeGiftsData";
 import SliderItem from "./SliderItem/SliderItem";
+
+import s from './GiftSection.module.scss';
 export default function GiftSection() {
     const { t } = useTranslation();
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)

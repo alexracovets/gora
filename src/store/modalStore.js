@@ -3,7 +3,7 @@ import { immer } from 'zustand/middleware/immer';
 
 const modalStore = create(immer((set) => ({
     isPayModal: false,
-    isModalProgress: true,
+    isModalProgress: false,
     setIsPayModal: (value) => set((state) => {
         state.isPayModal = value;
     }),
