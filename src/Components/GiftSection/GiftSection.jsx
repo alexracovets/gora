@@ -43,6 +43,7 @@ export default function GiftSection() {
                         slide={slide}
                         currentSlide={currentSlide1}
                         totalSlides={hugeGiftsData.length}
+                        aria-hidden="true"
                     />)}
                 </GiftSlider>
             </div>
@@ -59,6 +60,7 @@ export default function GiftSection() {
                         currentSlide={currentSlide2}
                         totalSlides={availableGiftsData.length}
                         plusClases={s.available}
+                        aria-hidden="true"
                     />)}
                 </GiftSlider>
             </div>

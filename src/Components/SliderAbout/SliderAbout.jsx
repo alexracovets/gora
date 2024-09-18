@@ -27,7 +27,7 @@ export default function SliderAbout() {
         <Slider {...settings}>
             {sliderAboutData.map((slide, idx) => {
                 return (
-                    <div key={idx} className={s.slide} inert="true" >
+                    <div key={idx} className={s.slide} inert="true" aria-hidden="true" >
                         <img src={`./img/slider/about/${slide.image}`} alt={`slide-${idx}`} />
                         {slide.points.map((point, idx) => {
                             return (

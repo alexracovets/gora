@@ -8,6 +8,7 @@ export default function GoogleMap() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            name="google_map"
         ></iframe>
     );
 }
