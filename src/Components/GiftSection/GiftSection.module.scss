@@ -65,24 +65,39 @@
                     transform: scale(0.8, 0.8);
 
                     @media (max-width:$media-mobile) {
-                        margin: 0;
-                        padding: 0;
+                        transform: scale(1, 1);
                     }
 
                     &.active {
                         transform: scale(1, 1);
 
+                        @media (max-width:$media-mobile) {
+                            transform: scale(1, 1);
+                        }
+
                         .item_wrapper {
                             background: linear-gradient(137.3deg, #DCA61F 10.32%, #F6EC97 31.23%, #FADD5A 50.12%, #FBDE9C 67.34%, #E3A21F 86.35%);
                             transform: scale(1, 1);
+
+                            @media (max-width:$media-mobile) {
+                                transform: scale(1, 1);
+                            }
                         }
                     }
 
                     &.second {
                         transform: scale(0.9, 0.9);
 
+                        @media (max-width:$media-mobile) {
+                            transform: scale(1, 1);
+                        }
+
                         .item_wrapper {
                             transform: scale(1, 1);
+
+                            @media (max-width:$media-mobile) {
+                                transform: scale(0.9, 0.9);
+                            }
                         }
                     }
 
@@ -161,6 +176,11 @@
                         transition: all ease-in-out 300ms;
                         transform: scale(1.2, 1);
 
+                        @media (max-width:$media-mobile) {
+                            width: 350px;
+                            height: 330px;
+                            transform: scale(0.9, 0.9);
+                        }
 
                         &::before,
                         &::after {
@@ -178,7 +198,8 @@
                             @media (max-width:$media-mobile) {
                                 background-image: url("/img/pattern/pattern_white_mobile.svg");
                                 height: 7.845rem;
-                                background-position-y: 2.3rem;
+                                background-position-y: 2.8rem;
+                                background-size: 7.4rem;
                             }
                         }
 
@@ -187,6 +208,7 @@
                             background-position-x: 2rem;
 
                             @media (max-width:$media-mobile) {
+                                background-position-x: 2rem;
                                 top: -2.5rem;
                             }
                         }
