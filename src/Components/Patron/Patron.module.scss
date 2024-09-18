@@ -29,7 +29,17 @@
 
             @media (max-width:$media-mobile) {
                 padding-bottom: 5rem;
+                transition: all ease-in-out 300ms;
+
+                &.active {
+                    transform: scale(1);
+                }
+
+                &:not(&.active) {
+                    transform: scale(0.95);
+                }
             }
+
 
             &[index='item_0'] {
                 .item {
@@ -91,7 +101,7 @@
                     padding: 0;
                     padding-top: 0;
                     width: 100%;
-                    height: 36.5rem;
+                    height: 38.5rem;
                     border-radius: 1.8rem;
                     border-width: 0.04rem;
                     justify-content: flex-start;

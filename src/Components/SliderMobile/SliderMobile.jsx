@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 import SliderArrow from "../UI/SliderArrow/SliderArrow";
 
-export default function SliderMobile({ children, styleName }) {
+export default function SliderMobile({ children, styleName, onSlideChange }) {
 
     const settings = {
         className: styleName,
@@ -15,7 +15,18 @@ export default function SliderMobile({ children, styleName }) {
         autoplaySpeed: 6000,
         pauseOnHover: true,
         nextArrow: <SliderArrow isPrev={false} />,
-        prevArrow: <SliderArrow isPrev={true} />
+        prevArrow: <SliderArrow isPrev={true} />,
+        beforeChange: (current, next) => { onSlideChange(next) },
+        responsive: [
+            {
+                breakpoint: 431,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    variableWidth: false,
+                }
+            }
+        ]
     };
 
     return (
@@ -26,6 +37,7 @@ export default function SliderMobile({ children, styleName }) {
 }
 
 SliderMobile.propTypes = {
+    onSlideChange: PropTypes.func,
     styleName: PropTypes.string,
     children: PropTypes.node
 };

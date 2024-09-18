@@ -6,12 +6,18 @@ import modalStore from '../../../store/modalStore';
 import BackgroundImage from "./BackgroundImage/BackgroundImage";
 
 import s from '../Patron.module.scss';
-export default function Item({ item, idx }) {
+import { useEffect, useState } from "react";
+export default function Item({ item, idx, activeSlideIndex }) {
+    const [isActive, setIsActive] = useState(false);
+
     const { t } = useTranslation();
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
+    useEffect(() => {
+        setIsActive(activeSlideIndex === idx);
+    }, [idx, activeSlideIndex])
     return (
-        <div className={s.item_wrapper} index={`item_${idx}`}>
+        <div className={`${s.item_wrapper} ${isActive ? s.active : ''}`} index={`item_${idx}`}>
             <div className={s.item}>
                 <div className={s.background_wrapper}>
                     <BackgroundImage idx={idx} />
@@ -46,5 +52,6 @@ export default function Item({ item, idx }) {
 
 Item.propTypes = {
     item: PropTypes.object,
-    idx: PropTypes.number
+    idx: PropTypes.number,
+    activeSlideIndex: PropTypes.number
 };

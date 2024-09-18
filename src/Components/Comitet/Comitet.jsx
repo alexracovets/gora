@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Title from "../UI/Title/Title";
 import Container from "../Container/Container";
 import comitetData from "../../data/comitetData";
-import SliderMobile from "../SliderMobile/SliderMobile";
+import ComitetMobile from "./ComitetMobile/ComitetMobile";
 
 import s from './Comitet.module.scss';
 export default function Comitet() {
@@ -31,9 +31,9 @@ export default function Comitet() {
 
     return (
         <section className={s.comitet} id="comitet">
-            <Container>
-                <Title>{t("title.comitet")}</Title>
-                {isDesktop ?
+            {isDesktop ?
+                <Container>
+                    <Title>{t("title.comitet")}</Title>
                     <div className={s.comitet_wrapper}>
                         {
                             comitetData.map((person, idx) => {
@@ -47,23 +47,13 @@ export default function Comitet() {
                             })
                         }
                     </div>
-                    :
-                    <SliderMobile styleName={s.comitet_wrapper}>
-                        {
-                            comitetData.map((person, idx) => {
-                                return (
-                                    <div key={idx} className={s.item}>
-                                        <div className={s.photo} style={{ backgroundImage: `url(./img/comitet/${person.image})` }} />
-                                        <div className={s.name} dangerouslySetInnerHTML={{ __html: t(person.name) }} />
-                                        <div className={s.position} dangerouslySetInnerHTML={{ __html: t(person.position) }} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </SliderMobile>
-                }
-
-            </Container>
+                </Container>
+                :
+                <>
+                    <Title>{t("title.comitet")}</Title>
+                    <ComitetMobile />
+                </>
+            }
         </section >
     )
 }

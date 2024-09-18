@@ -78,5 +78,19 @@
                 }
             }
         }
+
+        .item_wrapper {
+            max-width: 35rem;
+            margin: 0;
+
+            .item {
+                transform: scale(0.95);
+                transition: all ease-in-out 300ms;
+
+                &.active {
+                    transform: scale(1);
+                }
+            }
+        }
     }
 }

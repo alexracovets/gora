@@ -14,6 +14,7 @@ export default function Patron() {
     const { t } = useTranslation();
     const [data, setData] = useState([]);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
     useEffect(() => {
         const updateData = () => {
@@ -37,29 +38,27 @@ export default function Patron() {
 
     return (
         <section className={s.patronat} id="patron">
-            <Container>
-                <Title>{t("title.patron")}</Title>
-                {data
-                    ?
+            {
+                isDesktop ?
+                    <Container>
+                        <Title>{t("title.patron")}</Title>
+                        <div className={s.patron_type} >
+                            {data.map((item, idx) => {
+                                return <Item key={idx} item={item} idx={idx} />
+                            })}
+                        </div>
+                    </Container> :
                     <>
-                        {
-                            isDesktop ?
-                                <div className={s.patron_type} >
-                                    {
-                                        data.map((item, idx) => {
-                                            return <Item key={idx} item={item} idx={idx} />
-                                        })
-                                    }
-                                </div> :
-                                <SliderMobile styleName={s.patron_type} >
-                                    {data.map((item, idx) => {
-                                        return <Item key={idx} item={item} idx={idx} />
-                                    })}
-                                </SliderMobile>
-                        }
+                        <Title>{t("title.patron")}</Title>
+                        <SliderMobile styleName={s.patron_type} onSlideChange={setActiveSlideIndex}>
+                            {data.map((item, idx) => {
+                                return <Item key={idx} item={item} idx={idx} activeSlideIndex={activeSlideIndex} />
+                            })}
+                        </SliderMobile>
                     </>
-                    : null}
-            </Container>
+
+            }
+
         </section >
     )
 }
