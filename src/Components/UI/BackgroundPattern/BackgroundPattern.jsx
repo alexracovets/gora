@@ -23,7 +23,7 @@ export default function BackgroundPattern({ backgroundHeight }) {
 
     return (
         showPattern && (
-            <div className={s.pattern} style={{ backgroundImage: `url(${pattern})`, minHeight: `${backgroundHeight}px` }}></div>
+            <div className={s.pattern} style={{ backgroundImage: `url(${pattern})`, minHeight: `${backgroundHeight / 2}rem` }}></div>
         )
     );
 }

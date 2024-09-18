@@ -33,6 +33,9 @@
     }
 
     .slider_wrapper {
+        overflow: hidden;
+        width: 100%;
+
         .slider {
             position: relative;
             z-index: 0;
@@ -167,9 +170,10 @@
                             width: 100%;
                             height: 9.614rem;
                             background-image: url("/img/pattern/pattern_white.svg");
-                            background-position-y: 3.1rem;
+                            background-position-y: 3.2rem;
                             opacity: 0.7;
                             pointer-events: none;
+                            background-size: 9.6rem;
 
                             @media (max-width:$media-mobile) {
                                 background-image: url("/img/pattern/pattern_white_mobile.svg");

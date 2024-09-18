@@ -5,21 +5,21 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 26px;
+    margin-top: 2.6rem;
 
     .line_wrapper {
-        width: 238px;
-        height: 5px;
+        width: 23.8rem;
+        height: 0.5rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         position: relative;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         overflow: hidden;
-        margin-bottom: 16px;
+        margin-bottom: 1.6rem;
 
         .back_line {
-            height: 2px;
+            height: 0.2rem;
             width: 100%;
             background-color: #424242;
         }
@@ -31,18 +31,18 @@
             width: 0%;
             height: 100%;
             background-color: $color-green;
-            border-radius: 5px;
+            border-radius: 0.5rem;
             overflow: hidden;
         }
     }
 
     .calculate {
         color: #8D8D8D;
-        font-size: 16px;
-        line-height: 19.62px;
+        font-size: 1.6rem;
+        line-height: 1.962rem;
         font-family: $font-Centurygothic;
         font-weight: 400;
-        margin-bottom: 42px;
+        margin-bottom: 4.2rem;
 
         span {
             font-weight: 600;
