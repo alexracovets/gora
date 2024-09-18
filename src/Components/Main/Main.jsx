@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 
 // import About from "../About/About";
