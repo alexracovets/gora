@@ -8,6 +8,7 @@ import Main from "./Components/Main/Main";
 import ScrollToHashElement from './static/ScrollToHashElement';
 import CustomScroll from './Components/CustomScroll/CustomScroll';
 import ModalPay from './Components/Modal/ModalPay/ModalPay';
+import ModalProgress from './Components/Modal/ModalProgress/ModalProgress';
 
 export default function App() {
   const [scrollHeight, setScrollHeight] = useState(null);
@@ -22,6 +23,7 @@ export default function App() {
         <Footer />
       </CustomScroll>
       <ModalPay />
+      <ModalProgress />
     </BrowserRouter>
 
   )

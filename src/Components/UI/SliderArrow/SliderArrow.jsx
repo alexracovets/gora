@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 import s from './SliderArrow.module.scss';
-export default function SliderArrow({ onClick, isPrev, isBottom }) {
+export default function SliderArrow({ onClick, isPrev, isBottom, isProgress, isProgressModal }) {
 
     return (
-        <img className={`${isPrev ? s.arrowPrev : s.arrowNext} ${isBottom && s.bottom}`}
+        <img className={`${isPrev ? s.arrowPrev : s.arrowNext} ${isBottom ? s.bottom : ''} ${isProgress ? s.progress : ''} ${isProgressModal ? s.progress_modal : ''}`}
             src="./img/slider/about/arrow/arrow.svg"
             onClick={onClick}
         />
@@ -14,5 +14,7 @@ export default function SliderArrow({ onClick, isPrev, isBottom }) {
 SliderArrow.propTypes = {
     onClick: PropTypes.func,
     isPrev: PropTypes.bool,
-    isBottom: PropTypes.bool
+    isBottom: PropTypes.bool,
+    isProgress: PropTypes.bool,
+    isProgressModal: PropTypes.bool
 }; 

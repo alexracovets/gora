@@ -31,7 +31,7 @@ export default function SliderItem({ slide, currentSlide, index, totalSlides, pl
 }
 
 SliderItem.propTypes = {
-    slide: PropTypes.array,
+    slide: PropTypes.object,
     index: PropTypes.number,
     currentSlide: PropTypes.number,
     totalSlides: PropTypes.number,

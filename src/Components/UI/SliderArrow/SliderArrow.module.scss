@@ -52,3 +52,28 @@
         }
     }
 }
+
+.progress {
+    width: 3rem;
+    height: 3rem;
+
+    &.arrowPrev {
+        transform: rotate(180deg) translateY(50%);
+        left: -3.5rem
+    }
+
+    &.arrowNext {
+        transform: rotate(0deg) translateY(-50%);
+        right: -3.5rem
+    }
+}
+
+.progress_modal {
+    &.arrowPrev {
+        left: -8rem
+    }
+
+    &.arrowNext {
+        right: -8rem
+    }
+}
