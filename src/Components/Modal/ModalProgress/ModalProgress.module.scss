@@ -12,6 +12,7 @@
     align-items: center;
     background-color: #9b9b9b33;
     backdrop-filter: blur(0.4rem);
+    z-index: 200;
 
     .modal {
         background-color: $color-bg;

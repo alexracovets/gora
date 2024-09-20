@@ -54,7 +54,7 @@ export default function Header({ scrollbarsRef }) {
         const handleScroll = () => {
             if (scrollbarsRef.current) {
                 const currentScroll = scrollbarsRef.current.getScrollTop();
-                
+
                 if (currentScroll < lastScrollY) {
                     setIsScrollingUp(true);
                 } else {
@@ -84,9 +84,6 @@ export default function Header({ scrollbarsRef }) {
     return (
         <Headroom
             ref={headroomRef}
-            onPin={() => console.log('pinned')}
-            onUnpin={() => console.log('unpinned')}
-            style={{ zIndex: 10 }}
         >
             <header className={`${isOpen ? s.open : ''}`}>
                 <Container>
