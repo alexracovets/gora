@@ -41,21 +41,23 @@ const timeLineData = [
         info: [
             "timeLine.5.info.0"
         ],
-        done: true
+        done: false,
+        progress: true
     },
     {
         title: "timeLine.6.title",
         info: [
             "timeLine.6.info.0"
         ],
-        done: false,
-        progress: true
+        done: false
     },
-    // {
-    //     title: "timeLine.7.title",
-    //     info: [],
-    //     done: false
-    // },
+    {
+        title: "timeLine.7.title",
+        info: [
+            "timeLine.7.info.0"
+        ],
+        done: false
+    },
     // {
     //     title: "timeLine.8.title",
     //     info: [],

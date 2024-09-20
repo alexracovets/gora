@@ -12,8 +12,7 @@
     }
 
     .line {
-        // height: 223.6rem;
-        height: 157rem;
+        height: 195.1rem;
         width: 0.3rem;
         background-color: $color-white;
         position: relative;
@@ -25,8 +24,7 @@
         @media (max-width:$media-mobile) {
             width: 0.1rem;
             border-radius: 0.1rem;
-            // height: 155.8rem;
-            height: 114.9rem;
+            height: 140.8rem;
             margin: 0;
             margin-left: 2.5rem;
             margin-top: 3rem;
@@ -86,10 +84,10 @@
             }
 
             &:nth-of-type(7) {
-                top: 157rem;
+                top: 165rem;
 
                 @media (max-width:$media-mobile) {
-                    top: 114.9rem;
+                    top: 124rem;
                 }
             }
 
@@ -99,15 +97,7 @@
                 @media (max-width:$media-mobile) {
                     top: 140.8rem;
                 }
-            }
-
-            &:nth-of-type(9) {
-                top: 222.7rem;
-
-                @media (max-width:$media-mobile) {
-                    top: 153.3rem;
-                }
-            }
+            } 
 
             &.right {
                 .dot_wrapper {
