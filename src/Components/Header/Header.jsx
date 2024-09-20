@@ -63,12 +63,14 @@ export default function Header({ scrollbarsRef }) {
 
                 setLastScrollY(currentScroll);
 
-                if (headroomRef.current) {
+                if (headroomRef.current && !isOpen) {
                     if (isScrollingUp) {
                         headroomRef.current.pin();
                     } else {
                         headroomRef.current.unpin();
                     }
+                } else {
+                    headroomRef.current.pin();
                 }
             }
         };
@@ -79,7 +81,7 @@ export default function Header({ scrollbarsRef }) {
         return () => {
             scrollbars.view.removeEventListener('scroll', handleScroll);
         };
-    }, [lastScrollY, isScrollingUp, scrollbarsRef]);
+    }, [lastScrollY, isScrollingUp, scrollbarsRef, isOpen]);
 
     return (
         <Headroom

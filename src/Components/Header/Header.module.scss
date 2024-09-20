@@ -1,18 +1,19 @@
 @import '../../global/variable.scss';
 
 header {
- 
+
     width: 100%;
     z-index: 1;
     transition: all ease-in-out 300ms;
     pointer-events: none;
     background-color: $color-bg;
-    box-shadow: 0 0 2rem 1rem $color-bg; 
+    box-shadow: 0 0 2rem 1rem $color-bg;
 
     @media (max-width:$media-mobile) {
-        height: 8rem;
+        height: 10rem;
         box-shadow: none;
         background-color: transparent;
+        pointer-events: none;
     }
 
     &.open {
