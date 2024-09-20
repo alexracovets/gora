@@ -15,7 +15,7 @@ const sliderAboutData = [
         ]
     },
     {
-        image: 'slide_02.jpg',
+        image: 'slide_02.png',
         points: [
             {
                 name: "sliderAbout.0.0.name",
