@@ -1,13 +1,8 @@
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import { BrowserRouter } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useRef } from 'react';
 
-// import Footer from "./Components/Footer/Footer";
-// import Header from "./Components/Header/Header";
-// import Main from "./Components/Main/Main";
 import ScrollToHashElement from './static/ScrollToHashElement';
-import CustomScroll from './Components/CustomScroll/CustomScroll';
-// import ModalPay from './Components/Modal/ModalPay/ModalPay';
-// import ModalProgress from './Components/Modal/ModalProgress/ModalProgress';
 
 const Footer = lazy(() => import('./Components/Footer/Footer'));
 const Header = lazy(() => import('./Components/Header/Header'));
@@ -16,16 +11,25 @@ const ModalPay = lazy(() => import('./Components/Modal/ModalPay/ModalPay'));
 const ModalProgress = lazy(() => import('./Components/Modal/ModalProgress/ModalProgress'));
 
 export default function App() {
+  const scrollbarsRef = useRef(null);
+
   return (
     <BrowserRouter>
       <ScrollToHashElement behavior="smooth" inline="start" block="start" />
-      <CustomScroll>
+      <Scrollbars
+        autoHeight
+        autoHeightMax={'100dvh'}
+        renderTrackVertical={props => <div {...props} className={'track_vertical'} />}
+        renderThumbVertical={props => <div {...props} className={'thumb_vertical'} />}
+        universal={true}
+        ref={scrollbarsRef}
+      >
         <Suspense fallback={null}>
-          <Header />
+          <Header scrollbarsRef={scrollbarsRef} />
           <Main />
           <Footer />
         </Suspense>
-      </CustomScroll>
+      </Scrollbars>
       <Suspense fallback={null}>
         <ModalPay />
       </Suspense>
@@ -33,5 +37,5 @@ export default function App() {
         <ModalProgress />
       </Suspense>
     </BrowserRouter>
-  )
+  );
 }

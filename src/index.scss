@@ -37,3 +37,19 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.track_vertical {
+  background-color: #ebd7b22c;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.thumb_vertical {
+  background-color: $color-beige;
+  border-radius: 1rem;
+  overflow: hidden;
+}

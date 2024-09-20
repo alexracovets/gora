@@ -1,29 +1,18 @@
 @import '../../global/variable.scss';
 
 header {
-    position: fixed;
-    left: 0;
-    top: 0;
+ 
     width: 100%;
     z-index: 1;
     transition: all ease-in-out 300ms;
     pointer-events: none;
     background-color: $color-bg;
-    box-shadow: 0 0 2rem 1rem $color-bg;
-
+    box-shadow: 0 0 2rem 1rem $color-bg; 
 
     @media (max-width:$media-mobile) {
         height: 8rem;
         box-shadow: none;
         background-color: transparent;
-    }
-
-    &.disable {
-        transform: translateY(-150%);
-    }
-
-    &.active {
-        transform: translateY(0%);
     }
 
     &.open {
@@ -33,7 +22,7 @@ header {
     }
 
     .navigation {
-        padding-top: 12.3rem;
+        padding-top: 3rem;
         padding-bottom: 2rem;
         position: relative;
 
