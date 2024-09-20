@@ -8,6 +8,7 @@ header {
     pointer-events: none;
     background-color: $color-bg;
     box-shadow: 0 0 2rem 1rem $color-bg;
+    font-family: "Lora", serif;
 
     @media (max-width:$media-mobile) {
         height: 10rem;
@@ -37,9 +38,15 @@ header {
                 line-height: 2rem;
                 color: $color-white;
                 text-transform: uppercase;
-                font-weight: 350;
+                font-weight: 600;
                 padding: 1.6rem;
                 pointer-events: all;
+                letter-spacing: 0.1rem;
+                transition: all ease-in-out 300ms;
+
+                &:hover {
+                    color: $color-green;
+                }
             }
         }
 
