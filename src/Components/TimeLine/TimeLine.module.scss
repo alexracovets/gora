@@ -97,7 +97,7 @@
                 @media (max-width:$media-mobile) {
                     top: 140.8rem;
                 }
-            } 
+            }
 
             &.right {
                 .dot_wrapper {
@@ -170,6 +170,8 @@
                         font-size: 4rem;
                         line-height: 4.8rem;
                         margin-bottom: 1.3rem;
+                        font-family: "Lora", serif;
+                        font-weight: 900;
 
                         @media (max-width:$media-mobile) {
                             font-size: 3.2rem;
