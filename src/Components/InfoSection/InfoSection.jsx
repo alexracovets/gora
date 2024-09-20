@@ -34,7 +34,6 @@ export default function InfoSection({ content, fullscreen }) {
 
             </Container>
         </section >
-
     )
 }
 

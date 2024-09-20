@@ -1,5 +1,6 @@
-import InfoSection from "../InfoSection/InfoSection";
-export default function FirstInfo() {
+import Container from "../Container/Container";
+import s from './FirstSection.module.scss';
+export default function FirstSection() {
 
     const content = {
         title: "title.gathering",
@@ -15,6 +16,10 @@ export default function FirstInfo() {
     }
 
     return (
-        <InfoSection content={content} fullscreen />
+        <section className={s.first} id={content.id}>
+            <Container>
+
+            </Container>
+        </section>
     )
 } 

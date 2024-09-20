@@ -8,7 +8,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-family: "Spectral", serif;
+    font-family: $font-Spectral;
 
     @media (max-width:$media-mobile) {
         font-size: 3.2rem;
