@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 
@@ -12,8 +12,12 @@ const Comitet = lazy(() => import('../Comitet/Comitet'));
 const GiftSection = lazy(() => import('../GiftSection/GiftSection'));
 
 import s from './Main.module.scss';
-export default function Main() {
-
+export default function Main({ scrollbarsRef }) {
+    useEffect(() => {
+        if (scrollbarsRef.current) {
+            scrollbarsRef.current.update(); // Оновлення скролбарів
+        }
+    }, [scrollbarsRef]);
     return (
         <main>
             <section className={s.first} id={"start"}>
@@ -61,5 +65,5 @@ export default function Main() {
 }
 
 Main.propTypes = {
-    scrollHeight: PropTypes.number
+    scrollbarsRef: PropTypes.object
 };

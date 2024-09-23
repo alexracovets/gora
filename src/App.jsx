@@ -1,14 +1,13 @@
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { BrowserRouter } from 'react-router-dom';
-import { lazy, useRef } from 'react';
+import { useRef } from 'react';
 
 import ScrollToHashElement from './static/ScrollToHashElement';
-
-const Footer = lazy(() => import('./Components/Footer/Footer'));
-const Header = lazy(() => import('./Components/Header/Header'));
-const Main = lazy(() => import('./Components/Main/Main'));
-const ModalPay = lazy(() => import('./Components/Modal/ModalPay/ModalPay'));
-const ModalProgress = lazy(() => import('./Components/Modal/ModalProgress/ModalProgress'));
+import Header from './Components/Header/Header';
+import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
+import ModalPay from './Components/Modal/ModalPay/ModalPay';
+import ModalProgress from './Components/Modal/ModalProgress/ModalProgress';
 
 export default function App() {
   const scrollbarsRef = useRef(null);
@@ -21,11 +20,10 @@ export default function App() {
         autoHeightMax={'100dvh'}
         renderTrackVertical={props => <div {...props} className={'track_vertical'} />}
         renderThumbVertical={props => <div {...props} className={'thumb_vertical'} />}
-        universal={true}
         ref={scrollbarsRef}
       >
         <Header scrollbarsRef={scrollbarsRef} />
-        <Main />
+        <Main scrollbarsRef={scrollbarsRef} />
         <Footer />
       </Scrollbars>
       <ModalPay />
