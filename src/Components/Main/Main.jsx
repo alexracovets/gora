@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 
@@ -13,30 +13,30 @@ const GiftSection = lazy(() => import('../GiftSection/GiftSection'));
 
 import s from './Main.module.scss';
 export default function Main({ scrollbarsRef }) {
-    useEffect(() => {
-        if (scrollbarsRef.current) {
-            scrollbarsRef.current.update(); // Оновлення скролбарів
-        }
-    }, [scrollbarsRef]);
+
+    const handleComponentLoad = () => {
+        scrollbarsRef.current.update()
+    };
+
     return (
         <main>
             <section className={s.first} id={"start"}>
                 <Suspense fallback={<Loader />}>
-                    <FirstSection />
+                    <FirstSection onLoad={() => handleComponentLoad()} />
                 </Suspense>
             </section>
             <section id="patron">
                 <Suspense fallback={<Loader />}>
-                    <Patron />
+                    <Patron onLoad={() => handleComponentLoad()}  />
                 </Suspense>
             </section>
             <section id="about">
                 <Suspense fallback={<Loader />}>
-                    <About />
+                    <About onLoad={() => handleComponentLoad()}  />
                 </Suspense>
             </section>
             <section id="gifts">
-                <Suspense fallback={<Loader />}>
+                <Suspense fallback={<Loader />} >
                     <GiftSection />
                 </Suspense>
             </section>
@@ -46,7 +46,7 @@ export default function Main({ scrollbarsRef }) {
                 </Suspense>
             </section >
             <section id="time_line">
-                <Suspense fallback={<Loader />}>
+                <Suspense fallback={<Loader />} >
                     <TimeLine />
                 </Suspense>
             </section>
@@ -60,7 +60,7 @@ export default function Main({ scrollbarsRef }) {
                     <Comitet />
                 </Suspense>
             </section>
-        </main>
+        </main >
     )
 }
 

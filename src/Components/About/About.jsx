@@ -10,10 +10,15 @@ import modalStore from '../../store/modalStore';
 import sliderAboutData from "../../data/sliderAboutData";
 
 import s from './About.module.scss';
-export default function About() {
+import { useEffect } from "react";
+export default function About({ onLoad }) {
     const { t } = useTranslation();
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
-
+    useEffect(() => {
+        if (onLoad) {
+            onLoad();
+        }
+    }, [onLoad]);
     return (
         <Container>
             <Title>{t("title.about")}</Title>

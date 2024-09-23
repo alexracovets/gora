@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import Container from "../Container/Container";
 import s from './FirstSection.module.scss';
-export default function FirstSection() {
-
+export default function FirstSection({ onLoad }) {
+    useEffect(() => {
+        if (onLoad) {
+            onLoad();
+        }
+    }, [onLoad]);
     return (
         <Container>
             <div className={s.squad_wrapper}>
