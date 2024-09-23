@@ -24,18 +24,16 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <AnimatePresence>
-        {
-          loader ? <motion.div className={'loader'}
-            initial={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
-          >
-            <Loader />
-          </motion.div> : null
-        }
-
-      </AnimatePresence>
+      {
+        loader ? <motion.div className={'loader'}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          exit={{ opacity: 0 }}
+        >
+          <Loader />
+        </motion.div> : null
+      }
 
       <ScrollToHashElement behavior="smooth" inline="start" block="start" />
       <Scrollbars

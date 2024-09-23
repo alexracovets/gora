@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import SliderArrow from "../../../UI/SliderArrow/SliderArrow";
 
 import s from '../ModalProgress.module.scss';
+import VideoPlayer from './VideoPlayer/VideoPlayer';
 export default function ProgressItem({ content, index, activeSlideIndex, countSlides }) {
     const sliderTopRef = useRef(null);
     const sliderBottomRef = useRef(null);
@@ -95,11 +96,7 @@ export default function ProgressItem({ content, index, activeSlideIndex, countSl
                                 {
                                     item.type === 'mp4'
                                         ?
-                                        <ReactPlayer
-                                            className={s.content_wrapper}
-                                            url={item.src}
-                                            playing muted loop
-                                            alt='video_progress' />
+                                        <VideoPlayer src={item.src} />
                                         :
                                         <div className={s.content_wrapper}>
                                             <img src={item.src} alt='photo_progress' />
@@ -117,12 +114,7 @@ export default function ProgressItem({ content, index, activeSlideIndex, countSl
                                     {
                                         item.type === 'mp4'
                                             ?
-                                            <ReactPlayer
-                                                className={s.content_wrapper}
-                                                url={item.src}
-                                                playing muted loop
-                                                alt='video_progress'
-                                            />
+                                            <VideoPlayer src={item.src} />
                                             :
                                             <div className={s.content_wrapper}>
                                                 <img src={item.src} alt='photo_progress' />
