@@ -27,20 +27,15 @@ export default function VideoPlayer({ src }) {
     }, [src]);
 
     if (isError) {
-        console.log('1')
         return <Loader />;
     }
-    console.log(isLoading)
     return (
         <>
 
             <div className={s.content_wrapper}>
-                <video
-                    src={src}
-                    autoPlay
-                    muted
-                    loop
-                />
+                <video autoPlay muted loop>
+                    <source src={src} type="video/mp4" />
+                </video>
                 {isLoading && <Loader />}
             </div>
 
