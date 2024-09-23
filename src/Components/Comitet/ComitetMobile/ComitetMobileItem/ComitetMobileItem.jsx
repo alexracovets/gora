@@ -15,8 +15,10 @@ export default function ComitetMobileItem({ person, idx, activeSlideIndex }) {
         <div className={s.item_wrapper}>
             <div key={idx} className={`${s.item} ${isActive ? s.active : ''}`}>
                 <div className={s.photo} style={{ backgroundImage: `url(./img/comitet/${person.image})` }} />
-                <div className={s.name} dangerouslySetInnerHTML={{ __html: t(person.name) }} />
-                <div className={s.position} dangerouslySetInnerHTML={{ __html: t(person.position) }} />
+                <div className={s.info}>
+                    <div className={s.name} dangerouslySetInnerHTML={{ __html: t(person.name) }} />
+                    <div className={s.position} dangerouslySetInnerHTML={{ __html: t(person.position) }} />
+                </div>
             </div>
         </div>
     )

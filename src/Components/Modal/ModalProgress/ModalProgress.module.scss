@@ -43,7 +43,7 @@
             padding: 1rem;
             box-sizing: border-box;
             border-radius: 50%;
-            background-color: $color-bg;
+            background-color: $color-browne;
             cursor: pointer;
             transition: all ease-in-out 300ms;
 
@@ -139,7 +139,7 @@
                     align-items: center;
 
                     @media (max-width:$media-mobile) {
-                        width: 35rem;
+                        width: 100%;
                     }
 
                     .item_wrapper {
@@ -150,7 +150,7 @@
                         border-radius: 2.5rem;
                         padding: 5.4rem 8rem 0 8rem;
                         position: relative;
-                        transform: scale(0.9);
+                        transform: scale(1);
                         transition: all ease-in-out 300ms;
                         margin-top: 1rem;
 
@@ -183,6 +183,7 @@
 
                         @media (max-width:$media-mobile) {
                             border-radius: 1rem;
+                            width: 100%;
                             height: 16rem;
                         }
 
@@ -262,13 +263,12 @@
         .text_info {
             color: $color-white;
             font-size: 1.6rem;
-            line-height: 1.962rem;
+            line-height: 1.2;
             text-align: center;
-            font-family: $font-Centurygothic;
+            font-family: $font-Roboto;
 
             @media (max-width:$media-mobile) {
                 font-size: 1.3rem;
-                line-height: 1.594rem;
             }
         }
     }

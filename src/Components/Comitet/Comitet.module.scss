@@ -1,12 +1,6 @@
 @import '../../global/variable.scss';
 
 .comitet {
-    margin-top: 24rem;
-
-    @media (max-width:$media-mobile) {
-        margin-top: 13rem;
-    }
-
     .comitet_wrapper {
         display: flex;
         justify-content: center;
@@ -50,32 +44,40 @@
                 }
             }
 
-            .name {
-                color: $color-white;
-                text-align: center;
-                font-size: 3.6rem;
-                line-height: 4.32rem;
-                font-weight: 500;
-                margin-bottom: 3.6rem;
-                font-family: "Lora", serif;
-                
-                @media (max-width:$media-mobile) {
-                    font-size: 3.2rem;
-                    line-height: 3.84rem;
-                    margin-bottom: 1.5rem;
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                flex-grow: 1;
+
+                .name {
+                    color: $color-white;
+                    text-align: center;
+                    font-size: 3.6rem;
+                    line-height: 1.1;
+                    font-weight: 500;
+                    margin-bottom: 3.6rem;
+                    font-family: $font-Spectral;
+
+                    @media (max-width:$media-mobile) {
+                        font-size: 3.2rem;
+                        line-height: 3.84rem;
+                        margin-bottom: 1.5rem;
+                    }
                 }
-            }
 
-            .position {
-                color: $color-lightYellow;
-                font-family: $font-Centurygothic;
-                font-size: 2rem;
-                line-height: 2.452rem;
-                text-align: center;
+                .position {
+                    color: $color-lightYellow;
+                    font-family: $font-Roboto;
+                    font-size: 2rem;
+                    line-height: 2.452rem;
+                    text-align: center;
 
-                @media (max-width:$media-mobile) {
-                    font-size: 1.6rem;
-                    line-height: 1.962rem;
+                    @media (max-width:$media-mobile) {
+                        font-size: 1.6rem;
+                        line-height: 1.962rem;
+                    }
                 }
             }
         }

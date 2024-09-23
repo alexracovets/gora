@@ -10,38 +10,20 @@ import s from './SecondInfo.module.scss';
 export default function SecondInfo() {
     const { t } = useTranslation();
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
-    const content = {
-        title: "title.join",
-        startText: [
-            "secondInfo.0"
-        ],
-        help: [
-            "secondInfo.1.0",
-            "secondInfo.1.1"
-        ],
-        btn: "btn.join",
-        id: "join"
-    }
 
     return (
-        <section className={s.info} id={content.id}>
+        <section className={s.info} id={"join"}>
             <Container>
-                <Title>{t(content.title)}</Title>
+                <Title>{t("title.join")}</Title>
                 <div className={s.we_are}>
-                    {content.startText.map((text, idx) => {
-                        return (
-                            <p key={idx} dangerouslySetInnerHTML={{ __html: t(text) }} />
-                        )
-                    })}
+                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.0") }} />
                 </div>
                 <DashLine />
                 <div className={s.help}>
-                    {content.help.map((item, idx) => {
-                        return <p key={idx} dangerouslySetInnerHTML={{ __html: t(item) }} />
-                    })}
+                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.0") }} />
+                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.1") }} /> 
                 </div>
-                {content.btn ? <Button click={() => setIsPayModal(true)}>{t(content.btn)}</Button> : null}
-
+                <Button click={() => setIsPayModal(true)}>{t("btn.join")}</Button>
             </Container>
         </section >
     )

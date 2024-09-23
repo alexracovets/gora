@@ -7,9 +7,10 @@
     height: 7rem;
     top: 50%;
     z-index: 1;
+    opacity: 1;
+    scale: 1;
     cursor: pointer;
-    transition: all ease-in-out 300ms;
-
+    transition: all ease-in 300ms;
 
     @media (max-width:$media-mobile) {
         top: auto;
@@ -86,4 +87,9 @@
             right: 25%;
         }
     }
+}
+
+.disabled {
+    opacity: 0.5;
+    scale: 0.9;
 }

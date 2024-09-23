@@ -3,30 +3,27 @@ const sliderAboutData = [
         image: 'slide_01.png',
         points: [
             {
-                name: "sliderAbout.0.0.name",
-                image: "point_01.svg",
-                text: "sliderAbout.0.0.text"
-            },
-            {
-                name: "sliderAbout.0.1.name",
-                image: "point_01.svg",
-                text: "sliderAbout.0.1.text"
-            },
+                name: "about.sliderAbout.0.name",
+                text: "about.sliderAbout.0.text"
+            }
         ]
     },
     {
         image: 'slide_02.png',
         points: [
             {
-                name: "sliderAbout.0.0.name",
-                image: "point_01.svg",
-                text: "sliderAbout.0.0.text"
-            },
+                name: "about.sliderAbout.1.name",
+                text: "about.sliderAbout.1.text"
+            }
+        ]
+    },
+    {
+        image: 'slide_03.png',
+        points: [
             {
-                name: "sliderAbout.0.1.name",
-                image: "point_01.svg",
-                text: "sliderAbout.0.1.text"
-            },
+                name: "about.sliderAbout.2.name",
+                text: "about.sliderAbout.2.text"
+            }
         ]
     }
 ]

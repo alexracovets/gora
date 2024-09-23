@@ -3,7 +3,7 @@
 .progress_wrapper {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
     margin-top: 2.6rem;
 
@@ -46,9 +46,9 @@
 
     .calculate {
         color: #8D8D8D;
-        font-size: 1.6rem;
+        font-size: 2rem;
         line-height: 1.962rem;
-        font-family: $font-Centurygothic;
+        font-family: $font-Roboto;
         font-weight: 400;
         margin-bottom: 4.2rem;
 
