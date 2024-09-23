@@ -24,11 +24,9 @@ export default function App() {
         universal={true}
         ref={scrollbarsRef}
       >
-        <Suspense fallback={null}>
-          <Header scrollbarsRef={scrollbarsRef} />
-          <Main />
-          <Footer />
-        </Suspense>
+        <Header scrollbarsRef={scrollbarsRef} />
+        <Main />
+        <Footer />
       </Scrollbars>
       <Suspense fallback={null}>
         <ModalPay />
