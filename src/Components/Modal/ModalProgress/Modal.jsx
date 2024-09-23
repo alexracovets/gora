@@ -1,5 +1,3 @@
-import { motion, AnimatePresence } from "framer-motion";
-
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -20,19 +18,19 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "0.mp4"
+                    src: "progress/0/0.mp4"
                 },
                 1: {
                     type: 'jpg',
-                    src: "1.jpg"
+                    src: "progress/0/1.jpg"
                 },
                 2: {
                     type: 'jpg',
-                    src: "2.jpg"
+                    src: "progress/0/2.jpg"
                 },
                 3: {
                     type: 'jpg',
-                    src: "3.jpg"
+                    src: "progress/0/3.jpg"
                 }
             },
             status: {
@@ -47,15 +45,15 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'jpg',
-                    src: "0.jpg"
+                    src: "progress/1/0.jpg"
                 },
                 1: {
                     type: 'jpg',
-                    src: "1.jpg"
+                    src: "progress/1/1.jpg"
                 },
                 2: {
                     type: 'jpg',
-                    src: "0.jpg"
+                    src: "progress/1/0.jpg"
                 },
             },
             status: {
@@ -67,22 +65,23 @@ export default function Modal() {
             ]
         },
         {
+            //copy
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "0.mp4"
+                    src: "progress/0/0.mp4"
                 },
                 1: {
                     type: 'jpg',
-                    src: "1.jpg"
+                    src: "progress/0/1.jpg"
                 },
                 2: {
                     type: 'jpg',
-                    src: "2.jpg"
+                    src: "progress/0/2.jpg"
                 },
                 3: {
                     type: 'jpg',
-                    src: "3.jpg"
+                    src: "progress/0/3.jpg"
                 }
             },
             status: {
@@ -94,18 +93,19 @@ export default function Modal() {
             ]
         },
         {
+            //copy
             sources: {
                 0: {
                     type: 'jpg',
-                    src: "0.jpg"
+                    src: "progress/1/0.jpg"
                 },
                 1: {
                     type: 'jpg',
-                    src: "1.jpg"
+                    src: "progress/1/1.jpg"
                 },
                 2: {
                     type: 'jpg',
-                    src: "0.jpg"
+                    src: "progress/1/0.jpg"
                 },
             },
             status: {
@@ -119,34 +119,23 @@ export default function Modal() {
     ]
 
     return (
-        <AnimatePresence>
-            {isModalProgress ?
-                <motion.div className={s.modal_wrapper}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    exit={{ opacity: 0 }}
-                    onClick={() => setIsModalProgress(false)}
-                >
-                    <div className={s.modal} onClick={(e) => e.stopPropagation()}>
-                        <div className={s.close_form} onClick={() => setIsModalProgress(false)}>
-                            <div className={s.lines}>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <Title>{t("title.progress")}</Title>
-                        <div className={s.progres}>
-                            <SliderModal styleName={`${s.slider_modal} fix_visible`} onSlideChange={(index) => setActiveSlideIndex(index)}>
-                                {progressData.map((item, idx) => {
-                                    return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + (window.innerWidth > 430 ? 1 : 0)} countSlides={progressData.length} />
-                                })}
-                            </SliderModal>
-                        </div>
+        <div className={`${s.modal_wrapper} ${isModalProgress ? s.active : ''}`} onClick={() => setIsModalProgress(false)}>
+            <div className={s.modal} onClick={(e) => e.stopPropagation()}>
+                <div className={s.close_form} onClick={() => setIsModalProgress(false)}>
+                    <div className={s.lines}>
+                        <span></span>
+                        <span></span>
                     </div>
-                </motion.div> :
-                null
-            }
-        </AnimatePresence>
+                </div>
+                <Title>{t("title.progress")}</Title>
+                <div className={s.progres}>
+                    <SliderModal styleName={`${s.slider_modal} fix_visible`} onSlideChange={(index) => setActiveSlideIndex(index)}>
+                        {progressData.map((item, idx) => {
+                            return <ProgressItem key={idx} content={item} index={idx} activeSlideIndex={activeSlideIndex + (window.innerWidth > 430 ? 1 : 0)} countSlides={progressData.length} />
+                        })}
+                    </SliderModal>
+                </div>
+            </div>
+        </div>
     );
 }

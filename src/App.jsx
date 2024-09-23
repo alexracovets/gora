@@ -1,6 +1,6 @@
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { BrowserRouter } from 'react-router-dom';
-import { lazy, Suspense, useRef } from 'react';
+import { lazy, useRef } from 'react';
 
 import ScrollToHashElement from './static/ScrollToHashElement';
 
@@ -28,12 +28,8 @@ export default function App() {
         <Main />
         <Footer />
       </Scrollbars>
-      <Suspense fallback={null}>
-        <ModalPay />
-      </Suspense>
-      <Suspense fallback={null}>
-        <ModalProgress />
-      </Suspense>
+      <ModalPay />
+      <ModalProgress />
     </BrowserRouter>
   );
 }

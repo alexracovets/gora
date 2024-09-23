@@ -97,11 +97,12 @@ export default function ProgressItem({ content, index, activeSlideIndex, countSl
                                         ?
                                         <ReactPlayer
                                             className={s.content_wrapper}
-                                            url={`./progress/${index}/${item.src}`}
-                                            playing muted loop />
+                                            url={item.src}
+                                            playing muted loop
+                                            alt='video_progress' />
                                         :
                                         <div className={s.content_wrapper}>
-                                            <img src={`./progress/${index}/${item.src}`} />
+                                            <img src={item.src} alt='photo_progress' />
                                         </div>
                                 }
                             </div>
@@ -118,11 +119,13 @@ export default function ProgressItem({ content, index, activeSlideIndex, countSl
                                             ?
                                             <ReactPlayer
                                                 className={s.content_wrapper}
-                                                url={`./progress/${index}/${item.src}`}
-                                                playing muted loop />
+                                                url={item.src}
+                                                playing muted loop
+                                                alt='video_progress'
+                                            />
                                             :
                                             <div className={s.content_wrapper}>
-                                                <img src={`./progress/${index}/${item.src}`} />
+                                                <img src={item.src} alt='photo_progress' />
                                             </div>
                                     }
                                 </div>

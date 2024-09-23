@@ -12,7 +12,14 @@
     align-items: center;
     background-color: #9b9b9b33;
     backdrop-filter: blur(0.4rem);
-    z-index: 200;
+    z-index: -1;
+    transition: all ease-in-out 300ms;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+        z-index: 200;
+    }
 
     .modal {
         background-color: $color-bg;
@@ -150,9 +157,9 @@
                         border-radius: 2.5rem;
                         padding: 5.4rem 8rem 0 8rem;
                         position: relative;
-                        transform: scale(1);
+                        transform: scale(0.95);
                         transition: all ease-in-out 300ms;
-                        margin-top: 1rem;
+                        margin-top: 3rem;
 
                         @media (max-width:$media-mobile) {
                             border-radius: 1.8rem;
@@ -165,7 +172,7 @@
                         }
 
                         &.active {
-                            transform: scale(0.95);
+                            transform: scale(1);
 
                             @media (max-width:$media-mobile) {
                                 transform: scale(1);
