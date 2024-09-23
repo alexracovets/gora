@@ -66,58 +66,6 @@ export default function Modal() {
             info: [
                 'Основна історична будова - Келія, що зараз відновлюється (близько 200 м2).'
             ]
-        },
-        {
-            //copy
-            sources: {
-                0: {
-                    type: 'mp4',
-                    src: progress_0_0
-                },
-                1: {
-                    type: 'jpg',
-                    src: "progress/0/1.jpg"
-                },
-                2: {
-                    type: 'jpg',
-                    src: "progress/0/2.jpg"
-                },
-                3: {
-                    type: 'jpg',
-                    src: "progress/0/3.jpg"
-                }
-            },
-            status: {
-                status: 'progress',
-                value: 'в процесі'
-            },
-            info: [
-                'Основна історична будова - Келія, що зараз відновлюється (близько 200 м2).'
-            ]
-        },
-        {
-            //copy
-            sources: {
-                0: {
-                    type: 'jpg',
-                    src: "progress/1/0.jpg"
-                },
-                1: {
-                    type: 'jpg',
-                    src: "progress/1/1.jpg"
-                },
-                2: {
-                    type: 'jpg',
-                    src: "progress/1/0.jpg"
-                },
-            },
-            status: {
-                status: 'progress',
-                value: 'в процесі'
-            },
-            info: [
-                'Основна історична будова - Келія, що зараз відновлюється (близько 200 м2).'
-            ]
         }
     ]
 

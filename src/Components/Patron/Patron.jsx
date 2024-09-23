@@ -10,7 +10,7 @@ import patronDataMobile from "../../data/patronDataMobile";
 import SliderMobile from "../SliderMobile/SliderMobile";
 
 import s from './Patron.module.scss';
-export default function Patron({ onLoad }) {
+export default function Patron() {
     const { t } = useTranslation();
     const [data, setData] = useState([]);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 430)
@@ -35,12 +35,6 @@ export default function Patron({ onLoad }) {
             window.removeEventListener('resize', updateData);
         };
     }, []);
-
-    useEffect(() => {
-        if (onLoad) {
-            onLoad();
-        }
-    }, [onLoad]);
 
     return (
         <>

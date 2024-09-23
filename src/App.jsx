@@ -1,14 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 
 import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
-import ModalPay from './Components/Modal/ModalPay/ModalPay';
-import ModalProgress from './Components/Modal/ModalProgress/ModalProgress';
 import Loader from './Components/Loader/Loader';
+import Default from "./layout/Default";
+import Home from "./pages/Home";
 
 export default function App() {
   const scrollbarsRef = useRef(null);
@@ -43,11 +43,13 @@ export default function App() {
         ref={scrollbarsRef}
       >
         <Header scrollbarsRef={scrollbarsRef} />
-        <Main scrollbarsRef={scrollbarsRef} />
+        <Routes>
+          <Route path="/" element={<Default />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
         <Footer />
       </Scrollbars>
-      <ModalPay />
-      <ModalProgress />
     </BrowserRouter>
   );
 }
