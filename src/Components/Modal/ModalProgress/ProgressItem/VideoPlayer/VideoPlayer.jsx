@@ -33,11 +33,9 @@ export default function VideoPlayer({ src }) {
         <>
 
             <div className={s.content_wrapper}>
-                <video autoPlay muted loop>
-                    <source src={src} type="video/mp4" />
-                </video>
+                <ReactPlayer url={src} playing muted loop onStart={console.log('1')} />
                 {isLoading && <Loader />}
-            </div>
+            </div >
 
         </>
     );

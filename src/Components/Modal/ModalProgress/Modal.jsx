@@ -7,6 +7,9 @@ import modalStore from '../../../store/modalStore';
 
 import s from './ModalProgress.module.scss';
 import Title from "../../UI/Title/Title";
+
+import progress_0_0 from "/progress/0/0.mp4"
+
 export default function Modal() {
     const isModalProgress = modalStore((state) => state.isModalProgress);
     const setIsModalProgress = modalStore((state) => state.setIsModalProgress);
@@ -18,7 +21,7 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "./progress/0/0.mp4"
+                    src: progress_0_0
                 },
                 1: {
                     type: 'jpg',
@@ -69,7 +72,7 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "./progress/0/0.mp4"
+                    src: progress_0_0
                 },
                 1: {
                     type: 'jpg',
