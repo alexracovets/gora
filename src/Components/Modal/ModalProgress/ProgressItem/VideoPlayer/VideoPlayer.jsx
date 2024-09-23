@@ -10,17 +10,16 @@ export default function VideoPlayer({ src }) {
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-        // Робимо запит на завантаження відео
         const checkVideoAvailability = async () => {
             try {
                 const response = await fetch(src);
                 if (response.ok) {
-                    setIsLoading(false); // Якщо ресурс доступний, вимикаємо лоудер
+                    setIsLoading(false);
                 } else {
-                    setIsError(true); // Якщо ресурс недоступний, показуємо помилку
+                    setIsError(true); 
                 }
             } catch (error) {
-                setIsError(true); // Помилка при запиті
+                setIsError(true);
             }
         };
 
@@ -28,13 +27,13 @@ export default function VideoPlayer({ src }) {
     }, [src]);
 
     if (isError) {
-        return <Loader />; // Показуємо лоудер або інший компонент у разі помилки
+        return <Loader />;
     }
 
     return (
         <div className={s.content_wrapper}>
             {isLoading ? (
-                <Loader />  // Показуємо лоудер, поки чекаємо на відповідь
+                <Loader />  
             ) : (
                 <ReactPlayer
                     url={src}

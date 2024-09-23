@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
 
