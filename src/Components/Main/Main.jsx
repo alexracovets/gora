@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
+import Loader from '../Loader/Loader';
 
 const About = lazy(() => import('../Patron/Patron'));
 const Patron = lazy(() => import('../About/About'));
@@ -10,34 +11,51 @@ const CurrentState = lazy(() => import('../CurrentState/CurrentState'));
 const Comitet = lazy(() => import('../Comitet/Comitet'));
 const GiftSection = lazy(() => import('../GiftSection/GiftSection'));
 
+import s from './Main.module.scss';
 export default function Main() {
 
     return (
         <main>
-            <Suspense fallback={null}>
-                <FirstSection />
-            </Suspense>
-            <Suspense fallback={null}>
-                <Patron />
-            </Suspense>
-            <Suspense fallback={null}>
-                <About />
-            </Suspense>
-            <Suspense fallback={null}>
-                <GiftSection />
-            </Suspense>
-            <Suspense fallback={null}>
-                <SecondInfo />
-            </Suspense>
-            <Suspense fallback={null}>
-                <TimeLine />
-            </Suspense>
-            <Suspense fallback={null}>
-                <CurrentState />
-            </Suspense>
-            <Suspense fallback={null}>
-                <Comitet />
-            </Suspense>
+            <section className={s.first} id={"start"}>
+                <Suspense fallback={<Loader />}>
+                    <FirstSection />
+                </Suspense>
+            </section>
+            <section id="patron">
+                <Suspense fallback={<Loader />}>
+                    <Patron />
+                </Suspense>
+            </section>
+            <section id="about">
+                <Suspense fallback={<Loader />}>
+                    <About />
+                </Suspense>
+            </section>
+            <section id="gifts">
+                <Suspense fallback={<Loader />}>
+                    <GiftSection />
+                </Suspense>
+            </section>
+            <section id="join">
+                <Suspense fallback={<Loader />}>
+                    <SecondInfo />
+                </Suspense>
+            </section >
+            <section id="time_line">
+                <Suspense fallback={<Loader />}>
+                    <TimeLine />
+                </Suspense>
+            </section>
+            <section id="time_line">
+                <Suspense fallback={<Loader />}>
+                    <CurrentState />
+                </Suspense>
+            </section>
+            <section id="comitet">
+                <Suspense fallback={<Loader />}>
+                    <Comitet />
+                </Suspense>
+            </section>
         </main>
     )
 }

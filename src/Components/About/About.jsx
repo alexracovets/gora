@@ -15,21 +15,18 @@ export default function About() {
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     return (
-        <section className={s.about} id="about">
-            <Container>
-                <Title>{t("title.about")}</Title>
-                <article className={s.mission}>
-                    <p className={s.title}>{t("about.mission")}</p>
-                    <div className={s.text}>{t("about.mission_desc")}</div>
-                </article>
-                <div className={s.slider_wrapper}>
-                    <SliderAbout length={sliderAboutData.length}>
-                        {sliderAboutData.map((slide, idx) => <SliderItem key={idx} idx={idx} slide={slide} />)}
-                    </SliderAbout>
-                </div>
-                <Button click={() => setIsPayModal(true)}>{t("btn.contribution")}</Button>
-            </Container>
-        </section >
-
+        <Container>
+            <Title>{t("title.about")}</Title>
+            <article className={s.mission}>
+                <p className={s.title}>{t("about.mission")}</p>
+                <div className={s.text}>{t("about.mission_desc")}</div>
+            </article>
+            <div className={s.slider_wrapper}>
+                <SliderAbout length={sliderAboutData.length}>
+                    {sliderAboutData.map((slide, idx) => <SliderItem key={idx} idx={idx} slide={slide} />)}
+                </SliderAbout>
+            </div>
+            <Button click={() => setIsPayModal(true)}>{t("btn.contribution")}</Button>
+        </Container>
     )
 }

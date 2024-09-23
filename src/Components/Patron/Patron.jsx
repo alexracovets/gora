@@ -37,7 +37,7 @@ export default function Patron() {
     }, []);
 
     return (
-        <section className={s.patronat} id="patron">
+        <>
             {
                 isDesktop ?
                     <Container>
@@ -56,9 +56,7 @@ export default function Patron() {
                             })}
                         </SliderMobile>
                     </>
-
             }
-
-        </section >
+        </>
     )
 }

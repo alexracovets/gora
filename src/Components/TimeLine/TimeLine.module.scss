@@ -1,198 +1,194 @@
 @import '../../global/variable.scss';
 
-.time_line {
-    padding-bottom: 15rem;
+.line {
+    height: 195.1rem;
+    width: 0.3rem;
+    background-color: $color-white;
+    position: relative;
+    border-radius: 0.3rem;
+    margin: 0 auto;
+    margin-top: 13.95rem;
+    box-shadow: 0 0 0.5rem 0 $color-white;
 
-    .line {
-        height: 195.1rem;
-        width: 0.3rem;
-        background-color: $color-white;
-        position: relative;
-        border-radius: 0.3rem;
-        margin: 0 auto;
-        margin-top: 13.95rem;
-        box-shadow: 0 0 0.5rem 0 $color-white;
+    @media (max-width:$media-mobile) {
+        width: 0.1rem;
+        border-radius: 0.1rem;
+        height: 140.8rem;
+        margin: 0;
+        margin-left: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .dot {
+        position: absolute;
+        top: 0;
+        left: calc(0.15rem - 7.9rem/2);
 
         @media (max-width:$media-mobile) {
-            width: 0.1rem;
-            border-radius: 0.1rem;
-            height: 140.8rem;
-            margin: 0;
-            margin-left: 2.5rem;
-            margin-top: 3rem;
+            left: calc(0.15rem - 2.5rem);
         }
 
-        .dot {
-            position: absolute;
+        &:nth-of-type(1) {
             top: 0;
-            left: calc(0.15rem - 7.9rem/2);
+        }
+
+        &:nth-of-type(2) {
+            top: 23.6rem;
 
             @media (max-width:$media-mobile) {
-                left: calc(0.15rem - 2.5rem);
+                top: 16.4rem;
             }
+        }
 
-            &:nth-of-type(1) {
-                top: 0;
+        &:nth-of-type(3) {
+            top: 58.6rem;
+
+            @media (max-width:$media-mobile) {
+                top: 43.1rem;
             }
+        }
 
-            &:nth-of-type(2) {
-                top: 23.6rem;
+        &:nth-of-type(4) {
+            top: 84.9rem;
 
-                @media (max-width:$media-mobile) {
-                    top: 16.4rem;
-                }
+            @media (max-width:$media-mobile) {
+                top: 66.3rem;
             }
+        }
 
-            &:nth-of-type(3) {
-                top: 58.6rem;
+        &:nth-of-type(5) {
+            top: 108.4rem;
 
-                @media (max-width:$media-mobile) {
-                    top: 43.1rem;
-                }
+            @media (max-width:$media-mobile) {
+                top: 82.5rem;
             }
+        }
 
-            &:nth-of-type(4) {
-                top: 84.9rem;
+        &:nth-of-type(6) {
+            top: 127.4rem;
 
-                @media (max-width:$media-mobile) {
-                    top: 66.3rem;
-                }
+            @media (max-width:$media-mobile) {
+                top: 96rem;
             }
+        }
 
-            &:nth-of-type(5) {
-                top: 108.4rem;
+        &:nth-of-type(7) {
+            top: 165rem;
 
-                @media (max-width:$media-mobile) {
-                    top: 82.5rem;
-                }
+            @media (max-width:$media-mobile) {
+                top: 124rem;
             }
+        }
 
-            &:nth-of-type(6) {
-                top: 127.4rem;
+        &:nth-of-type(8) {
+            top: 195.1rem;
 
-                @media (max-width:$media-mobile) {
-                    top: 96rem;
-                }
+            @media (max-width:$media-mobile) {
+                top: 140.8rem;
             }
+        }
 
-            &:nth-of-type(7) {
-                top: 165rem;
-
-                @media (max-width:$media-mobile) {
-                    top: 124rem;
-                }
-            }
-
-            &:nth-of-type(8) {
-                top: 195.1rem;
-
-                @media (max-width:$media-mobile) {
-                    top: 140.8rem;
-                }
-            }
-
-            &.right {
-                .dot_wrapper {
-                    .content {
-                        left: 7.9rem;
-                        text-align: left;
-                        align-items: flex-start;
-                        margin-left: 3rem;
-
-                        @media (max-width:$media-mobile) {
-                            left: 4rem;
-                        }
-                    }
-                }
-            }
-
-            &.left {
-                .dot_wrapper {
-                    .content {
-                        right: 7.9rem;
-                        text-align: right;
-                        align-items: flex-end;
-                        margin-right: 3rem;
-
-                        @media (max-width:$media-mobile) {
-                            text-align: left;
-                            align-items: flex-start;
-                            right: auto;
-                            left: 4rem;
-                            margin-right: 0;
-                            margin-left: 3rem;
-                        }
-                    }
-                }
-            }
-
+        &.right {
             .dot_wrapper {
-                position: relative;
-                width: 7.9rem;
-                height: 7.9rem;
-                background-color: $color-beige;
-                box-shadow: 0 0 1rem 0 $color-beige;
-                border-radius: 50%;
-
-                @media (max-width:$media-mobile) {
-                    width: 5rem;
-                    height: 5rem;
-                }
-
-                &.done {
-                    background-color: $color-green;
-                    box-shadow: 0 0 1rem 0 $color-green;
-                }
-
                 .content {
-                    position: absolute;
-                    top: 0;
-                    color: $color-white;
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    width: 63.6rem;
+                    left: 7.9rem;
+                    text-align: left;
+                    align-items: flex-start;
+                    margin-left: 3rem;
 
                     @media (max-width:$media-mobile) {
-                        width: 28.6rem;
-                        padding: 0;
-                    }
-
-                    .title {
-                        font-size: 5rem; 
-                        line-height: 1;
-                        margin-bottom: 1.3rem;
-                        font-family: $font-Spectral;
-                        font-weight: 600;
-
-                        @media (max-width:$media-mobile) {
-                            font-size: 3.2rem; 
-                            margin-bottom: 1.5rem;
-                        }
-                    }
-
-                    .info {
-                        font-family: $font-Playfair;
-
-                        p {
-                            font-size: 2.5rem;
-                            line-height: 1.2;
-                            margin-bottom: 1.6rem;
-
-                            @media (max-width:$media-mobile) {
-                                font-size: 1.3rem; 
-                                margin-bottom: 1.5rem;
-                            }
-
-                            &:last-of-type {
-                                margin-bottom: 0;
-                            }
-
-                        }
+                        left: 4rem;
                     }
                 }
             }
-
         }
+
+        &.left {
+            .dot_wrapper {
+                .content {
+                    right: 7.9rem;
+                    text-align: right;
+                    align-items: flex-end;
+                    margin-right: 3rem;
+
+                    @media (max-width:$media-mobile) {
+                        text-align: left;
+                        align-items: flex-start;
+                        right: auto;
+                        left: 4rem;
+                        margin-right: 0;
+                        margin-left: 3rem;
+                    }
+                }
+            }
+        }
+
+        .dot_wrapper {
+            position: relative;
+            width: 7.9rem;
+            height: 7.9rem;
+            background-color: $color-beige;
+            box-shadow: 0 0 1rem 0 $color-beige;
+            border-radius: 50%;
+
+            @media (max-width:$media-mobile) {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            &.done {
+                background-color: $color-green;
+                box-shadow: 0 0 1rem 0 $color-green;
+            }
+
+            .content {
+                position: absolute;
+                top: 0;
+                color: $color-white;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 63.6rem;
+
+                @media (max-width:$media-mobile) {
+                    width: 28.6rem;
+                    padding: 0;
+                }
+
+                .title {
+                    font-size: 5rem;
+                    line-height: 1;
+                    margin-bottom: 1.3rem;
+                    font-family: $font-Spectral;
+                    font-weight: 600;
+
+                    @media (max-width:$media-mobile) {
+                        font-size: 3.2rem;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                .info {
+                    font-family: $font-Playfair;
+
+                    p {
+                        font-size: 2.5rem;
+                        line-height: 1.2;
+                        margin-bottom: 1.6rem;
+
+                        @media (max-width:$media-mobile) {
+                            font-size: 1.3rem;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+
     }
 }

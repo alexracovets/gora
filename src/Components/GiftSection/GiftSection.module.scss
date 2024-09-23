@@ -1,290 +1,283 @@
 @import '../../global/variable.scss';
 
-.gift {
-    margin-top: 24rem;
+
+.line_wrapper {
+    margin-top: 9rem;
+    margin-bottom: 6rem;
 
     @media (max-width:$media-mobile) {
-        margin-top: 13rem;
+        margin-top: 3rem;
     }
 
-    .line_wrapper {
-        margin-top: 9rem;
-        margin-bottom: 6rem;
+    .text {
+        color: $color-white;
+        font-family: $font-Spectral;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2.4rem;
 
         @media (max-width:$media-mobile) {
-            margin-top: 3rem;
-        }
-
-        .text {
-            color: $color-white;
-            font-family: $font-Spectral;
-            font-size: 4rem;
-            line-height: 4.8rem;
-            font-weight: 600;
-            text-align: center;
-            text-transform: uppercase;
-            margin-top: 2.4rem;
-
-            @media (max-width:$media-mobile) {
-                font-size: 2rem;
-                line-height: 2.4rem;
-                margin-top: 1.5rem;
-            }
+            font-size: 2rem;
+            line-height: 2.4rem;
+            margin-top: 1.5rem;
         }
     }
+}
 
-    .slider_wrapper {
-        overflow: hidden;
-        width: 100%;
+.slider_wrapper {
+    overflow: hidden;
+    width: 100%;
 
-        .slider {
-            position: relative;
-            z-index: 0;
-            padding-bottom: 13rem;
+    .slider {
+        position: relative;
+        z-index: 0;
+        padding-bottom: 13rem;
+
+        @media (max-width:$media-mobile) {
+            padding-bottom: 9rem;
+            margin-bottom: 10rem;
+        }
+
+        div {
+            height: 47.5rem;
+            overflow: visible;
 
             @media (max-width:$media-mobile) {
-                padding-bottom: 9rem;
-                margin-bottom: 10rem;
+                height: 35.1rem;
             }
 
-            div {
-                height: 47.5rem;
-                overflow: visible;
+            .item {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin: 0 auto;
+                padding: 0;
+                transition: all ease-in-out 300ms;
+                transform: scale(0.8, 0.8);
 
                 @media (max-width:$media-mobile) {
-                    height: 35.1rem;
+                    transform: scale(1, 1);
                 }
 
-                .item {
-                    display: flex !important;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    margin: 0 auto;
-                    padding: 0;
-                    transition: all ease-in-out 300ms;
-                    transform: scale(0.8, 0.8);
+                &.active {
+                    transform: scale(1, 1);
 
                     @media (max-width:$media-mobile) {
                         transform: scale(1, 1);
                     }
 
-                    &.active {
+                    .item_wrapper {
+                        background: linear-gradient(137.3deg, #DCA61F 10.32%, #F6EC97 31.23%, #FADD5A 50.12%, #FBDE9C 67.34%, #E3A21F 86.35%);
                         transform: scale(1, 1);
 
                         @media (max-width:$media-mobile) {
                             transform: scale(1, 1);
                         }
-
-                        .item_wrapper {
-                            background: linear-gradient(137.3deg, #DCA61F 10.32%, #F6EC97 31.23%, #FADD5A 50.12%, #FBDE9C 67.34%, #E3A21F 86.35%);
-                            transform: scale(1, 1);
-
-                            @media (max-width:$media-mobile) {
-                                transform: scale(1, 1);
-                            }
-                        }
                     }
+                }
 
-                    &.second {
-                        transform: scale(0.9, 0.9);
+                &.second {
+                    transform: scale(0.9, 0.9);
 
-                        @media (max-width:$media-mobile) {
-                            transform: scale(1, 1);
-                        }
-
-                        .item_wrapper {
-                            transform: scale(1, 1);
-
-                            @media (max-width:$media-mobile) {
-                                transform: scale(0.9, 0.9);
-                            }
-                        }
-                    }
-
-                    &.available {
-                        .dot {
-                            color: $color-black;
-                            background-color: $color-white;
-                        }
-
-                        .item_wrapper {
-                            background: linear-gradient(137.3deg, #977A50 10.32%, #DEB984 31.23%, #B89263 50.12%, #AF895C 67.34%, #D7B27B 86.35%);
-
-                            &::before,
-                            &::after {
-                                opacity: 0.3;
-                            }
-
-                            .name,
-                            .price {
-
-                                span {
-                                    color: $color-white;
-                                }
-                            }
-
-                            button {
-                                color: $color-black ;
-                                background-color: $color-white;
-                            }
-                        }
-                    }
-
-                    .dot {
-                        position: absolute;
-                        top: 0;
-                        right: 4.5rem;
-                        width: 6.5rem;
-                        height: 6.5rem;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $color-green;
-                        border-radius: 50%;
-                        transition: all ease-in-out 300ms;
-                        z-index: 1;
-                        font-size: 2rem;
-                        color: $color-white;
-                        font-family: $font-Spectral;
-                        font-weight: 400;
-
-                        @media (max-width:$media-mobile) {
-                            width: 5.3rem;
-                            height: 5.3rem;
-                            right: 3rem;
-                        }
-
-                        span {
-                            font-weight: 700;
-                        }
+                    @media (max-width:$media-mobile) {
+                        transform: scale(1, 1);
                     }
 
                     .item_wrapper {
-                        width: 43.1rem;
-                        height: 40.5rem;
-                        background: linear-gradient(137.3deg, #B9BCC1 10.32%, #D1D2D6 31.23%, #EEF0EF 50.12%, #DDE1E2 67.34%, #AEB6B8 86.35%);
-                        box-shadow: 0 0 2rem 0 rgba(237, 224, 134, 0.2);
-                        border-radius: 2.5rem;
-                        padding: 0 2rem;
-                        margin: 1rem auto;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        position: relative;
-                        overflow: hidden;
-                        transition: all ease-in-out 300ms;
-                        transform: scale(1.2, 1);
+                        transform: scale(1, 1);
 
                         @media (max-width:$media-mobile) {
-                            width: 35rem;
-                            height: 35rem;
                             transform: scale(0.9, 0.9);
                         }
+                    }
+                }
+
+                &.available {
+                    .dot {
+                        color: $color-black;
+                        background-color: $color-white;
+                    }
+
+                    .item_wrapper {
+                        background: linear-gradient(137.3deg, #977A50 10.32%, #DEB984 31.23%, #B89263 50.12%, #AF895C 67.34%, #D7B27B 86.35%);
 
                         &::before,
                         &::after {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            width: 100%;
-                            height: 9.614rem;
-                            background-image: url("/img/pattern/pattern_white.svg");
-                            background-position-y: 3.2rem;
-                            opacity: 0.7;
-                            pointer-events: none;
-                            background-size: 9.6rem;
-                            transition: all ease-in-out 300ms;
-
-                            @media (max-width:$media-mobile) {
-                                background-image: url("/img/pattern/pattern_white_mobile.svg");
-                                height: 7.845rem;
-                                background-position-y: 2.8rem;
-                                background-size: 7.4rem;
-                            }
-                        }
-
-                        &::before {
-                            top: -3rem;
-                            background-position-x: 2rem;
-
-                            @media (max-width:$media-mobile) {
-                                background-position-x: 2rem;
-                                top: -2.5rem;
-                            }
-                        }
-
-                        &::after {
-                            bottom: -3rem;
-                            transform: rotate(180deg);
-
-                            @media (max-width:$media-mobile) {
-                                background-position-x: 2rem;
-                            }
+                            opacity: 0.3;
                         }
 
                         .name,
                         .price {
-                            text-align: center;
-                            font-size: 2.556rem;
-                            line-height: 1.1;
-                            text-transform: uppercase;
-                            height: auto;
-                            transition: all ease-in-out 300ms;
-                            padding: 0;
-                            position: relative;
-                            z-index: 1;
-                            font-family: $font-Spectral;
-
-                            @media (max-width:$media-mobile) {
-                                font-size: 2rem;
-                            }
 
                             span {
-                                color: $color-green;
-                                font-size: 3.196rem;
-                                font-weight: 700;
-
-                                @media (max-width:$media-mobile) {
-                                    font-size: 2.6rem;
-                                }
-                            }
-                        }
-
-                        .name {
-                            font-weight: 700;
-                        }
-
-                        .price {
-                            font-weight: 600;
-                            margin-bottom: 4rem;
-
-                            @media (max-width:$media-mobile) {
-                                margin-bottom: 3rem;
+                                color: $color-white;
                             }
                         }
 
                         button {
-                            color: $color-white;
-                            font-size: 2.304rem;
-                            text-align: center;
+                            color: $color-black ;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+
+                .dot {
+                    position: absolute;
+                    top: 0;
+                    right: 4.5rem;
+                    width: 6.5rem;
+                    height: 6.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-green;
+                    border-radius: 50%;
+                    transition: all ease-in-out 300ms;
+                    z-index: 1;
+                    font-size: 2rem;
+                    color: $color-white;
+                    font-family: $font-Spectral;
+                    font-weight: 400;
+
+                    @media (max-width:$media-mobile) {
+                        width: 5.3rem;
+                        height: 5.3rem;
+                        right: 3rem;
+                    }
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                .item_wrapper {
+                    width: 43.1rem;
+                    height: 40.5rem;
+                    background: linear-gradient(137.3deg, #B9BCC1 10.32%, #D1D2D6 31.23%, #EEF0EF 50.12%, #DDE1E2 67.34%, #AEB6B8 86.35%);
+                    box-shadow: 0 0 2rem 0 rgba(237, 224, 134, 0.2);
+                    border-radius: 2.5rem;
+                    padding: 0 2rem;
+                    margin: 1rem auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all ease-in-out 300ms;
+                    transform: scale(1.2, 1);
+
+                    @media (max-width:$media-mobile) {
+                        width: 35rem;
+                        height: 35rem;
+                        transform: scale(0.9, 0.9);
+                    }
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 9.614rem;
+                        background-image: url("/img/pattern/pattern_white.svg");
+                        background-position-y: 3.2rem;
+                        opacity: 0.7;
+                        pointer-events: none;
+                        background-size: 9.6rem;
+                        transition: all ease-in-out 300ms;
+
+                        @media (max-width:$media-mobile) {
+                            background-image: url("/img/pattern/pattern_white_mobile.svg");
+                            height: 7.845rem;
+                            background-position-y: 2.8rem;
+                            background-size: 7.4rem;
+                        }
+                    }
+
+                    &::before {
+                        top: -3rem;
+                        background-position-x: 2rem;
+
+                        @media (max-width:$media-mobile) {
+                            background-position-x: 2rem;
+                            top: -2.5rem;
+                        }
+                    }
+
+                    &::after {
+                        bottom: -3rem;
+                        transform: rotate(180deg);
+
+                        @media (max-width:$media-mobile) {
+                            background-position-x: 2rem;
+                        }
+                    }
+
+                    .name,
+                    .price {
+                        text-align: center;
+                        font-size: 2.556rem;
+                        line-height: 1.1;
+                        text-transform: uppercase;
+                        height: auto;
+                        transition: all ease-in-out 300ms;
+                        padding: 0;
+                        position: relative;
+                        z-index: 1;
+                        font-family: $font-Spectral;
+
+                        @media (max-width:$media-mobile) {
+                            font-size: 2rem;
+                        }
+
+                        span {
+                            color: $color-green;
+                            font-size: 3.196rem;
                             font-weight: 700;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1rem;
-                            background-color: $color-black;
-                            font-family: $font-Spectral;
-                            padding: 1.8rem 3rem;
-                            border-radius: 1.084rem;
-                            transition: all ease-in-out 300ms;
-                            letter-spacing: -0.05rem;
-                            position: relative;
-                            z-index: 1;
 
                             @media (max-width:$media-mobile) {
-                                font-size: 1.6rem;
-                                padding: 1.4rem 2.7rem;
+                                font-size: 2.6rem;
                             }
+                        }
+                    }
+
+                    .name {
+                        font-weight: 700;
+                    }
+
+                    .price {
+                        font-weight: 600;
+                        margin-bottom: 4rem;
+
+                        @media (max-width:$media-mobile) {
+                            margin-bottom: 3rem;
+                        }
+                    }
+
+                    button {
+                        color: $color-white;
+                        font-size: 2.304rem;
+                        text-align: center;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1rem;
+                        background-color: $color-black;
+                        font-family: $font-Spectral;
+                        padding: 1.8rem 3rem;
+                        border-radius: 1.084rem;
+                        transition: all ease-in-out 300ms;
+                        letter-spacing: -0.05rem;
+                        position: relative;
+                        z-index: 1;
+
+                        @media (max-width:$media-mobile) {
+                            font-size: 1.6rem;
+                            padding: 1.4rem 2.7rem;
                         }
                     }
                 }

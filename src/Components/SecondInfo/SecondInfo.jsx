@@ -12,19 +12,17 @@ export default function SecondInfo() {
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
 
     return (
-        <section className={s.info} id={"join"}>
-            <Container>
-                <Title>{t("title.join")}</Title>
-                <div className={s.we_are}>
-                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.0") }} />
-                </div>
-                <DashLine />
-                <div className={s.help}>
-                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.0") }} />
-                    <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.1") }} /> 
-                </div>
-                <Button click={() => setIsPayModal(true)}>{t("btn.join")}</Button>
-            </Container>
-        </section >
+        <Container>
+            <Title>{t("title.join")}</Title>
+            <div className={s.we_are}>
+                <p dangerouslySetInnerHTML={{ __html: t("secondInfo.0") }} />
+            </div>
+            <DashLine />
+            <div className={s.help}>
+                <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.0") }} />
+                <p dangerouslySetInnerHTML={{ __html: t("secondInfo.1.1") }} />
+            </div>
+            <Button click={() => setIsPayModal(true)}>{t("btn.join")}</Button>
+        </Container>
     )
 }

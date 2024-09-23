@@ -29,7 +29,7 @@ export default function GiftSection() {
     }, []);
 
     return (
-        <section className={s.gift} id="gifts">
+        <>
             <Title>{isDesktop ? t("title.gifts") : t("title.gifts_mobile")}</Title>
             <div className={s.line_wrapper}>
                 <DashLine />
@@ -64,6 +64,6 @@ export default function GiftSection() {
                     />)}
                 </GiftSlider>
             </div>
-        </section>
+        </>
     )
 }

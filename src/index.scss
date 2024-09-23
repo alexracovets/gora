@@ -23,6 +23,7 @@ html {
 section,
 footer {
   margin-top: 20rem;
+  position: relative;
 
   @media (max-width:$media-mobile) {
     margin-top: 10rem;
