@@ -18,7 +18,7 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "progress/0/0.mp4"
+                    src: "./progress/0/0.mp4"
                 },
                 1: {
                     type: 'jpg',
@@ -69,7 +69,7 @@ export default function Modal() {
             sources: {
                 0: {
                     type: 'mp4',
-                    src: "progress/0/0.mp4"
+                    src: "./progress/0/0.mp4"
                 },
                 1: {
                     type: 'jpg',

@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense } from "react";
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
 
 import SliderArrow from "../../../UI/SliderArrow/SliderArrow";
 
 import s from '../ModalProgress.module.scss';
+import Loader from '../../../Loader/Loader';
 import VideoPlayer from './VideoPlayer/VideoPlayer';
 export default function ProgressItem({ content, index, activeSlideIndex, countSlides }) {
     const sliderTopRef = useRef(null);

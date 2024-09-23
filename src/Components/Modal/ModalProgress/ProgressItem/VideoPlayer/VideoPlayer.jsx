@@ -16,7 +16,7 @@ export default function VideoPlayer({ src }) {
                 if (response.ok) {
                     setIsLoading(false);
                 } else {
-                    setIsError(true); 
+                    setIsError(true);
                 }
             } catch (error) {
                 setIsError(true);
@@ -27,24 +27,24 @@ export default function VideoPlayer({ src }) {
     }, [src]);
 
     if (isError) {
+        console.log('1')
         return <Loader />;
     }
-
+    console.log(isLoading)
     return (
-        <div className={s.content_wrapper}>
-            {isLoading ? (
-                <Loader />  
-            ) : (
-                <ReactPlayer
-                    url={src}
-                    playing
+        <>
+
+            <div className={s.content_wrapper}>
+                <video
+                    src={src}
+                    autoPlay
                     muted
                     loop
-                    width="100%"
-                    height="100%"
                 />
-            )}
-        </div>
+                {isLoading && <Loader />}
+            </div>
+
+        </>
     );
 }
 

@@ -11,6 +11,8 @@ const CurrentState = lazy(() => import('../CurrentState/CurrentState'));
 const Comitet = lazy(() => import('../Comitet/Comitet'));
 const GiftSection = lazy(() => import('../GiftSection/GiftSection'));
 
+import ScrollToHashElement from '../../static/ScrollToHashElement';
+
 import s from './Main.module.scss';
 export default function Main({ scrollbarsRef }) {
 
@@ -20,19 +22,20 @@ export default function Main({ scrollbarsRef }) {
 
     return (
         <main>
-            <section className={s.first} id={"start"}>
+            <ScrollToHashElement />
+            <section className={s.first} id="first">
                 <Suspense fallback={<Loader />}>
                     <FirstSection onLoad={() => handleComponentLoad()} />
                 </Suspense>
             </section>
             <section id="patron">
                 <Suspense fallback={<Loader />}>
-                    <Patron onLoad={() => handleComponentLoad()}  />
+                    <Patron onLoad={() => handleComponentLoad()} />
                 </Suspense>
             </section>
             <section id="about">
                 <Suspense fallback={<Loader />}>
-                    <About onLoad={() => handleComponentLoad()}  />
+                    <About onLoad={() => handleComponentLoad()} />
                 </Suspense>
             </section>
             <section id="gifts">

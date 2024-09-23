@@ -17,7 +17,7 @@ export default function Header({ scrollbarsRef }) {
     const links = [
         {
             name: t("links.0"),
-            href: "#start"
+            href: "#first"
         },
         {
             name: t("links.1"),
@@ -49,6 +49,10 @@ export default function Header({ scrollbarsRef }) {
         }
     ]
 
+    const mobileHanfler = () => {
+        setOpen(prevIsOpen => !prevIsOpen);
+        headroomRef.current.pin();
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -110,7 +114,7 @@ export default function Header({ scrollbarsRef }) {
                             {links.map((link, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <Link to={link.href} onClick={() => { setOpen(prevIsOpen => !prevIsOpen) }}>{link.name}</Link>
+                                        <Link to={link.href} onClick={mobileHanfler}>{link.name}</Link>
                                     </li>
                                 )
                             })}

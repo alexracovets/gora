@@ -10,7 +10,6 @@ export default function Loader() {
             radius={5}
             color="#EBD7B2"
             ariaLabel="ball-triangle-loading"
-            wrapperStyle={{}}
             wrapperClass={s.loader_wrapper}
             visible={true}
         />

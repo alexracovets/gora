@@ -8,9 +8,9 @@
     outline: none;
     margin-bottom: 6rem;
     position: relative;
-    z-index: 2;
+    z-index: -1;
 
-    @media (max-width:$media-mobile) { 
+    @media (max-width:$media-mobile) {
         margin-bottom: 12.5rem;
         flex-direction: column;
     }

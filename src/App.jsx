@@ -3,7 +3,6 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
-import ScrollToHashElement from './static/ScrollToHashElement';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
@@ -36,7 +35,6 @@ export default function App() {
           </motion.div> : null
         }
       </AnimatePresence>
-      <ScrollToHashElement behavior="smooth" inline="start" block="start" />
       <Scrollbars
         autoHeight
         autoHeightMax={'100dvh'}

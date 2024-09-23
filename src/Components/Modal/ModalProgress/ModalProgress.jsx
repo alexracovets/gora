@@ -1,11 +1,8 @@
-import { lazy, Suspense } from "react";
+import Modal from "./Modal";
 
-const Modal = lazy(() => import('./Modal'));
 export default function ModalProgress() {
 
     return (
-        <Suspense fallback={null}>
-            <Modal />
-        </Suspense>
+        <Modal />
     );
 }
