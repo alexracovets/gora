@@ -15,6 +15,7 @@ export default function ProgressItem({ content, index, activeSlideIndex, countSl
         ref: sliderTopRef,
         className: `default`,
         dots: false,
+        draggable: false,
         speed: 500,
         arrows: false,
         infinite: true,
