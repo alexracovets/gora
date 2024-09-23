@@ -101,7 +101,7 @@ export default function Header({ scrollbarsRef }) {
                         </ul>
                     </nav>
                     <div className={s.burger_wrapper}>
-                        <div className={s.burger}>
+                        <div className={`${s.burger} ${isOpen ? s.active : ''}`}>
                             <Hamburger toggled={isOpen} toggle={setOpen} className={s.me_burger} color="white" size={36} />
                         </div>
                     </div>

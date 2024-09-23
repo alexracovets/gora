@@ -72,18 +72,18 @@ header {
 
         .burger {
             display: none;
-            padding: 1rem;
             pointer-events: all;
-            border-radius: 50%;
+            border-radius: 0.5rem;
+            background-color: rgba(13, 13, 13, 0.5);
+            transition: all ease-in-out 300ms;
+
+            &.active {
+                border-radius: 50%;
+                background-color: $color-browne;
+            }
 
             @media (max-width:$media-mobile) {
                 display: block;
-                background-color: $color-bg;
-                box-shadow: 0 0 2rem 1rem $color-bg;
-            }
-
-            .me_burger {
-                background-color: aqua;
             }
         }
     }
