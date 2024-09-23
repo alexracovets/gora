@@ -18,10 +18,13 @@ export default function Main() {
                 <FirstSection />
             </Suspense>
             <Suspense fallback={null}>
+                <Patron />
+            </Suspense>
+            <Suspense fallback={null}>
                 <About />
             </Suspense>
             <Suspense fallback={null}>
-                <Patron />
+                <GiftSection />
             </Suspense>
             <Suspense fallback={null}>
                 <SecondInfo />
@@ -34,9 +37,6 @@ export default function Main() {
             </Suspense>
             <Suspense fallback={null}>
                 <Comitet />
-            </Suspense>
-            <Suspense fallback={null}>
-                <GiftSection />
             </Suspense>
         </main>
     )
