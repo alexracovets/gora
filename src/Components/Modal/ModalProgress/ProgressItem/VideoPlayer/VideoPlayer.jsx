@@ -1,36 +1,30 @@
-import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-import s from '../../ModalProgress.module.scss';
 import Loader from '../../../../Loader/Loader';
 
+import s from '../../ModalProgress.module.scss';
 export default function VideoPlayer({ src }) {
     const [content, setContent] = useState(false)
 
-    useEffect(() => {
-        const checkVideoAvailability = async () => {
-            try {
-                const response = await fetch(src);
-                if (response.ok) {
-                    setContent(response.url)
-                }
-            } catch (error) {
-                console.log(`error_${src}`)
-            }
-        };
-
-        checkVideoAvailability();
-    }, [src]);
-
     return (
-        <>
-
-            <div className={s.content_wrapper}>
-                {content ? <ReactPlayer url={content} playing muted loop onStart={console.log('1')} /> : <Loader />}
-            </div >
-
-        </>
+        <div className={s.content_wrapper}>
+            <ReactPlayer url={src} playing muted loop onStart={() => setContent(true)} />
+            <AnimatePresence>
+                {
+                    content ? null : <motion.div className={s.loader}
+                        initial={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <Loader content />
+                    </motion.div>
+                }
+            </AnimatePresence>
+        </div >
     );
 }
 
