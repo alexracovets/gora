@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 import SliderAbout from "../SliderAbout/SliderAbout";
 import SliderItem from "./SliderItem/SliderItem";
@@ -11,18 +12,43 @@ import sliderAboutData from "../../data/sliderAboutData";
 
 import s from './About.module.scss';
 export default function About() {
-    const { t } = useTranslation();
     const setIsPayModal = modalStore((state) => state.setIsPayModal);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentMeta, setCurrentMeta] = useState(0);
+    const [isHideMeta, setIsHideMeta] = useState(false);
+    const { t } = useTranslation();
+
+    const metas = [
+        "about.sliderAbout.0.meta",
+        "about.sliderAbout.1.meta",
+        "about.sliderAbout.2.meta"
+    ]
+
+    const changeMeta = (current) => {
+        setIsHideMeta(true);
+        setTimeout(() => {
+            setCurrentMeta(current)
+        }, 300);
+        setTimeout(() => {
+            setIsHideMeta(false);
+        }, 400)
+
+    }
+
+    useEffect(() => {
+        console.log('1')
+        changeMeta(currentSlide);
+    }, [currentSlide])
 
     return (
         <Container>
             <Title>{t("title.about")}</Title>
-            <article className={s.mission}>
-                <p className={s.title}>{t("about.mission")}</p>
-                <div className={s.text}>{t("about.mission_desc")}</div>
-            </article>
+            <div className={s.title_desc}>
+                <span>Відновлення</span> Першого та Єдиного Україномовного Осередку на Святій Горі Афон
+            </div>
+            <div className={`${s.mission} ${isHideMeta ? s.hide : ''}`} dangerouslySetInnerHTML={{ __html: t(metas[currentMeta]) }} />
             <div className={s.slider_wrapper}>
-                <SliderAbout length={sliderAboutData.length}>
+                <SliderAbout length={sliderAboutData.length} setCurrent={setCurrentSlide}>
                     {sliderAboutData.map((slide, idx) => <SliderItem key={idx} idx={idx} slide={slide} />)}
                 </SliderAbout>
             </div>

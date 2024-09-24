@@ -15,15 +15,15 @@ function Home() {
 
     return (
         <>
-            <ScrollToHashElement />
+            <ScrollToHashElement behavior="smooth" inline="start" block="start" />
             <section className={s.first} id="first">
                 <FirstSection />
             </section>
-            <section id="patron">
-                <Patron />
-            </section>
             <section id="about">
                 <About />
+            </section>
+            <section id="patron">
+                <Patron />
             </section>
             <section id="gifts">
                 <GiftSection />

@@ -1,6 +1,16 @@
 import { useLayoutEffect, useState, useEffect } from "react";
 
-const ScrollToHashElement = () => {
+interface ScrollToHashElementProps {
+    behavior?: ScrollBehavior;
+    inline?: ScrollLogicalPosition;
+    block?: ScrollLogicalPosition;
+}
+
+const ScrollToHashElement = ({
+    behavior = "auto",
+    inline = "nearest",
+    block = "start",
+}: ScrollToHashElementProps) => {
     const [hash, setHash] = useState(window.location.hash);
 
     const originalPushState = window.history.pushState;
@@ -49,7 +59,11 @@ const ScrollToHashElement = () => {
             const element = document.getElementById(removeHashCharacter(hash));
 
             if (element) {
-                element.scrollIntoView();
+                element.scrollIntoView({
+                    behavior: behavior,
+                    inline: inline,
+                    block: block,
+                });
                 window.history.replaceState(null, '', window.location.pathname + window.location.search)
             }
         }

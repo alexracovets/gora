@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import Loader from '../../../../Loader/Loader';
-
+ 
 import s from '../../ModalProgress.module.scss';
 export default function VideoPlayer({ src }) {
     const [content, setContent] = useState(false)

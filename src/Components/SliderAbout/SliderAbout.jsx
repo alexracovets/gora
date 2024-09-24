@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import Slider from "react-slick";
 
 import SliderArrow from "../UI/SliderArrow/SliderArrow";
-import { useRef, useState } from 'react';
-export default function SliderAbout({ children, length }) {
+import { useEffect, useRef, useState } from 'react';
+export default function SliderAbout({ children, length, setCurrent }) {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -21,6 +21,10 @@ export default function SliderAbout({ children, length }) {
         }
     };
 
+    useEffect(() => {
+        setCurrent(currentSlide)
+    }, [setCurrent, currentSlide])
+
     return (
         <Slider {...settings} ref={sliderRef}>
             {children}
@@ -30,5 +34,6 @@ export default function SliderAbout({ children, length }) {
 
 SliderAbout.propTypes = {
     children: PropTypes.node,
-    length: PropTypes.number
+    length: PropTypes.number,
+    setCurrent: PropTypes.func
 };

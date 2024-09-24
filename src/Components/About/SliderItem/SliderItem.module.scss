@@ -19,6 +19,8 @@
         width: 129.2rem;
         height: auto;
         margin: 0 auto;
+        border-radius: 1rem;
+        overflow: hidden;
 
         @media (max-width:$media-mobile) {
             width: 100%;
@@ -28,73 +30,185 @@
 
     .point {
         position: absolute;
-        left: 9rem;
+        right: 0;
+        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 72.2rem;
 
-        @media (max-width:$media-mobile) {
-            position: initial;
-            width: 100%;
+        &[number="item_0_0"] {
+            right: auto;
             left: 0;
-            margin-bottom: 3.5rem;
+            top: 20%;
+            width: 56rem;
 
-            &:nth-of-type(2n-1) {
-                order: 1;
-            }
+            .line_wrapper {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%) translateY(100%);
 
-            &:nth-of-type(2n) {
-                order: 3;
+                .line_block {
+                    transform: rotate(300deg);
+
+                    .line {
+                        height: 25rem;
+                    }
+                }
             }
         }
 
-        &:nth-of-type(2n) {
-            left: auto;
-            right: 9rem;
+        &[number="item_0_1"] {
+            right: 10rem;
+            top: 10%;
+            width: 43rem;
+
+            .line_wrapper {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%) translateY(100%);
+
+                .line_block {
+                    transform: rotate(60deg);
+
+                    .line {
+                        height: 25rem;
+                    }
+                }
+            }
         }
 
-        &:nth-of-type(1) {
+        &[number="item_1_0"] {
+            right: auto;
+            left: 10rem;
+            top: 12%;
+            width: 60rem;
+
+            .line_wrapper {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%) translateY(100%);
+
+                .line_block {
+                    transform: rotate(300deg);
+
+                    .line {
+                        height: 25rem;
+                    }
+                }
+            }
+        }
+
+        &[number="item_1_1"] {
+            right: 20rem;
+            top: 12%;
+            width: 43rem;
+
+            .line_wrapper {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%) translateY(100%);
+
+                .line_block {
+                    transform: rotate(40deg);
+
+                    .line {
+                        height: 20rem;
+                    }
+                }
+            }
+        }
+
+        &[number="item_2_0"] {
+            right: 25rem;
             top: 30%;
-            left: auto;
-            right: 10%;
-        }
+            width: 43rem;
 
-        .title {
-            font-size: 4.8rem;
-            line-height: 5.76rem;
-            color: $color-white;
-            font-family: $font-Playfair;
-            font-weight: 500;
-            text-transform: uppercase;
-            margin-bottom: 1.7rem;
+            .line_wrapper {
+                left: 0;
+                bottom: 50%;
+                transform: translateX(-50%) translateY(100%);
 
-            @media (max-width:$media-mobile) {
-                font-size: 2.4rem;
-                line-height: 2.88rem;
-                margin-bottom: 1rem;
-                order: 2;
+                .line_block {
+                    transform: rotate(130deg);
+
+                    .line {
+                        height: 15rem;
+                    }
+                }
             }
         }
 
-        .text {
-            font-size: 2.4rem;
-            line-height: 1;
-            color: $color-white;
-            font-family: $font-Roboto;
-            text-align: center;
-            padding: 3.4rem 7rem;
-            background-color: rgba(90, 90, 90, 0.63);
-            border: 0.1rem solid $color-white;
-            border-radius: 2.5rem;
+        &[number="item_2_1"] {
+            right: auto;
+            left: 10rem;
+            top: 30%;
+            width: 43rem;
 
-            @media (max-width:$media-mobile) {
-                font-size: 1.3rem;
-                line-height: 1.594rem;
-                padding: 1.2rem;
-                border-radius: 1.5rem;
-                order: 3;
+            .line_wrapper {
+                left: auto;
+                right: 0;
+                bottom: 50%;
+                transform: translateX(50%) translateY(100%);
+
+                .line_block {
+                    transform: rotate(260deg);
+
+                    .line {
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+
+        .point_wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .text {
+                font-size: 3rem;
+                line-height: 1.2;
+                color: $color-white;
+                font-family: $font-Roboto;
+                text-align: center;
+                padding: 1.5rem 2rem;
+                background-color: rgba(0, 0, 0, 0.6);
+                border: 0.2rem solid $color-white;
+                border-radius: 2.5rem;
+                letter-spacing: 0.1rem;
+
+                @media (max-width:$media-mobile) {
+                    font-size: 1.3rem;
+                    line-height: 1.594rem;
+                    padding: 1.2rem;
+                    border-radius: 1.5rem;
+                    order: 3;
+                }
+            }
+
+            .line_wrapper {
+                position: absolute;
+
+                .line_block {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    transform-origin: top center;
+
+                    .line {
+                        width: 0.2rem;
+                        background-color: $color-white;
+                    }
+
+                    .dot {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        background-color: $color-white;
+                    }
+                }
             }
         }
     }
