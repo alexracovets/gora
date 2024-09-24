@@ -36,7 +36,6 @@ export default function About() {
     }
 
     useEffect(() => {
-        console.log('1')
         changeMeta(currentSlide);
     }, [currentSlide])
 
