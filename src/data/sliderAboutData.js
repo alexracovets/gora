@@ -2,8 +2,7 @@ const sliderAboutData = [
     {
         image: 'slide_01.png',
         points: [
-            "about.sliderAbout.0.text_0",
-            "about.sliderAbout.0.text_1"
+            "about.sliderAbout.0.text_0"
         ]
     },
     {
