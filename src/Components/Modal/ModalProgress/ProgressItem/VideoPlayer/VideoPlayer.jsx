@@ -11,7 +11,7 @@ export default function VideoPlayer({ src }) {
 
     return (
         <div className={s.content_wrapper}>
-            <ReactPlayer url={src} playing muted loop onStart={() => setContent(true)} />
+            <ReactPlayer url={src} playing playsinline muted loop onStart={() => setContent(true)} />
             <AnimatePresence>
                 {
                     content ? null : <motion.div className={s.loader}
