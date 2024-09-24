@@ -58,7 +58,7 @@ export default function Footer() {
                         <div className={s.map}>
                             <GoogleMap />
                         </div>
-                        <a href="https://drive.google.com/drive/folders/1tZ-B4U0FUOTJBLAfFqkzlpQyGhUieMX3" target="_blank" rel="noreferrer">
+                        <a href="https://ukraine-athos.com.ua/" target="_blank" rel="noreferrer">
                             <Button footer>{t("btn.docs")}</Button>
                         </a>
                     </div>
